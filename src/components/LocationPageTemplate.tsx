@@ -79,6 +79,31 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
         </div>
       </section>
 
+      <section className="grid gap-6 rounded-3xl bg-[#041B34] p-8 text-white shadow-sm md:grid-cols-3">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Local Trust Layer</p>
+          <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold">Need help before the local issue gets worse?</h2>
+          <p className="mt-3 text-slate-200">This trust-and-urgency section increases conversion pressure on every location page without changing the template system.</p>
+        </div>
+        <div className="rounded-2xl bg-white/10 p-5">
+          <p className="text-2xl font-bold text-[#F4911D]">★★★★★</p>
+          <p className="mt-2 text-slate-200">Review-style proof block positioned near the next local CTA.</p>
+        </div>
+        <div className="rounded-2xl bg-white/10 p-5">
+          <p className="font-semibold">Experience + insured messaging</p>
+          <p className="mt-2 text-slate-200">Structured trust support for local homeowners evaluating urgency and next-step confidence.</p>
+        </div>
+      </section>
+
+      <CTASection
+        heading="Need local HVAC service right now?"
+        body="Use the service links above or call Crest Air directly so the problem gets routed into the right repair or installation path faster."
+        primaryLabel={location.cta.primaryLabel}
+        primaryHref={location.cta.primaryHref}
+        secondaryLabel={`Call ${site.phone}`}
+        secondaryHref={`tel:${site.phone}`}
+      />
+
       <FAQSection faqs={location.faqs} />
 
       <CTASection {...location.cta} />

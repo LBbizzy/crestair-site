@@ -79,6 +79,21 @@ export default function HomePage() {
         secondaryHref={`tel:${site.phone}`}
       />
 
+      <section className="grid gap-6 rounded-3xl bg-[#041B34] p-8 text-white shadow-sm md:grid-cols-3">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Trust Signal</p>
+          <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold">Trusted by Tucson homeowners</h2>
+        </div>
+        <div className="rounded-2xl bg-white/10 p-5">
+          <p className="text-2xl font-bold text-[#F4911D]">★★★★★</p>
+          <p className="mt-2 text-slate-200">Review-style proof block placed directly beside a conversion band.</p>
+        </div>
+        <div className="rounded-2xl bg-white/10 p-5">
+          <p className="font-semibold">Licensed / Insured messaging</p>
+          <p className="mt-2 text-slate-200">Use this layer to reinforce trust, local service confidence, and response credibility.</p>
+        </div>
+      </section>
+
       <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-2">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Trust & Proof</p>

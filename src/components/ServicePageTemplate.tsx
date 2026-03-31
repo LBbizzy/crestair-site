@@ -74,6 +74,31 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         <ol className="mt-4 space-y-3 text-slate-700">{service.process.map((step, index) => <li key={step}>{index + 1}. {step}</li>)}</ol>
       </section>
 
+      <section className="grid gap-6 rounded-3xl bg-[#041B34] p-8 text-white shadow-sm md:grid-cols-3">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Fast Response</p>
+          <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold">Need service before the issue gets worse?</h2>
+          <p className="mt-3 text-slate-200">This urgency block increases mid-page conversion pressure without changing the overall template structure.</p>
+        </div>
+        <div className="rounded-2xl bg-white/10 p-5">
+          <p className="text-2xl font-bold text-[#F4911D]">★★★★★</p>
+          <p className="mt-2 text-slate-200">Review-style proof block positioned near the next CTA.</p>
+        </div>
+        <div className="rounded-2xl bg-white/10 p-5">
+          <p className="font-semibold">Licensed / Insured messaging</p>
+          <p className="mt-2 text-slate-200">Additional trust support for homeowners comparing urgent repair against waiting.</p>
+        </div>
+      </section>
+
+      <CTASection
+        heading="Need same-day help or a faster next step?"
+        body="Use the local service path now or call Crest Air directly before comfort issues become larger repair costs."
+        primaryLabel={service.cta.primaryLabel}
+        primaryHref={service.cta.primaryHref}
+        secondaryLabel={`Call ${site.phone}`}
+        secondaryHref={`tel:${site.phone}`}
+      />
+
       <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-2">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Trust & Proof</p>
