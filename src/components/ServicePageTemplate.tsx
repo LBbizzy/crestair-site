@@ -20,6 +20,8 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         primaryHref={service.cta.primaryHref}
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        imageSrc={service.slug === 'ac-installation-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/ac-installation-tucson-az-crane-lift-crest-air-hvac.webp' : service.slug === 'hvac-maintenance-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/hvac-maintenance-service-tucson-az-crest-air-hvac.webp' : service.slug === 'indoor-air-quality-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/indoor-air-quality-solutions-tucson-az-crest-air.webp' : service.slug === 'duct-cleaning-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/ductwork-airflow-solutions-tucson-az-crest-air.webp' : 'https://crestairaz.com/wp-content/uploads/2026/03/ac-repair-tucson-az-crest-air-technician-servicing-air-conditioner.webp'}
+        imageAlt={`${service.title} service in ${service.location}`}
       />
 
       <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-[1.3fr_1fr]">

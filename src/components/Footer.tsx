@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="mt-16 bg-[#041B34] text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div>
-          <p className="font-[family-name:var(--font-heading)] text-3xl font-bold">{site.name}</p>
+          <img src="https://crestairaz.com/wp-content/uploads/2026/02/crest-air-heating-cooling-tucson-logo.png" alt="Crest Air Heating and Cooling Tucson logo" className="h-14 w-auto" />
           <p className="mt-4 text-sm leading-7 text-slate-200">
             Fast heating and cooling support for Tucson-area homes with service pages, location routing, and a cleaner custom stack built to scale.
           </p>

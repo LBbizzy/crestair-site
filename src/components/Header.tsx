@@ -8,8 +8,8 @@ export function Header() {
         Call now for Tucson HVAC service: <a className="text-[#66CFEF]" href={`tel:${site.phone}`}>{site.phone}</a>
       </div>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5">
-        <Link href="/" className="font-[family-name:var(--font-heading)] text-3xl font-bold tracking-tight text-[#041B34]">
-          {site.name}
+        <Link href="/" className="flex items-center gap-3">
+          <img src="https://crestairaz.com/wp-content/uploads/2026/02/crest-air-heating-cooling-tucson-logo.png" alt="Crest Air Heating and Cooling Tucson logo" className="h-12 w-auto" />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {primaryNav.map((item) => (

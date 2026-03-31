@@ -36,6 +36,8 @@ export default function HomePage() {
         primaryHref="/locations/tucson-az"
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        imageSrc="https://crestairaz.com/wp-content/uploads/2026/03/ac-repair-tucson-az-crest-air-hvac-service.webp"
+        imageAlt="Crest Air technician providing air conditioning repair service in Tucson, Arizona"
       />
 
       <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-[1.4fr_1fr]">
