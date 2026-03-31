@@ -1,6 +1,6 @@
 export const site = {
   name: 'Crest Air',
-  url: 'https://crestair-site.vercel.app',
+  url: 'https://crestair-site-ody5bb4bw-bizzy-cube-llc.vercel.app',
   description:
     'Crest Air delivers HVAC repair, installation, and heating services across Tucson-area communities.',
   phone: '(520) 751-8888',
@@ -25,5 +25,13 @@ export const footerGroups = {
     { href: '/services/ac-installation-tucson', label: 'AC Installation' },
     { href: '/services/heating-tucson', label: 'Heating' },
   ],
-  locations: [{ href: '/locations/tucson-az', label: 'Tucson, AZ' }],
+  locations: [
+    { href: '/locations/tucson-az', label: 'Tucson, AZ' },
+    { href: '/locations/green-valley-az', label: 'Green Valley, AZ' },
+    { href: '/locations/oro-valley-az', label: 'Oro Valley, AZ' },
+    { href: '/locations/marana-az', label: 'Marana, AZ' },
+    { href: '/locations/vail-az', label: 'Vail, AZ' },
+    { href: '/locations/sahuarita-az', label: 'Sahuarita, AZ' },
+    { href: '/locations/catalina-foothills-az', label: 'Catalina Foothills, AZ' },
+  ],
 };

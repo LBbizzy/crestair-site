@@ -2,9 +2,9 @@ import { getServiceBySlug } from '@/content/services';
 import { buildMetadata } from '@/lib/metadata';
 import { ServicePageTemplate } from '@/components/ServicePageTemplate';
 
-const service = getServiceBySlug('ac-repair-tucson')!;
-export const metadata = buildMetadata(service.meta, '/services/ac-repair-tucson');
+const service = getServiceBySlug('indoor-air-quality-tucson')!;
+export const metadata = buildMetadata(service.meta, '/services/indoor-air-quality-tucson');
 
-export default function AcRepairPage() {
+export default function Page() {
   return <ServicePageTemplate service={service} />;
 }

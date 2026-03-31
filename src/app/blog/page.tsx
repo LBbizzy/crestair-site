@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { BlogCard } from '@/components/BlogCard';
 import { HeroSection } from '@/components/HeroSection';
 import { blogPosts } from '@/content/blog';
@@ -18,7 +19,7 @@ export default function BlogPage() {
       <HeroSection
         eyebrow="Crest Air Blog"
         title="Structured HVAC content built for service and location SEO"
-        body="Each article outline routes readers into a service page and a location page so the blog supports crawl depth and conversion intent."
+        body="Each article routes readers into a service page and a location page so the blog supports crawl depth, local relevance, and conversion intent."
         primaryLabel="See Tucson HVAC"
         primaryHref="/locations/tucson-az"
       />
@@ -27,6 +28,16 @@ export default function BlogPage() {
           <BlogCard key={post.slug} post={post} />
         ))}
       </div>
+      <section className="rounded-3xl bg-white p-8 shadow-sm">
+        <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">All Posts</h2>
+        <ul className="mt-6 space-y-3 text-slate-700">
+          {blogPosts.map((post) => (
+            <li key={post.slug}>
+              <Link className="underline" href={`/blog/${post.slug}`}>{post.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }

@@ -106,16 +106,7 @@ export default function HomePage() {
         <p className="max-w-3xl text-slate-700">
           The homepage now carries stronger area-coverage presence so users can move from broad Tucson intent into local service routing more like the source site’s conversion flow.
         </p>
-        <LocationGrid
-          locations={[
-            { href: '/locations/tucson-az', label: 'Tucson, AZ' },
-            { href: '/locations/tucson-az', label: 'Oro Valley, AZ' },
-            { href: '/locations/tucson-az', label: 'Marana, AZ' },
-            { href: '/locations/tucson-az', label: 'Vail, AZ' },
-            { href: '/locations/tucson-az', label: 'Sahuarita, AZ' },
-            { href: '/locations/tucson-az', label: 'Catalina Foothills, AZ' },
-          ]}
-        />
+        <LocationGrid locations={locations.map((location) => ({ href: `/locations/${location.slug}`, label: location.title }))} />
       </section>
 
       <CTASection

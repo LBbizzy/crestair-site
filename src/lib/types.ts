@@ -9,8 +9,10 @@ export type CTA = {
   body: string;
   primaryLabel: string;
   primaryHref: string;
+  primaryId?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  secondaryId?: string;
 };
 
 export type FAQ = {
