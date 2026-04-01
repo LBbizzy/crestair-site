@@ -2,6 +2,18 @@ const GHL_API_BASE_URL = process.env.GHL_API_BASE_URL;
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
 const GHL_PRIVATE_INTEGRATION_TOKEN = process.env.GHL_PRIVATE_INTEGRATION_TOKEN;
 
+const TRACKING_FIELDS = ['source_page', 'service_type', 'location', 'action_type', 'page_type'] as const;
+
+type TrackingFieldName = (typeof TRACKING_FIELDS)[number];
+
+type GhlCustomField = {
+  id?: string;
+  name?: string;
+  fieldKey?: string;
+  key?: string;
+  dataType?: string;
+};
+
 export type GhlConversionPayload = {
   name: string;
   email?: string;
@@ -28,21 +40,97 @@ function splitName(name: string) {
   };
 }
 
-export async function upsertGhlContact(payload: GhlConversionPayload) {
+async function ghlRequest<T>(path: string, init: RequestInit = {}) {
   const baseUrl = requireEnv('GHL_API_BASE_URL', GHL_API_BASE_URL);
-  const locationId = requireEnv('GHL_LOCATION_ID', GHL_LOCATION_ID);
   const token = requireEnv('GHL_PRIVATE_INTEGRATION_TOKEN', GHL_PRIVATE_INTEGRATION_TOKEN);
 
-  const { firstName, lastName } = splitName(payload.name);
-
-  const response = await fetch(`${baseUrl}/contacts/upsert`, {
-    method: 'POST',
+  const response = await fetch(`${baseUrl}${path}`, {
+    ...init,
     headers: {
       Authorization: `Bearer ${token}`,
       Version: '2021-07-28',
       'Content-Type': 'application/json',
       Accept: 'application/json',
+      ...(init.headers || {}),
     },
+    cache: 'no-store',
+  });
+
+  const text = await response.text();
+  const data = text ? JSON.parse(text) : null;
+
+  if (!response.ok) {
+    throw new Error(data?.message || data?.error || `GHL request failed for ${path} with status ${response.status}`);
+  }
+
+  return data as T;
+}
+
+function extractCustomFieldList(data: unknown): GhlCustomField[] {
+  if (Array.isArray(data)) return data as GhlCustomField[];
+  if (data && typeof data === 'object') {
+    const record = data as Record<string, unknown>;
+    if (Array.isArray(record.customFields)) return record.customFields as GhlCustomField[];
+    if (Array.isArray(record.fields)) return record.fields as GhlCustomField[];
+    if (Array.isArray(record.data)) return record.data as GhlCustomField[];
+  }
+  return [];
+}
+
+async function ensureTrackingCustomFields(locationId: string) {
+  try {
+    const list = extractCustomFieldList(await ghlRequest<unknown>(`/locations/${locationId}/customFields`));
+    const mapping = new Map<TrackingFieldName, string>();
+
+    for (const fieldName of TRACKING_FIELDS) {
+      const found = list.find((field) => {
+        const candidates = [field.name, field.fieldKey, field.key]
+          .filter(Boolean)
+          .map((value) => String(value).toLowerCase());
+        return candidates.includes(fieldName) || candidates.includes(`contact.${fieldName}`);
+      });
+
+      if (found?.id) {
+        mapping.set(fieldName, found.id);
+        continue;
+      }
+
+      const created = await ghlRequest<GhlCustomField>(`/locations/${locationId}/customFields`, {
+        method: 'POST',
+        body: JSON.stringify({
+          name: fieldName,
+          fieldKey: fieldName,
+          dataType: 'TEXT',
+          model: 'contact',
+          placeholder: fieldName,
+        }),
+      });
+
+      if (created?.id) {
+        mapping.set(fieldName, created.id);
+      }
+    }
+
+    return mapping;
+  } catch (error) {
+    console.error('Unable to ensure GHL tracking custom fields', error);
+    return new Map<TrackingFieldName, string>();
+  }
+}
+
+export async function upsertGhlContact(payload: GhlConversionPayload) {
+  const locationId = requireEnv('GHL_LOCATION_ID', GHL_LOCATION_ID);
+  const { firstName, lastName } = splitName(payload.name);
+  const fieldIds = await ensureTrackingCustomFields(locationId);
+
+  const customFields = TRACKING_FIELDS.flatMap((fieldName) => {
+    const id = fieldIds.get(fieldName);
+    if (!id) return [];
+    return [{ id, field_value: String(payload[fieldName]) }];
+  });
+
+  return ghlRequest(`/contacts/upsert`, {
+    method: 'POST',
     body: JSON.stringify({
       locationId,
       firstName,
@@ -58,16 +146,7 @@ export async function upsertGhlContact(payload: GhlConversionPayload) {
         `action_type:${payload.action_type}`,
         `page_type:${payload.page_type}`,
       ],
+      customFields,
     }),
-    cache: 'no-store',
   });
-
-  const text = await response.text();
-  const data = text ? JSON.parse(text) : null;
-
-  if (!response.ok) {
-    throw new Error(data?.message || data?.error || `GHL upsert failed with status ${response.status}`);
-  }
-
-  return data;
 }
