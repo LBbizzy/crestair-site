@@ -1,4 +1,4 @@
-import { AcRepairConversionSection } from '@/components/AcRepairConversionSection';
+import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { ServicePageTemplate } from '@/components/ServicePageTemplate';
 import { getServiceBySlug } from '@/content/services';
 import { buildMetadata } from '@/lib/metadata';
@@ -11,7 +11,15 @@ export default function AcRepairPage() {
     <>
       <ServicePageTemplate service={service} />
       <div className="mx-auto w-full max-w-5xl px-6 pb-10">
-        <AcRepairConversionSection />
+        <ServiceConversionSection
+          sourcePage="/services/ac-repair-tucson"
+          serviceType="ac-repair"
+          location="tucson-az"
+          pageType="service"
+          title="AC Repair Tucson"
+          callCtaId="ac-repair-tucson-call"
+          formCtaId="ac-repair-tucson-form"
+        />
       </div>
     </>
   );
