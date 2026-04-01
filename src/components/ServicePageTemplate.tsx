@@ -107,7 +107,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             <li>Diagnostic-first service process</li>
             <li>Clear next-step guidance</li>
             <li>Local routing into service and location pages</li>
-            <li>Stronger conversion treatment without builder lock-in</li>
+            <li>Customer-first guidance that keeps service decisions clear and practical</li>
           </ul>
         </div>
         <div className="grid gap-4">

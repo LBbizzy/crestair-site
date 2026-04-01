@@ -108,7 +108,7 @@ export default function HomePage() {
         <div className="grid gap-4">
           <article className="rounded-2xl border border-slate-200 p-5">
             <p className="font-semibold text-[#041B34]">“Fast response and clear communication.”</p>
-            <p className="mt-2 text-sm text-slate-600">Testimonial-style trust block for source-matched credibility layering.</p>
+            <p className="mt-2 text-sm text-slate-600">Homeowners trust Crest Air for clear communication, reliable recommendations, and fast response when comfort matters most.</p>
           </article>
           <article className="rounded-2xl border border-slate-200 p-5">
             <p className="font-semibold text-[#041B34]">“Helpful recommendations without pressure.”</p>

@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <img src="https://crestairaz.com/wp-content/uploads/2026/02/crest-air-heating-cooling-tucson-logo.png" alt="Crest Air Heating and Cooling Tucson logo" className="h-14 w-auto" />
           <p className="mt-4 text-sm leading-7 text-slate-200">
-            Fast heating and cooling support for Tucson-area homes with service pages, location routing, and a cleaner custom stack built to scale.
+            Fast heating and cooling support for Tucson-area homes with clear service options, local coverage, and dependable help when comfort problems need attention.
           </p>
           <Link href="/locations/tucson-az" className="mt-5 inline-flex rounded-full bg-[#F4911D] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#D97F16]">
             Request Service
