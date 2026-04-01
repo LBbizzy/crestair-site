@@ -11,7 +11,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
         <Link href={post.serviceLink.href} className="underline">{post.serviceLink.label}</Link>
         <Link href={post.locationLink.href} className="underline">{post.locationLink.label}</Link>
       </div>
-      <Link href={`/blog#${post.slug}`} className="mt-6 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">Read article outline</Link>
+      <Link href={`/blog/${post.slug}`} className="mt-6 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">Read article</Link>
     </article>
   );
 }

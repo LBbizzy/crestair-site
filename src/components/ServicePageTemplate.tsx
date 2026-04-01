@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroSection } from '@/components/HeroSection';
+import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { ServiceContent } from '@/lib/types';
 import { site } from '@/lib/site';
 
@@ -10,6 +11,8 @@ type ServicePageTemplateProps = {
 };
 
 export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
+  const sourcePage = `/services/${service.slug}`;
+
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-6 py-10">
       <HeroSection
@@ -20,6 +23,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         primaryHref={service.cta.primaryHref}
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage, serviceType: service.slug, location: 'tucson-az', pageType: 'service' }}
         imageSrc={service.slug === 'ac-installation-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/ac-installation-tucson-az-crane-lift-crest-air-hvac.webp' : service.slug === 'hvac-maintenance-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/hvac-maintenance-service-tucson-az-crest-air-hvac.webp' : service.slug === 'indoor-air-quality-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/indoor-air-quality-solutions-tucson-az-crest-air.webp' : service.slug === 'duct-cleaning-tucson' ? 'https://crestairaz.com/wp-content/uploads/2026/03/ductwork-airflow-solutions-tucson-az-crest-air.webp' : 'https://crestairaz.com/wp-content/uploads/2026/03/ac-repair-tucson-az-crest-air-technician-servicing-air-conditioner.webp'}
         imageAlt={`${service.title} service in ${service.location}`}
       />
@@ -34,9 +38,18 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Phone-first option</p>
           <p className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold">{site.phone}</p>
           <p className="mt-3 text-slate-200">Call now for diagnostics, service planning, and fast scheduling help.</p>
-          <a href={`tel:${site.phone}`} className="mt-5 inline-flex rounded-full bg-[#F4911D] px-5 py-3 font-semibold text-white transition hover:bg-[#D97F16]">Call Now</a>
         </div>
       </section>
+
+      <ServiceConversionSection
+        sourcePage={sourcePage}
+        serviceType={service.slug}
+        location="tucson-az"
+        pageType="service"
+        title={service.title}
+        callCtaId={`${service.slug}-top-call`}
+        formCtaId={`${service.slug}-top-form`}
+      />
 
       <section className="space-y-4 rounded-3xl bg-white p-8 shadow-sm">
         <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Service Overview</h2>
@@ -67,6 +80,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         primaryHref={service.cta.primaryHref}
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage, serviceType: service.slug, location: 'tucson-az', pageType: 'service' }}
       />
 
       <section className="rounded-3xl bg-white p-8 shadow-sm">
@@ -97,6 +111,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         primaryHref={service.cta.primaryHref}
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage, serviceType: service.slug, location: 'tucson-az', pageType: 'service' }}
       />
 
       <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-2">

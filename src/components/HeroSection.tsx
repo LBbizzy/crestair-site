@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CallTrackedLink } from '@/components/CallTrackedLink';
 
 type HeroSectionProps = {
   eyebrow?: string;
@@ -12,9 +13,16 @@ type HeroSectionProps = {
   secondaryId?: string;
   imageSrc?: string;
   imageAlt?: string;
+  secondaryCallTracking?: {
+    sourcePage: string;
+    serviceType: string;
+    location: string;
+    pageType: string;
+    funnelIdentifier?: string;
+  };
 };
 
-export function HeroSection({ eyebrow, title, body, primaryLabel, primaryHref, primaryId, secondaryLabel, secondaryHref, secondaryId, imageSrc, imageAlt }: HeroSectionProps) {
+export function HeroSection({ eyebrow, title, body, primaryLabel, primaryHref, primaryId, secondaryLabel, secondaryHref, secondaryId, imageSrc, imageAlt, secondaryCallTracking }: HeroSectionProps) {
   return (
     <section className="overflow-hidden rounded-3xl bg-slate-950 text-white shadow-xl">
       <div className="grid items-stretch gap-0 lg:grid-cols-[1.15fr_0.85fr]">
@@ -25,7 +33,21 @@ export function HeroSection({ eyebrow, title, body, primaryLabel, primaryHref, p
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link data-cta-id={primaryId} className="inline-flex rounded-full bg-[#F4911D] px-6 py-3 font-semibold text-white transition hover:bg-[#D97F16]" href={primaryHref}>{primaryLabel}</Link>
             {secondaryLabel && secondaryHref ? (
-              <Link data-cta-id={secondaryId} className="inline-flex rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-[#66CFEF] hover:text-[#66CFEF]" href={secondaryHref}>{secondaryLabel}</Link>
+              secondaryHref.startsWith('tel:') && secondaryCallTracking ? (
+                <CallTrackedLink
+                  className="inline-flex rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-[#66CFEF] hover:text-[#66CFEF]"
+                  sourcePage={secondaryCallTracking.sourcePage}
+                  serviceType={secondaryCallTracking.serviceType}
+                  location={secondaryCallTracking.location}
+                  pageType={secondaryCallTracking.pageType}
+                  funnelIdentifier={secondaryCallTracking.funnelIdentifier}
+                  dataCtaId={secondaryId}
+                >
+                  {secondaryLabel}
+                </CallTrackedLink>
+              ) : (
+                <Link data-cta-id={secondaryId} className="inline-flex rounded-full border border-white/20 px-6 py-3 font-semibold text-white transition hover:border-[#66CFEF] hover:text-[#66CFEF]" href={secondaryHref}>{secondaryLabel}</Link>
+              )
             ) : null}
           </div>
         </div>

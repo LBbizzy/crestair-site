@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
+import { CallTrackedLink } from '@/components/CallTrackedLink';
 import { BlogPost } from '@/lib/types';
 import { site } from '@/lib/site';
 
@@ -12,7 +13,9 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
         <p className="mt-5 text-lg leading-8 text-slate-200">{post.intro}</p>
         <div className="mt-6 flex flex-col gap-4 sm:flex-row">
           <Link href={post.serviceLink.href} className="inline-flex rounded-full bg-[#F4911D] px-6 py-3 font-semibold text-white transition hover:bg-[#D97F16]">Explore {post.serviceLink.label}</Link>
-          <a href={`tel:${site.phone}`} className="inline-flex rounded-full border border-white/20 px-6 py-3 font-semibold text-white">Call {site.phone}</a>
+          <CallTrackedLink className="inline-flex rounded-full border border-white/20 px-6 py-3 font-semibold text-white" sourcePage={`/blog/${post.slug}`} serviceType="blog-reader" location="tucson-az" pageType="blog" dataCtaId={`${post.slug}-call`}>
+            Call {site.phone}
+          </CallTrackedLink>
         </div>
       </header>
 

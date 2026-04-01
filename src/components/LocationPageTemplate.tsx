@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroSection } from '@/components/HeroSection';
+import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { LocationContent } from '@/lib/types';
 import { site } from '@/lib/site';
 
@@ -10,6 +11,8 @@ type LocationPageTemplateProps = {
 };
 
 export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
+  const sourcePage = `/locations/${location.slug}`;
+
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-6 py-10">
       <HeroSection
@@ -20,6 +23,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
         primaryHref={location.cta.primaryHref}
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage, serviceType: 'general-hvac', location: location.slug, pageType: 'location' }}
       />
 
       <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-[1.3fr_1fr]">
@@ -32,9 +36,19 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Phone-first local help</p>
           <p className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold">{site.phone}</p>
           <p className="mt-3 text-slate-200">Call now for local HVAC service routing, repair help, and installation planning.</p>
-          <a href={`tel:${site.phone}`} className="mt-5 inline-flex rounded-full bg-[#F4911D] px-5 py-3 font-semibold text-white transition hover:bg-[#D97F16]">Call Now</a>
         </div>
       </section>
+
+      <ServiceConversionSection
+        sourcePage={sourcePage}
+        serviceType="general-hvac"
+        location={location.slug}
+        pageType="location"
+        title={location.title}
+        callCtaId={`${location.slug}-call`}
+        formCtaId={`${location.slug}-form`}
+        contextLabel="location page"
+      />
 
       <section className="rounded-3xl bg-white p-8 shadow-sm">
         <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Services available in this area</h2>
@@ -48,6 +62,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
         primaryHref={location.cta.primaryHref}
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage, serviceType: 'general-hvac', location: location.slug, pageType: 'location' }}
       />
 
       <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-2">
@@ -102,6 +117,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
         primaryHref={location.cta.primaryHref}
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage, serviceType: 'general-hvac', location: location.slug, pageType: 'location' }}
       />
 
       <FAQSection faqs={location.faqs} />

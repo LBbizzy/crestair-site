@@ -2,7 +2,7 @@ const GHL_API_BASE_URL = process.env.GHL_API_BASE_URL;
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
 const GHL_PRIVATE_INTEGRATION_TOKEN = process.env.GHL_PRIVATE_INTEGRATION_TOKEN;
 
-const TRACKING_FIELDS = ['source_page', 'service_type', 'location', 'action_type', 'page_type'] as const;
+const TRACKING_FIELDS = ['source_page', 'service_type', 'location', 'action_type', 'page_type', 'service_request', 'funnel_identifier'] as const;
 
 type TrackingFieldName = (typeof TRACKING_FIELDS)[number];
 
@@ -23,6 +23,7 @@ export type GhlConversionPayload = {
   location: string;
   action_type: 'form' | 'call';
   page_type: string;
+  service_request?: string;
   funnel_identifier?: string;
 };
 
@@ -147,6 +148,7 @@ export async function upsertGhlContact(payload: GhlConversionPayload) {
         `location:${payload.location}`,
         `action_type:${payload.action_type}`,
         `page_type:${payload.page_type}`,
+        ...(payload.funnel_identifier ? [`funnel_identifier:${payload.funnel_identifier}`] : []),
       ],
       customFields,
     }),

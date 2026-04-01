@@ -2,6 +2,7 @@ import { CTASection } from '@/components/CTASection';
 import { HeroSection } from '@/components/HeroSection';
 import { LocationGrid } from '@/components/LocationGrid';
 import { ServiceCard } from '@/components/ServiceCard';
+import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { site } from '@/lib/site';
 import { services } from '@/content/services';
 import { locations } from '@/content/locations';
@@ -36,6 +37,7 @@ export default function HomePage() {
         primaryHref="/locations/tucson-az"
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage: '/', serviceType: 'general-hvac', location: 'tucson-az', pageType: 'home' }}
         imageSrc="https://crestairaz.com/wp-content/uploads/2026/03/ac-repair-tucson-az-crest-air-hvac-service.webp"
         imageAlt="Crest Air technician providing air conditioning repair service in Tucson, Arizona"
       />
@@ -52,9 +54,19 @@ export default function HomePage() {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Phone-first CTA</p>
           <p className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold">{site.phone}</p>
           <p className="mt-3 text-slate-200">Talk to Crest Air now for AC repair, replacement planning, or Tucson-area heating support.</p>
-          <a href={`tel:${site.phone}`} className="mt-5 inline-flex rounded-full bg-[#F4911D] px-5 py-3 font-semibold text-white transition hover:bg-[#D97F16]">Call Now</a>
         </div>
       </section>
+
+      <ServiceConversionSection
+        sourcePage="/"
+        serviceType="general-hvac"
+        location="tucson-az"
+        pageType="home"
+        title="Crest Air Homepage"
+        callCtaId="home-call"
+        formCtaId="home-form"
+        contextLabel="homepage"
+      />
 
       <section className="space-y-6">
         <div className="flex items-end justify-between gap-6">
@@ -77,6 +89,7 @@ export default function HomePage() {
         primaryHref="/locations/tucson-az"
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
+        secondaryCallTracking={{ sourcePage: '/', serviceType: 'general-hvac', location: 'tucson-az', pageType: 'home' }}
       />
 
       <section className="grid gap-6 rounded-3xl bg-[#041B34] p-8 text-white shadow-sm md:grid-cols-3">
@@ -139,6 +152,7 @@ export default function HomePage() {
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Contact Crest Air</p>
         <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Talk to Crest Air today</h2>
         <p className="mt-4 text-slate-700">Phone: {site.phone} · Email: {site.email}</p>
+        <p className="mt-4 text-slate-700">Need a dedicated contact page? Use the live form at <strong>/contact</strong>.</p>
       </section>
     </div>
   );

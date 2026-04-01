@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { site } from '@/lib/site';
+import { CallTrackedLink } from '@/components/CallTrackedLink';
 
 type ServiceConversionSectionProps = {
   sourcePage: string;
@@ -39,6 +40,7 @@ export function ServiceConversionSection({
       name: String(formData.get('name') || ''),
       email: String(formData.get('email') || ''),
       phone: String(formData.get('phone') || ''),
+      service_request: String(formData.get('service_request') || ''),
       source_page: sourcePage,
       service_type: serviceType,
       location,
@@ -74,15 +76,19 @@ export function ServiceConversionSection({
         <p className="mt-4 text-slate-700">
           This {contextLabel} routes form submissions server-side into GoHighLevel using secure environment variables only.
         </p>
-        <a
+        <CallTrackedLink
           className="mt-6 inline-flex rounded-full bg-[#041B34] px-6 py-3 font-semibold text-white transition hover:bg-[#06284d]"
-          href={`tel:${site.phone}`}
-          data-cta-id={callCtaId}
+          sourcePage={sourcePage}
+          serviceType={serviceType}
+          location={location}
+          pageType={pageType}
+          funnelIdentifier={funnelIdentifier}
+          dataCtaId={callCtaId}
         >
           Call {site.phone}
-        </a>
+        </CallTrackedLink>
         <p className="mt-4 text-sm text-slate-500">
-          Call CTA stays phone-first. Form CTA creates the lead server-side with normalized tracking custom fields and matching attribution tags.
+          Call CTA now sends a best-effort GoHighLevel tracking event before continuing to the phone dialer. Form submissions persist source, service, location, action, request details, page type, and funnel attribution.
           {funnelIdentifier ? ` Funnel: ${funnelIdentifier}.` : ''}
         </p>
       </div>
@@ -99,6 +105,10 @@ export function ServiceConversionSection({
         <div>
           <label className="mb-2 block text-sm font-medium text-slate-700" htmlFor={`${formCtaId}-phone`}>Phone</label>
           <input required id={`${formCtaId}-phone`} name="phone" type="tel" className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none ring-0" />
+        </div>
+        <div>
+          <label className="mb-2 block text-sm font-medium text-slate-700" htmlFor={`${formCtaId}-service-request`}>Service request</label>
+          <textarea required id={`${formCtaId}-service-request`} name="service_request" rows={4} className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none ring-0" placeholder="Tell Crest Air what you need help with." />
         </div>
         <button
           type="submit"
