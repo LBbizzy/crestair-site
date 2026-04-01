@@ -23,6 +23,7 @@ export type GhlConversionPayload = {
   location: string;
   action_type: 'form' | 'call';
   page_type: string;
+  funnel_identifier?: string;
 };
 
 function requireEnv(name: string, value: string | undefined) {
@@ -125,8 +126,9 @@ export async function upsertGhlContact(payload: GhlConversionPayload) {
 
   const customFields = TRACKING_FIELDS.flatMap((fieldName) => {
     const id = fieldIds.get(fieldName);
-    if (!id) return [];
-    return [{ id, field_value: String(payload[fieldName]) }];
+    const value = payload[fieldName];
+    if (!id || value === undefined || value === null || value === '') return [];
+    return [{ id, field_value: String(value) }];
   });
 
   return ghlRequest(`/contacts/upsert`, {

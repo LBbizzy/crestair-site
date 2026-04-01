@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { Chivo, Public_Sans } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { StickyMobileCall } from '@/components/StickyMobileCall';
+import { SiteShell } from '@/components/SiteShell';
 import { site } from '@/lib/site';
 
 const headingFont = Chivo({
@@ -29,12 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body className="min-h-screen bg-slate-50 font-[family-name:var(--font-body)] text-slate-900">
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <StickyMobileCall />
-        </div>
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

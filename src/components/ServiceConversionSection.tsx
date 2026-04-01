@@ -11,9 +11,21 @@ type ServiceConversionSectionProps = {
   title: string;
   callCtaId: string;
   formCtaId: string;
+  funnelIdentifier?: string;
+  contextLabel?: string;
 };
 
-export function ServiceConversionSection({ sourcePage, serviceType, location, pageType, title, callCtaId, formCtaId }: ServiceConversionSectionProps) {
+export function ServiceConversionSection({
+  sourcePage,
+  serviceType,
+  location,
+  pageType,
+  title,
+  callCtaId,
+  formCtaId,
+  funnelIdentifier,
+  contextLabel = 'service page',
+}: ServiceConversionSectionProps) {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
@@ -32,6 +44,7 @@ export function ServiceConversionSection({ sourcePage, serviceType, location, pa
       location,
       action_type: 'form',
       page_type: pageType,
+      funnel_identifier: funnelIdentifier,
     };
 
     const response = await fetch('/api/ghl/conversion', {
@@ -59,7 +72,7 @@ export function ServiceConversionSection({ sourcePage, serviceType, location, pa
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Live Conversion Path</p>
         <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Request service or call now</h2>
         <p className="mt-4 text-slate-700">
-          This service page routes form submissions server-side into GoHighLevel using secure environment variables only.
+          This {contextLabel} routes form submissions server-side into GoHighLevel using secure environment variables only.
         </p>
         <a
           className="mt-6 inline-flex rounded-full bg-[#041B34] px-6 py-3 font-semibold text-white transition hover:bg-[#06284d]"
@@ -70,6 +83,7 @@ export function ServiceConversionSection({ sourcePage, serviceType, location, pa
         </a>
         <p className="mt-4 text-sm text-slate-500">
           Call CTA stays phone-first. Form CTA creates the lead server-side with normalized tracking custom fields and matching attribution tags.
+          {funnelIdentifier ? ` Funnel: ${funnelIdentifier}.` : ''}
         </p>
       </div>
 
@@ -94,9 +108,7 @@ export function ServiceConversionSection({ sourcePage, serviceType, location, pa
         >
           {status === 'submitting' ? 'Submitting…' : 'Request Service'}
         </button>
-        {message ? (
-          <p className={`text-sm ${status === 'success' ? 'text-emerald-700' : 'text-red-700'}`}>{message}</p>
-        ) : null}
+        {message ? <p className={`text-sm ${status === 'success' ? 'text-emerald-700' : 'text-red-700'}`}>{message}</p> : null}
       </form>
     </section>
   );

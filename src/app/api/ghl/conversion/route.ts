@@ -14,6 +14,7 @@ export async function POST(request: Request) {
       location: string;
       action_type: 'form' | 'call';
       page_type: string;
+      funnel_identifier?: string;
     } = {
       name: String(body.name || '').trim(),
       email: String(body.email || '').trim(),
@@ -23,6 +24,7 @@ export async function POST(request: Request) {
       location: String(body.location || '').trim(),
       action_type: body.action_type === 'call' ? 'call' : 'form',
       page_type: String(body.page_type || 'service').trim(),
+      funnel_identifier: body.funnel_identifier ? String(body.funnel_identifier).trim() : undefined,
     };
 
     if (!payload.name || !payload.phone || !payload.source_page || !payload.service_type || !payload.location || !payload.page_type) {
