@@ -1,13 +1,24 @@
 import Link from 'next/link';
 import { footerGroups, site } from '@/lib/site';
 import { CallTrackedLink } from '@/components/CallTrackedLink';
+import { SiteImage } from '@/components/SiteImage';
+import { ImageAsset } from '@/lib/types';
+
+const crestAirFooterLogo: ImageAsset = {
+  src: '/images/home/crest-air-heating-cooling-tucson-logo.png',
+  alt: 'Crest Air Heating and Cooling Tucson logo',
+  title: 'Crest Air Heating and Cooling Tucson',
+  description: 'Footer logo reinforcing Crest Air brand trust across the site.',
+  page: 'home',
+  section: 'footer',
+};
 
 export function Footer() {
   return (
     <footer className="mt-16 bg-[#041B34] text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
         <div>
-          <img src="https://crestairaz.com/wp-content/uploads/2026/02/crest-air-heating-cooling-tucson-logo.png" alt="Crest Air Heating and Cooling Tucson logo" className="h-14 w-auto" />
+          <SiteImage asset={crestAirFooterLogo} width={180} height={60} className="h-14 w-auto" />
           <p className="mt-4 text-sm leading-7 text-slate-200">
             Fast heating and cooling support for Tucson-area homes and businesses with clear service options, local coverage, and dependable help when comfort problems need attention.
           </p>

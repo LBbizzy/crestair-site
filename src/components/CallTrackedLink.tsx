@@ -1,6 +1,6 @@
 'use client';
 
-import { MouseEvent, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { site } from '@/lib/site';
 
 type CallTrackedLinkProps = {
@@ -47,7 +47,7 @@ export function CallTrackedLink({
     }
   }
 
-  function onClick(_event: MouseEvent<HTMLAnchorElement>) {
+  function onClick() {
     void handleClick();
   }
 

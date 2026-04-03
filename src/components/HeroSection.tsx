@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { CallTrackedLink } from '@/components/CallTrackedLink';
+import { SiteImage } from '@/components/SiteImage';
+import { ImageAsset } from '@/lib/types';
 
 type HeroSectionProps = {
   eyebrow?: string;
@@ -11,8 +13,10 @@ type HeroSectionProps = {
   secondaryLabel?: string;
   secondaryHref?: string;
   secondaryId?: string;
-  imageSrc?: string;
-  imageAlt?: string;
+  image?: ImageAsset;
+  imagePriority?: boolean;
+  imageSizes?: string;
+  ctaSubline?: string;
   secondaryCallTracking?: {
     sourcePage: string;
     serviceType: string;
@@ -22,7 +26,22 @@ type HeroSectionProps = {
   };
 };
 
-export function HeroSection({ eyebrow, title, body, primaryLabel, primaryHref, primaryId, secondaryLabel, secondaryHref, secondaryId, imageSrc, imageAlt, secondaryCallTracking }: HeroSectionProps) {
+export function HeroSection({
+  eyebrow,
+  title,
+  body,
+  primaryLabel,
+  primaryHref,
+  primaryId,
+  secondaryLabel,
+  secondaryHref,
+  secondaryId,
+  image,
+  imagePriority,
+  imageSizes,
+  ctaSubline,
+  secondaryCallTracking,
+}: HeroSectionProps) {
   return (
     <section className="overflow-hidden rounded-3xl bg-slate-950 text-white shadow-xl">
       <div className="grid items-stretch gap-0 lg:grid-cols-[1.15fr_0.85fr]">
@@ -50,10 +69,17 @@ export function HeroSection({ eyebrow, title, body, primaryLabel, primaryHref, p
               )
             ) : null}
           </div>
+          {ctaSubline ? <p className="mt-3 text-sm font-semibold text-[#66CFEF]">{ctaSubline}</p> : null}
         </div>
-        {imageSrc ? (
+        {image ? (
           <div className="relative min-h-[320px] bg-slate-900">
-            <img src={imageSrc} alt={imageAlt || title} className="h-full w-full object-cover" />
+            <SiteImage
+              asset={image}
+              fill
+              className="object-cover"
+              sizes={imageSizes || '(min-width: 1024px) 40vw, 100vw'}
+              priority={imagePriority}
+            />
           </div>
         ) : null}
       </div>

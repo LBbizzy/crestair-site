@@ -3,6 +3,7 @@ import { CommercialServicePage } from '@/components/CommercialServicePage';
 export default function CommercialAcRepairPage() {
   return (
     <CommercialServicePage
+      slug="ac-repair"
       title="Commercial AC Repair in Tucson"
       description="Commercial AC repair for business owners and property managers who need faster response, clearer diagnostics, and less operational disruption."
       intro="This commercial service path is separated from residential messaging and focused on uptime, occupant comfort, tenant expectations, and facility coordination."

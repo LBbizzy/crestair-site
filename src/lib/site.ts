@@ -21,7 +21,7 @@ export const primaryNav = [
   { href: '/', label: 'Home' },
   {
     href: '/services/ac-repair-tucson',
-    label: 'Residential',
+    label: 'Services',
     children: [
       { href: '/services/ac-repair-tucson', label: 'AC Repair' },
       { href: '/services/ac-installation-tucson', label: 'AC Installation' },

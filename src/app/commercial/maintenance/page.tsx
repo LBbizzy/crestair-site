@@ -3,6 +3,7 @@ import { CommercialServicePage } from '@/components/CommercialServicePage';
 export default function CommercialMaintenancePage() {
   return (
     <CommercialServicePage
+      slug="maintenance"
       title="Commercial HVAC Maintenance in Tucson"
       description="Commercial maintenance for owners and managers who want fewer breakdowns, more predictable performance, and better seasonal readiness."
       intro="This page targets preventive planning for commercial properties where missed maintenance can turn into occupant complaints, emergency calls, and avoidable downtime."

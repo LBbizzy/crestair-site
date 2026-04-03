@@ -3,6 +3,7 @@ import { CTA } from '@/lib/types';
 import { CallTrackedLink } from '@/components/CallTrackedLink';
 
 type CTASectionProps = CTA & {
+  subline?: string;
   secondaryCallTracking?: {
     sourcePage: string;
     serviceType: string;
@@ -12,7 +13,7 @@ type CTASectionProps = CTA & {
   };
 };
 
-export function CTASection({ heading, body, primaryLabel, primaryHref, primaryId, secondaryLabel, secondaryHref, secondaryId, secondaryCallTracking }: CTASectionProps) {
+export function CTASection({ heading, body, primaryLabel, primaryHref, primaryId, secondaryLabel, secondaryHref, secondaryId, secondaryCallTracking, subline }: CTASectionProps) {
   return (
     <section className="rounded-3xl bg-[#041B34] px-6 py-12 text-white md:px-10">
       <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">{heading}</h2>
@@ -37,6 +38,7 @@ export function CTASection({ heading, body, primaryLabel, primaryHref, primaryId
           )
         ) : null}
       </div>
+      <p className="mt-2 text-sm font-semibold text-[#66CFEF]">{subline ?? "Same-day service available in Tucson."}</p>
     </section>
   );
 }
