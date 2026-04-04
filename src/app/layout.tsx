@@ -16,6 +16,9 @@ const bodyFont = Public_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  verification: {
+    google: 'rqMpx7xOWI9rC4e8-cgGHjKkhGCsuF_YWWHiSD2EEis',
+  },
   alternates: {
     canonical: site.url,
   },
