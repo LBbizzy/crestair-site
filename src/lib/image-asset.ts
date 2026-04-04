@@ -1,6 +1,6 @@
 import { ImageAsset } from '@/lib/types';
 
-const allowedRootDirectories = ['home', 'services', 'locations', 'logos'] as const;
+const allowedRootDirectories = ['home', 'services', 'locations', 'logos', 'blog'] as const;
 const filenamePattern = /^[a-z0-9]+(?:-[a-z0-9]+)+\.(?:jpg|jpeg|png|webp|avif)$/;
 
 type AllowedRoot = (typeof allowedRootDirectories)[number];
@@ -17,6 +17,7 @@ const normalizePage = (page: string): AllowedRoot => {
   if (trimmed.startsWith('logos')) return 'logos';
   if (trimmed.startsWith('services') || trimmed.startsWith('commercial')) return 'services';
   if (trimmed.startsWith('locations')) return 'locations';
+  if (trimmed.startsWith('blog') || trimmed === '/blog') return 'blog';
   return 'home';
 };
 
