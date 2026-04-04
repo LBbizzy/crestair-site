@@ -16,10 +16,10 @@ import { locations } from '@/content/locations';
 import { ImageAsset } from '@/lib/types';
 
 const homeHeroImage: ImageAsset = {
-  src: '/images/home/home-hero-truck-arrival-tucson.webp',
-  alt: 'Crest Air technician arriving at a Tucson home with branded service van',
-  title: 'Hero arrival scene for Crest Air in Tucson',
-  description: 'Branded Crest Air van and technician arriving for a morning AC appointment in Tucson.',
+  src: '/images/home/home-hero-crest-air-team-tucson.webp',
+  alt: 'The Crest Air team — Tucson HVAC plumbing heating and cooling professionals',
+  title: 'Crest Air Tucson HVAC team photo',
+  description: 'The full Crest Air crew in front of the company logo — plumbing, heating, and cooling professionals serving Tucson, AZ.',
   page: 'home',
   section: 'hero',
 };
