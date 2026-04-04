@@ -39,6 +39,10 @@ const ensureFilenameMatchesContext = (filename: string, root: AllowedRoot, page:
     if (slug && !filename.includes(slug)) {
       throw new Error(`Location image filename must include location slug "${slug}". Received: ${filename}`);
     }
+  } else if (root === 'blog') {
+    if (!filename.includes('blog')) {
+      throw new Error(`Blog image filenames must include "blog". Received: ${filename}`);
+    }
   } else if (!filename.includes('home')) {
     throw new Error(`Homepage image filenames must include "home" to document context. Received: ${filename}`);
   }
