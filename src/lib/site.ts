@@ -1,13 +1,21 @@
-const fallbackSiteUrl = 'https://crestair-site.vercel.app';
-
 function normalizeSiteUrl(value: string | undefined) {
-  if (!value) return fallbackSiteUrl;
+  if (!value) return undefined;
   return value.replace(/\/$/, '');
 }
 
+const envSiteUrl =
+  normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  normalizeSiteUrl(process.env.SITE_URL);
+
+if (!envSiteUrl && process.env.NODE_ENV === 'production') {
+  throw new Error('Site URL env vars are required in production.');
+}
+
+const resolvedSiteUrl = envSiteUrl ?? 'http://localhost:3000';
+
 export const site = {
   name: 'Crest Air',
-  url: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.SITE_URL),
+  url: resolvedSiteUrl,
   description:
     'Crest Air delivers HVAC repair, installation, and heating services across Tucson-area communities.',
   phone: '(520) 751-8888',
@@ -36,7 +44,7 @@ export const primaryNav = [
     children: [
       { href: '/commercial', label: 'Commercial HVAC Overview' },
       { href: '/commercial/ac-repair', label: 'Commercial AC Repair' },
-      { href: '/commercial/installations', label: 'Commercial Installations' },
+      { href: '/commercial/ac-installation', label: 'Commercial Installations' },
       { href: '/commercial/maintenance', label: 'Commercial Maintenance' },
       { href: '/commercial/package-units', label: 'Rooftop & Package Units' },
     ],
@@ -54,6 +62,17 @@ export const primaryNav = [
   },
   { href: '/about', label: 'About' },
   { href: '/financing', label: 'Financing' },
+  {
+    href: '/blog',
+    label: 'Blog',
+    children: [
+      { href: '/blog', label: 'All Posts' },
+      { href: '/blog/signs-your-ac-is-about-to-fail-in-arizona-heat', label: 'Signs Your AC Is Failing' },
+      { href: '/blog/how-to-lower-cooling-costs-in-tucson-summer', label: 'Lower Cooling Costs' },
+      { href: '/blog/repair-vs-replace-ac-in-tucson-cost-comparison', label: 'Repair vs Replace' },
+      { href: '/blog/tucson-emergency-hvac-response-guide', label: 'Emergency HVAC Guide' },
+    ],
+  },
   {
     href: '/contact',
     label: 'Contact',

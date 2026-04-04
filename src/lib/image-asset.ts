@@ -1,6 +1,6 @@
 import { ImageAsset } from '@/lib/types';
 
-const allowedRootDirectories = ['home', 'services', 'locations'] as const;
+const allowedRootDirectories = ['home', 'services', 'locations', 'logos'] as const;
 const filenamePattern = /^[a-z0-9]+(?:-[a-z0-9]+)+\.(?:jpg|jpeg|png|webp|avif)$/;
 
 type AllowedRoot = (typeof allowedRootDirectories)[number];
@@ -14,13 +14,20 @@ const ensureValue = (value: string, field: keyof ImageAsset) => {
 const normalizePage = (page: string): AllowedRoot => {
   const trimmed = (page || '').trim().replace(/^\/+/, '');
   if (!trimmed || trimmed === 'home') return 'home';
+  if (trimmed.startsWith('logos')) return 'logos';
   if (trimmed.startsWith('services') || trimmed.startsWith('commercial')) return 'services';
   if (trimmed.startsWith('locations')) return 'locations';
   return 'home';
 };
 
-const ensureFilenameMatchesContext = (filename: string, root: AllowedRoot, page: string) => {
+const ensureFilenameMatchesContext = (filename: string, root: AllowedRoot, page: string, src: string) => {
   const normalizedPage = page.replace(/^\/+/, '');
+  if (root === 'logos') {
+    if (!src.includes('/logos/approved/')) {
+      throw new Error(`Logo assets must live under /images/logos/approved. Received: ${src}`);
+    }
+    return;
+  }
   if (root === 'services') {
     const slug = normalizedPage.replace(/^(services|commercial)\/?/, '').split('/')[0];
     if (slug && !filename.includes(slug)) {
@@ -68,5 +75,5 @@ export const validateImageAsset = (asset: ImageAsset) => {
     throw new Error(`Image stored in /images/${rootDirectory} but page context "${asset.page}" expects /images/${expectedRoot}.`);
   }
 
-  ensureFilenameMatchesContext(filename, expectedRoot, asset.page);
+  ensureFilenameMatchesContext(filename, expectedRoot, asset.page, asset.src);
 };

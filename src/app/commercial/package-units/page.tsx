@@ -3,6 +3,7 @@ import { CommercialServicePage } from '@/components/CommercialServicePage';
 export default function CommercialPackageUnitsPage() {
   return (
     <CommercialServicePage
+      slug="package-units"
       title="Commercial Package Units in Tucson"
       description="Commercial package unit service for rooftop and packaged systems that need reliable repair, maintenance, or replacement planning."
       intro="This commercial route focuses on package-unit workloads and messaging for properties that depend on rooftop equipment performance, access coordination, and uptime."

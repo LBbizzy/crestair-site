@@ -1,3 +1,4 @@
+import { AnimatedPage } from '@/components/AnimatedPage';
 import { MarketingPageTemplate } from '@/components/MarketingPageTemplate';
 import { buildMetadata } from '@/lib/metadata';
 
@@ -25,7 +26,7 @@ export default function FinancingPage() {
       serviceLinks={[
         { href: '/services/ac-installation-tucson', label: 'AC Installation' },
         { href: '/services/ac-repair-tucson', label: 'AC Repair' },
-        { href: '/commercial/installations', label: 'Commercial Installations' },
+        { href: '/commercial/ac-installation', label: 'Commercial Installations' },
       ]}
       locationLinks={[
         { href: '/locations/tucson-az', label: 'Tucson, AZ' },

@@ -1,3 +1,4 @@
+import { AnimatedPage } from '@/components/AnimatedPage';
 import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { HeroSection } from '@/components/HeroSection';
@@ -6,6 +7,7 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { BlogCard } from '@/components/BlogCard';
 import { CallTrackedLink } from '@/components/CallTrackedLink';
+import { ImageCard } from '@/components/ImageCard';
 import { SiteImage } from '@/components/SiteImage';
 import { site } from '@/lib/site';
 import { services } from '@/content/services';
@@ -14,67 +16,68 @@ import { locations } from '@/content/locations';
 import { ImageAsset } from '@/lib/types';
 
 const homeHeroImage: ImageAsset = {
-  src: '/images/home/ac-repair-tucson-az-crest-air-hvac-service.webp',
-  alt: 'Crest Air technician providing air conditioning repair service in Tucson, Arizona',
-  title: 'AC repair technician serving Tucson home',
-  description: 'Homepage hero image showing a Crest Air technician servicing an AC system for the Tucson offer.',
+  src: '/images/home/home-hero-truck-arrival-tucson.webp',
+  alt: 'Crest Air technician arriving at a Tucson home with branded service van',
+  title: 'Hero arrival scene for Crest Air in Tucson',
+  description: 'Branded Crest Air van and technician arriving for a morning AC appointment in Tucson.',
   page: 'home',
   section: 'hero',
 };
 
 const homeWorkflowImages: ImageAsset[] = [
   {
-    src: '/images/home/home-team-prep.png',
-    alt: 'Crest Air commercial team prepping vans and gear outside a Tucson home',
-    title: 'Team preparing for split-route dispatch',
-    description: 'Crew preparing vans with gauges, hoses, and safety gear for multiple Tucson calls.',
+    src: '/images/home/home-trust-team-portrait-living-room.webp',
+    alt: 'Crest Air technicians posing together inside a Tucson living room',
+    title: 'Trusted Crest Air team portrait',
+    description: 'Three uniformed Crest Air technicians showcase the Tucson service team.',
     page: 'home',
     section: 'gallery-workflow',
+    href: '/about',
   },
   {
-    src: '/images/home/home-services-team-install.png',
-    alt: 'Technicians installing a new condenser for a Tucson homeowner',
-    title: 'Installation and retrofit workflow',
-    description: 'Two Crest Air installers setting a new outdoor unit and aligning refrigerant lines.',
+    src: '/images/home/home-reviews-homeowner-tablet.webp',
+    alt: 'Homeowner reviewing Crest Air service notes with technician on a tablet',
+    title: 'Review conversation scene',
+    description: 'Tucson homeowner and Crest Air technician discuss positive reviews during a visit.',
     page: 'home',
     section: 'gallery-workflow',
+    href: '/services/ac-repair-tucson',
   },
   {
-    src: '/images/home/home-cta-tech-homeowner-plan.png',
-    alt: 'Technician reviewing repair options with a Tucson homeowner at the kitchen table',
-    title: 'Consultation and documentation',
-    description: 'Technician showing photos and repair options to a homeowner before work begins.',
+    src: '/images/home/home-same-day-doorway-handshake.webp',
+    alt: 'Crest Air technician greeting a Tucson homeowner at the front door',
+    title: 'Same-day doorway greeting',
+    description: 'Technician arrives for same-day service and greets the homeowner at the door.',
     page: 'home',
     section: 'gallery-workflow',
+    href: '/locations/tucson-az',
   },
 ];
 
+
+
 const homeEmergencyImages: ImageAsset[] = [
   {
-    src: '/images/home/home-emergency-night-response.png',
-    alt: 'Emergency HVAC crew arriving at night with a service van',
-    title: 'Night emergency response',
-    description: 'Crest Air night crew responding to a no-cool alert after sunset.',
+    src: '/images/home/home-emergency-night-repair-scene.webp',
+    alt: 'Crest Air technician handling an emergency HVAC repair at night in Tucson',
+    title: 'Emergency night response scene',
+    description: 'Crest Air handles a late-night no-cool call with full branding and lighting.',
     page: 'home',
     section: 'gallery-emergency',
+    href: '/services/emergency-hvac-repair-tucson',
   },
   {
-    src: '/images/home/home-rooftop-crew-tuneup.png',
-    alt: 'Technicians tuning a rooftop unit above a Tucson shopping center',
-    title: 'Rooftop maintenance crew',
-    description: 'Field team stabilizing a rooftop package unit before peak afternoon heat.',
+    src: '/images/home/home-financing-consultation-tabletalk.webp',
+    alt: 'Crest Air advisor reviewing AC financing plans with Tucson homeowners',
+    title: 'Financing consultation scene',
+    description: 'Advisor explains Crest Air financing choices at a Tucson kitchen table.',
     page: 'home',
     section: 'gallery-emergency',
-  },
-  {
-    src: '/images/home/home-trust-crew-meeting.png',
-    alt: 'Crest Air supervisors reviewing schedules with technicians',
-    title: 'Daily trust huddle',
-    description: 'Supervisors reviewing project timelines and technician assignments for the day.',
-    page: 'home',
-    section: 'gallery-emergency',
+    href: '/financing',
   },
 ];
+
+
 
 const homepageReviews = [
   { quote: 'Crest Air had a technician at our Oro Valley home in under two hours and the AC was cooling again that afternoon.', name: 'Jenna R.', city: 'Oro Valley' },
@@ -110,12 +113,13 @@ const expandedServices = [
 export default function HomePage() {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-10">
+      <AnimatedPage>
       <HeroSection
         eyebrow="Tucson HVAC Company"
         title="Tucson AC Not Cooling? We Fix It Today."
         body="Same-day Tucson technicians restore cold air fast with honest pricing, clear repair options, and dependable follow-up communication."
         primaryLabel="Book Now (Same-Day Service)"
-        primaryHref="/contact"
+        primaryHref="#request-service"
         secondaryLabel="Call Now for Priority Dispatch"
         secondaryHref={`tel:${site.phone}`}
         secondaryCallTracking={{ sourcePage: '/', serviceType: 'general-hvac', location: 'tucson-az', pageType: 'home' }}
@@ -133,7 +137,7 @@ export default function HomePage() {
         <div className="flex snap-x gap-4 overflow-x-auto pb-2" role="region" aria-label="Customer reviews">
           {homepageReviews.map((review) => (
             <article key={review.quote} className="min-w-[260px] snap-start rounded-2xl border border-slate-200 p-5 shadow-sm">
-              <p className="text-lg font-semibold text-[#041B34]">“{review.quote}”</p>
+              <p className="text-lg font-semibold text-[#041B34]">"{review.quote}"</p>
               <p className="mt-3 text-sm font-semibold text-slate-600">{review.name} · {review.city}</p>
             </article>
           ))}
@@ -153,13 +157,7 @@ export default function HomePage() {
 
       <section className="grid gap-4 rounded-3xl bg-white p-8 shadow-sm sm:grid-cols-2 lg:grid-cols-3">
         {homeWorkflowImages.map((asset) => (
-          <figure key={asset.src} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 transition hover:shadow-lg">
-            <SiteImage asset={asset} width={640} height={420} className="h-64 w-full object-cover" sizes="(min-width: 1024px) 30vw, 100vw" />
-            <figcaption className="px-4 py-3 text-sm text-slate-700">
-              <p className="font-semibold text-[#041B34]">{asset.title}</p>
-              <p className="text-slate-600">{asset.description}</p>
-            </figcaption>
-          </figure>
+          <ImageCard key={asset.src} asset={asset} />
         ))}
       </section>
 
@@ -206,8 +204,8 @@ export default function HomePage() {
       <CTASection
         heading="Stop a no-cool emergency before tonight"
         body="Reserve a Crest Air technician now before the schedule fills. Same-day appointments keep Tucson homes cool when the desert heat spikes."
-        primaryLabel="Book Now – Hold My Slot"
-        primaryHref="/contact"
+        primaryLabel="Book Now - Hold My Slot"
+        primaryHref="#request-service"
         secondaryLabel="Call Now for Priority Dispatch"
         secondaryHref={`tel:${site.phone}`}
         secondaryCallTracking={{ sourcePage: '/', serviceType: 'general-hvac', location: 'tucson-az', pageType: 'home' }}
@@ -228,15 +226,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-3">
+      <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-2">
         {homeEmergencyImages.map((asset) => (
-          <figure key={asset.src} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-            <SiteImage asset={asset} width={640} height={420} className="h-64 w-full object-cover" sizes="(min-width: 1024px) 30vw, 100vw" />
-            <figcaption className="px-4 py-3 text-sm text-slate-700">
-              <p className="font-semibold text-[#041B34]">{asset.title}</p>
-              <p className="text-slate-600">{asset.description}</p>
-            </figcaption>
-          </figure>
+          <ImageCard key={asset.src} asset={asset} />
         ))}
       </section>
 
@@ -253,12 +245,12 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4">
           <article className="rounded-2xl border border-slate-200 p-5">
-            <p className="font-semibold text-[#041B34]">“Fast response and clear communication.”</p>
-            <p className="mt-2 text-sm text-slate-600">“They texted when the technician was on the way and finished the repair in one visit.”</p>
+            <p className="font-semibold text-[#041B34]">"Fast response and clear communication."</p>
+            <p className="mt-2 text-sm text-slate-600">"They texted when the technician was on the way and finished the repair in one visit."</p>
           </article>
           <article className="rounded-2xl border border-slate-200 p-5">
-            <p className="font-semibold text-[#041B34]">“Helpful recommendations without pressure.”</p>
-            <p className="mt-2 text-sm text-slate-600">“The tech explained repair vs. replace options so we could choose what fit our budget.”</p>
+            <p className="font-semibold text-[#041B34]">"Helpful recommendations without pressure."</p>
+            <p className="mt-2 text-sm text-slate-600">"The tech explained repair vs. replace options so we could choose what fit our budget."</p>
           </article>
         </div>
       </section>
@@ -290,8 +282,8 @@ export default function HomePage() {
 
       <CTASection
         heading="Need HVAC support in Tucson right now?"
-        body="Jump straight into Crest Air’s Tucson hub to book online or tap the AC repair path for immediate dispatch help."
-        primaryLabel="Book Now – Tucson HVAC"
+        body="Jump straight into Crest Air's Tucson hub to book online or tap the AC repair path for immediate dispatch help."
+        primaryLabel="Book Now - Tucson HVAC"
         primaryHref="/locations/tucson-az"
         secondaryLabel="Call Now for AC Repair"
         secondaryHref={`tel:${site.phone}`}
@@ -312,6 +304,7 @@ export default function HomePage() {
         </div>
         <p className="mt-3 text-sm font-semibold text-[#66CFEF]">Same-day service available in Tucson.</p>
       </section>
+      </AnimatedPage>
     </div>
   );
 }

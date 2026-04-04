@@ -1,8 +1,10 @@
+import { AnimatedPage } from '@/components/AnimatedPage';
 import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroSection } from '@/components/HeroSection';
 import { ServiceConversionSection } from '@/components/ServiceConversionSection';
+import { ImageCard } from '@/components/ImageCard';
 import { SiteImage } from '@/components/SiteImage';
 import { ImageAsset, ServiceContent } from '@/lib/types';
 import { site } from '@/lib/site';
@@ -21,6 +23,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     description: 'Hero image for the AC repair service page showing a Crest Air technician servicing outdoor equipment.',
     page: '/services/ac-repair-tucson',
     section: 'hero',
+    href: '/services/ac-repair-tucson',
   },
   'ac-installation-tucson': {
     src: '/images/services/ac-installation-tucson-az-crane-lift-crest-air-hvac.webp',
@@ -29,6 +32,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     description: 'Hero image for the AC installation service page showing equipment being lifted into place.',
     page: '/services/ac-installation-tucson',
     section: 'hero',
+    href: '/services/ac-installation-tucson',
   },
   'heating-tucson': {
     src: '/images/services/heating-tucson-az-crest-air-hvac.webp',
@@ -37,30 +41,34 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     description: 'Hero image for the heating service page reinforcing winter support in Tucson.',
     page: '/services/heating-tucson',
     section: 'hero',
+    href: '/services/heating-tucson',
   },
   'indoor-air-quality-tucson': {
-    src: '/images/services/indoor-air-quality-solutions-tucson-az-crest-air.webp',
+    src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-hero.webp',
     alt: 'Homeowner reviewing indoor air quality solutions in Tucson',
     title: 'Indoor Air Quality Tucson hero image',
     description: 'Hero image for the indoor air quality service page focused on Tucson homes.',
     page: '/services/indoor-air-quality-tucson',
     section: 'hero',
+    href: '/services/indoor-air-quality-tucson',
   },
   'duct-cleaning-tucson': {
-    src: '/images/services/ductwork-airflow-solutions-tucson-az-crest-air.webp',
+    src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-hero.webp',
     alt: 'Technician addressing ductwork airflow issues in Tucson',
     title: 'Duct cleaning Tucson hero image',
     description: 'Hero image for the duct cleaning and airflow page for Tucson service areas.',
     page: '/services/duct-cleaning-tucson',
     section: 'hero',
+    href: '/services/duct-cleaning-tucson',
   },
   'hvac-maintenance-tucson': {
-    src: '/images/services/hvac-maintenance-service-tucson-az-crest-air-hvac.webp',
+    src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-hero.webp',
     alt: 'Crest Air technician performing HVAC maintenance in Tucson',
     title: 'HVAC maintenance Tucson hero image',
     description: 'Hero image supporting the HVAC maintenance service page for Tucson homeowners.',
     page: '/services/hvac-maintenance-tucson',
     section: 'hero',
+    href: '/services/hvac-maintenance-tucson',
   },
   'emergency-hvac-repair-tucson': {
     src: '/images/services/emergency-hvac-repair-tucson-az-crest-air.webp',
@@ -69,218 +77,320 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     description: 'Hero image for urgent HVAC repair requests across Tucson service areas.',
     page: '/services/emergency-hvac-repair-tucson',
     section: 'hero',
+    href: '/services/emergency-hvac-repair-tucson',
   },
 };
 
 const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   'ac-repair-tucson': [
     {
-      src: '/images/services/ac-repair-tucson/service-ac-repair-customer-handoff.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-customer-handoff.png',
       alt: 'Technician handing off diagnostic notes to a Tucson homeowner',
       title: 'Customer briefing after diagnostics',
       description: 'Tech recaps refrigerant pressures and next steps for a Tucson homeowner.',
       page: '/services/ac-repair-tucson',
       section: 'gallery',
+      href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/service-ac-repair-multimeter-test.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-multimeter-test.png',
       alt: 'Close-up of a Crest Air technician testing components with a multimeter',
       title: 'Component testing',
       description: 'Metering out contactors and capacitors before ordering parts.',
       page: '/services/ac-repair-tucson',
       section: 'gallery',
+      href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/service-ac-repair-wiring-detail.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-wiring-detail.png',
       alt: 'Detailed wiring repair inside an outdoor condensing unit',
       title: 'Wiring detail repair',
       description: 'Tightening low-voltage wiring and replacing failing connectors.',
       page: '/services/ac-repair-tucson',
       section: 'gallery',
+      href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/service-ac-repair-homeowner-briefing.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-homeowner-briefing.png',
       alt: 'Technician reviewing options with a Tucson homeowner inside the living room',
       title: 'Repair options conversation',
       description: 'Homeowner reviews repair vs. replacement options before signing.',
       page: '/services/ac-repair-tucson',
       section: 'gallery',
+      href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/service-ac-repair-rooftop-package.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-rooftop-package.png',
       alt: 'Crew working on a rooftop package unit overlooking Tucson',
       title: 'Rooftop package unit repair',
       description: 'Team stabilizing a rooftop package unit near Broadway and Campbell.',
       page: '/services/ac-repair-tucson',
       section: 'gallery',
+      href: '/services/ac-repair-tucson',
     },
   ],
   'ac-installation-tucson': [
     {
-      src: '/images/services/ac-installation-tucson/service-ac-install-hero-team.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-hero-team.png',
       alt: 'Crest Air installation crew unloading a new condenser',
       title: 'Installation crew arrival',
       description: 'Installers unloading equipment for a Tucson retrofit.',
       page: '/services/ac-installation-tucson',
       section: 'gallery',
+      href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/service-ac-install-blueprint-review.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-blueprint-review.png',
       alt: 'Project manager reviewing load calculations and blueprints with a business owner',
       title: 'Load calculation review',
       description: 'Project manager reviewing duct and load calcs with stakeholders.',
       page: '/services/ac-installation-tucson',
       section: 'gallery',
+      href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/service-ac-install-crane-rooftop.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-crane-rooftop.png',
       alt: 'Crane lifting HVAC equipment onto a Tucson rooftop',
       title: 'Crane lift coordination',
       description: 'Coordinating crane lifts for rooftop replacements downtown.',
       page: '/services/ac-installation-tucson',
       section: 'gallery',
+      href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/service-ac-install-attic-ductwork.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-attic-ductwork.png',
       alt: 'Technician adjusting ductwork inside an attic',
       title: 'Ductwork adjustments',
       description: 'Attic adjustments to balance airflow before startup.',
       page: '/services/ac-installation-tucson',
       section: 'gallery',
+      href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/service-ac-install-thermostat-setup.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-thermostat-setup.png',
       alt: 'Installer setting up a smart thermostat after a system replacement',
       title: 'Thermostat commissioning',
       description: 'Technician programming comfort schedules post-install.',
       page: '/services/ac-installation-tucson',
       section: 'gallery',
+      href: '/services/ac-installation-tucson',
     },
   ],
   'hvac-maintenance-tucson': [
     {
-      src: '/images/services/hvac-maintenance-tucson/service-maintenance-checklist.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-checklist.png',
       alt: 'Technician checking off a maintenance checklist',
       title: 'Seasonal maintenance checklist',
       description: 'Documenting each inspection point for Tucson tune-ups.',
       page: '/services/hvac-maintenance-tucson',
       section: 'gallery',
+      href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/service-maintenance-coil-cleaning.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-coil-cleaning.png',
       alt: 'Technician cleaning condenser coils',
       title: 'Coil cleaning',
       description: 'Clearing dust and debris from coils before heat season.',
       page: '/services/hvac-maintenance-tucson',
       section: 'gallery',
+      href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/service-maintenance-attic-adjustment.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-attic-adjustment.png',
       alt: 'Tech adjusting equipment inside an attic',
       title: 'Attic adjustments',
       description: 'Tightening panels and checking wiring in attic installs.',
       page: '/services/hvac-maintenance-tucson',
       section: 'gallery',
+      href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/service-maintenance-capacitor-swap.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-capacitor-swap.png',
       alt: 'Replacing a failing capacitor during maintenance',
       title: 'Capacitor replacement',
       description: 'Preemptively swapping weak capacitors during tune-ups.',
       page: '/services/hvac-maintenance-tucson',
       section: 'gallery',
+      href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/service-maintenance-customer-log.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-customer-log.png',
       alt: 'Homeowner reviewing maintenance logs with technician',
       title: 'Maintenance log handoff',
       description: 'Sharing digital logs and photos with the homeowner.',
       page: '/services/hvac-maintenance-tucson',
       section: 'gallery',
+      href: '/services/hvac-maintenance-tucson',
     },
   ],
   'duct-cleaning-tucson': [
     {
-      src: '/images/services/duct-cleaning-tucson/service-duct-cleaning-vent-detail.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vent-detail.png',
       alt: 'Technician inspecting a supply vent for dust build-up',
       title: 'Vent detail inspection',
       description: 'Documenting dust build-up inside Tucson vents before cleaning.',
       page: '/services/duct-cleaning-tucson',
       section: 'gallery',
+      href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/service-duct-cleaning-vacuum-detail.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vacuum-detail.png',
       alt: 'Vacuum hose cleaning ductwork in an attic',
       title: 'Vacuum extraction',
       description: 'Sealed vacuum hoses clearing debris from attic duct runs.',
       page: '/services/duct-cleaning-tucson',
       section: 'gallery',
+      href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/service-duct-cleaning-duct-seal.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-duct-seal.png',
       alt: 'Technician sealing duct joints with mastic',
       title: 'Duct sealing follow-up',
       description: 'Applying mastic to leaky joints after cleaning.',
       page: '/services/duct-cleaning-tucson',
       section: 'gallery',
+      href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/service-duct-cleaning-rooftop.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-rooftop.png',
       alt: 'Crew working on rooftop package unit duct connections',
       title: 'Rooftop duct support',
       description: 'Stabilizing rooftop duct transitions during cleaning.',
       page: '/services/duct-cleaning-tucson',
       section: 'gallery',
+      href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/service-duct-cleaning-vent-before-after.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vent-before-after.png',
       alt: 'Before and after comparison of a cleaned supply vent',
       title: 'Before/after proof',
       description: 'Visual proof of dust removal shared with homeowners.',
       page: '/services/duct-cleaning-tucson',
       section: 'gallery',
+      href: '/services/duct-cleaning-tucson',
+    },
+  ],
+  'heating-tucson': [
+    {
+      src: '/images/services/heating-tucson/heating-tucson-furnace-inspection.png',
+      alt: 'Technician inspecting a gas furnace in a Tucson home',
+      title: 'Furnace inspection',
+      description: 'Checking heat exchanger and burner assembly during a winter tune-up.',
+      page: '/services/heating-tucson',
+      section: 'gallery',
+      href: '/services/heating-tucson',
+    },
+    {
+      src: '/images/services/heating-tucson/heating-tucson-heat-pump-outdoor.png',
+      alt: 'Crest Air tech servicing a heat pump outdoor unit in Tucson',
+      title: 'Heat pump service',
+      description: 'Servicing a heat pump outdoor unit for efficient winter heating in Tucson.',
+      page: '/services/heating-tucson',
+      section: 'gallery',
+      href: '/services/heating-tucson',
+    },
+    {
+      src: '/images/services/heating-tucson/heating-tucson-thermostat-adjust.png',
+      alt: 'Homeowner adjusting thermostat with technician guidance',
+      title: 'Heating thermostat adjustment',
+      description: 'Technician showing homeowner optimal heating settings for Tucson winters.',
+      page: '/services/heating-tucson',
+      section: 'gallery',
+      href: '/services/heating-tucson',
+    },
+    {
+      src: '/images/services/heating-tucson/heating-tucson-duct-insulation.png',
+      alt: 'Technician checking duct insulation in an attic for heat loss',
+      title: 'Duct insulation check',
+      description: 'Inspecting attic ductwork insulation to prevent heat loss during Tucson cold snaps.',
+      page: '/services/heating-tucson',
+      section: 'gallery',
+      href: '/services/heating-tucson',
+    },
+  ],
+  'indoor-air-quality-tucson': [
+    {
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-filter-upgrade.png',
+      alt: 'Technician installing a high-efficiency air filter in a Tucson home',
+      title: 'Air filter upgrade',
+      description: 'Upgrading to a MERV-13 filter for better dust and allergen control.',
+      page: '/services/indoor-air-quality-tucson',
+      section: 'gallery',
+      href: '/services/indoor-air-quality-tucson',
+    },
+    {
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-uv-light-install.png',
+      alt: 'Installing a UV air purification light inside an HVAC system',
+      title: 'UV purification installation',
+      description: 'Installing UV-C germicidal light inside the air handler for indoor air purification.',
+      page: '/services/indoor-air-quality-tucson',
+      section: 'gallery',
+      href: '/services/indoor-air-quality-tucson',
+    },
+    {
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-air-test.png',
+      alt: 'Technician testing indoor air quality with a particulate meter',
+      title: 'Air quality testing',
+      description: 'Using a particulate meter to measure dust and allergen levels before and after service.',
+      page: '/services/indoor-air-quality-tucson',
+      section: 'gallery',
+      href: '/services/indoor-air-quality-tucson',
+    },
+    {
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-whole-home-purifier.png',
+      alt: 'Crest Air tech installing a whole-home air purification system',
+      title: 'Whole-home purifier install',
+      description: 'Installing a whole-home air purification system in a Tucson residence.',
+      page: '/services/indoor-air-quality-tucson',
+      section: 'gallery',
+      href: '/services/indoor-air-quality-tucson',
     },
   ],
   'emergency-hvac-repair-tucson': [
     {
-      src: '/images/services/emergency-hvac-repair-tucson/service-emergency-truck-arrival.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-truck-arrival.png',
       alt: 'Emergency HVAC truck arriving at night',
       title: 'Emergency truck arrival',
       description: 'Night dispatch arriving with headlamps and stocked truck.',
       page: '/services/emergency-hvac-repair-tucson',
       section: 'gallery',
+      href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/service-emergency-homeowner-brief.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-homeowner-brief.png',
       alt: 'Technician speaking with a homeowner during an emergency visit',
       title: 'Homeowner briefing',
       description: 'Explaining steps before emergency diagnostics start.',
       page: '/services/emergency-hvac-repair-tucson',
       section: 'gallery',
+      href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/service-emergency-night-headlamp.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-night-headlamp.png',
       alt: 'Night repair with technician using a headlamp',
       title: 'Night repair in progress',
       description: 'Tech working through the night with headlamps and safety gear.',
       page: '/services/emergency-hvac-repair-tucson',
       section: 'gallery',
+      href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/service-emergency-truck-prep.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-truck-prep.png',
       alt: 'Crew prepping emergency gear at the truck',
       title: 'Gear prep',
       description: 'Crew prepping parts and tools at the truck before climbing ladders.',
       page: '/services/emergency-hvac-repair-tucson',
       section: 'gallery',
+      href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/service-emergency-night-repair.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-night-repair.png',
       alt: 'Technician repairing rooftop unit at night',
       title: 'Rooftop emergency repair',
       description: 'Stabilizing a rooftop unit during a night outage.',
       page: '/services/emergency-hvac-repair-tucson',
       section: 'gallery',
+      href: '/services/emergency-hvac-repair-tucson',
     },
   ],
 };
@@ -300,12 +410,13 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-6 py-10">
+      <AnimatedPage>
       <HeroSection
         eyebrow={`${service.location} · ${service.title}`}
         title={service.problemHeadline}
         body={service.problemDescription}
         primaryLabel="Book Now (Same-Day Service)"
-        primaryHref="/contact"
+        primaryHref="#request-service"
         secondaryLabel="Call Now for Priority Dispatch"
         secondaryHref={`tel:${site.phone}`}
         secondaryCallTracking={{ sourcePage, serviceType: service.slug, location: 'tucson-az', pageType: 'service' }}
@@ -340,27 +451,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
       {galleryImages.length ? (
         <section className="grid gap-4 rounded-3xl bg-white p-6 shadow-sm sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((asset) => (
-            <figure key={asset.src} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-              <SiteImage asset={asset} width={640} height={420} className="h-64 w-full object-cover" sizes="(min-width: 1024px) 30vw, 100vw" />
-              <figcaption className="px-4 py-3 text-sm text-slate-700">
-                <p className="font-semibold text-[#041B34]">{asset.title}</p>
-                <p className="text-slate-600">{asset.description}</p>
-              </figcaption>
-            </figure>
-          ))}
-        </section>
-      ) : null}
-
-      {galleryImages.length ? (
-        <section className="grid gap-4 rounded-3xl bg-white p-6 shadow-sm sm:grid-cols-2 lg:grid-cols-3">
-          {galleryImages.map((asset) => (
-            <figure key={asset.src} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-              <SiteImage asset={asset} width={640} height={420} className="h-64 w-full object-cover" sizes="(min-width: 1024px) 30vw, 100vw" />
-              <figcaption className="px-4 py-3 text-sm text-slate-700">
-                <p className="font-semibold text-[#041B34]">{asset.title}</p>
-                <p className="text-slate-600">{asset.description}</p>
-              </figcaption>
-            </figure>
+            <ImageCard key={asset.src} asset={asset} />
           ))}
         </section>
       ) : null}
@@ -374,13 +465,13 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         <div className="rounded-3xl bg-white p-8 shadow-sm">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Signs you need this service</h2>
           <ul className="mt-4 space-y-3 text-slate-700">{service.signs.map((item) => <li key={item}>• {item}</li>)}</ul>
-          <Link href={service.serviceAreas[0]?.href || '/'} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">See local service coverage</Link>
+          <Link href={service.serviceAreas[0]?.href || '/'} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4 transition hover:text-[#F4911D] hover:decoration-[#F4911D]">See local service coverage</Link>
         </div>
         <div className="rounded-3xl bg-white p-8 shadow-sm">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Benefits</h2>
           <ul className="mt-4 space-y-3 text-slate-700">{service.benefits.map((item) => <li key={item}>• {item}</li>)}</ul>
           {service.relatedServices[0] ? (
-            <Link href={service.relatedServices[0].href} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">
+            <Link href={service.relatedServices[0].href} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4 transition hover:text-[#F4911D] hover:decoration-[#F4911D]">
               Explore related service
             </Link>
           ) : null}
@@ -436,24 +527,24 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Financing Support</p>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Need a bigger fix? Ask about financing.</h2>
           <p className="mt-4 text-slate-700">{service.financingNote}</p>
-          <Link href={service.financingLink.href} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">{service.financingLink.label}</Link>
+          <Link href={service.financingLink.href} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4 transition hover:text-[#F4911D] hover:decoration-[#F4911D]">{service.financingLink.label}</Link>
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Maintenance Plans</p>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Prevent future breakdowns with maintenance plans.</h2>
           <p className="mt-4 text-slate-700">{service.maintenanceNote}</p>
-          <Link href={service.maintenanceLink.href} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">{service.maintenanceLink.label}</Link>
+          <Link href={service.maintenanceLink.href} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4 transition hover:text-[#F4911D] hover:decoration-[#F4911D]">{service.maintenanceLink.label}</Link>
         </div>
       </section>
 
       <section className="grid gap-6 md:grid-cols-2">
         <div className="rounded-3xl bg-white p-8 shadow-sm">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Related Services</h2>
-          <ul className="mt-4 space-y-3 text-slate-700">{service.relatedServices.map((link) => <li key={link.href}><Link className="underline" href={link.href}>{link.label}</Link></li>)}</ul>
+          <ul className="mt-4 space-y-3 text-slate-700">{service.relatedServices.map((link) => <li key={link.href}><Link className="underline transition hover:text-[#F4911D]" href={link.href}>{link.label}</Link></li>)}</ul>
         </div>
         <div className="rounded-3xl bg-white p-8 shadow-sm">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Service Areas</h2>
-          <ul className="mt-4 space-y-3 text-slate-700">{service.serviceAreas.map((link) => <li key={link.href}><Link className="underline" href={link.href}>{link.label}</Link></li>)}</ul>
+          <ul className="mt-4 space-y-3 text-slate-700">{service.serviceAreas.map((link) => <li key={link.href}><Link className="underline transition hover:text-[#F4911D]" href={link.href}>{link.label}</Link></li>)}</ul>
         </div>
       </section>
 
@@ -463,11 +554,12 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         heading={`Call Now or Book Online for ${service.title}`}
         body="Same-day service available in Tucson—lock in your visit before the schedule fills."
         primaryLabel="Call Now or Book Online"
-        primaryHref="/contact"
+        primaryHref="#request-service"
         secondaryLabel={`Call ${site.phone}`}
         secondaryHref={`tel:${site.phone}`}
         secondaryCallTracking={{ sourcePage, serviceType: service.slug, location: 'tucson-az', pageType: 'service' }}
       />
+      </AnimatedPage>
     </div>
   );
 }

@@ -16,6 +16,18 @@ const bodyFont = Public_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  alternates: {
+    canonical: site.url,
+  },
+  openGraph: {
+    url: site.url,
+    siteName: site.name,
+    description: site.description,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
   title: {
     default: `${site.name} | Tucson HVAC Services`,
     template: `%s | ${site.name}`,

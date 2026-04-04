@@ -1,8 +1,10 @@
+import { AnimatedPage } from '@/components/AnimatedPage';
 import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroSection } from '@/components/HeroSection';
 import { ServiceConversionSection } from '@/components/ServiceConversionSection';
+import { ImageCard } from '@/components/ImageCard';
 import { SiteImage } from '@/components/SiteImage';
 import { ImageAsset, LocationContent } from '@/lib/types';
 import { site } from '@/lib/site';
@@ -19,87 +21,340 @@ type LocationImageSet = {
 const locationImageSets: Record<string, LocationImageSet> = {
   'tucson-az': {
     hero: {
-      src: '/images/locations/tucson-az/tucson-desert-driveway-visit.png',
+      src: '/images/locations/tucson-az/tucson-az-desert-driveway-visit.png',
       alt: 'Crest Air van pulling into a Tucson driveway with desert landscaping',
       title: 'Tucson technician arrival',
       description: 'Service van arriving at a Tucson neighborhood driveway during peak heat.',
       page: '/locations/tucson-az',
       section: 'hero',
+      href: '/locations/tucson-az',
     },
     gallery: [
       {
-        src: '/images/locations/tucson-az/tucson-rooftop-skyline-service.png',
+        src: '/images/locations/tucson-az/tucson-az-rooftop-skyline-service.png',
         alt: 'Technicians working on a rooftop unit with the Tucson skyline behind them',
         title: 'Rooftop skyline service',
         description: 'Crew stabilizing a rooftop package unit overlooking downtown Tucson.',
         page: '/locations/tucson-az',
         section: 'gallery',
+        href: '/locations/tucson-az',
       },
       {
-        src: '/images/locations/tucson-az/tucson-backyard-evening-check.png',
+        src: '/images/locations/tucson-az/tucson-az-backyard-evening-check.png',
         alt: 'Technician inspecting a condenser in a Tucson backyard at dusk',
         title: 'Evening backyard check',
         description: 'Evening follow-up visit after monsoon outages in central Tucson.',
         page: '/locations/tucson-az',
         section: 'gallery',
+        href: '/locations/tucson-az',
+      },
+      {
+        src: '/images/locations/tucson-az/tucson-az-midtown-apartment-service.png',
+        alt: 'Crest Air technician servicing an AC unit at a Tucson midtown apartment complex',
+        title: 'Midtown apartment service',
+        description: 'Servicing a condenser at a midtown Tucson apartment building.',
+        page: '/locations/tucson-az',
+        section: 'gallery',
+        href: '/locations/tucson-az',
       },
     ],
   },
   'oro-valley-az': {
     hero: {
-      src: '/images/locations/oro-valley-az/oro-valley-culdesac-arrival.png',
+      src: '/images/locations/oro-valley-az/oro-valley-az-culdesac-arrival.png',
       alt: 'Crest Air truck arriving in an Oro Valley cul-de-sac',
       title: 'Oro Valley arrival',
       description: 'Crew parking near foothills cul-de-sacs before morning appointments.',
       page: '/locations/oro-valley-az',
       section: 'hero',
+      href: '/locations/oro-valley-az',
     },
     gallery: [
       {
-        src: '/images/locations/oro-valley-az/oro-valley-terrace-service.png',
+        src: '/images/locations/oro-valley-az/oro-valley-az-terrace-service.png',
         alt: 'Technician servicing equipment on a shaded patio in Oro Valley',
         title: 'Terrace service visit',
         description: 'Servicing equipment on shaded patios common in Oro Valley.',
         page: '/locations/oro-valley-az',
         section: 'gallery',
+        href: '/locations/oro-valley-az',
       },
       {
-        src: '/images/locations/oro-valley-az/oro-valley-sunrise-street.png',
+        src: '/images/locations/oro-valley-az/oro-valley-az-sunrise-street.png',
         alt: 'Sunrise view over Oro Valley with service vans staged',
         title: 'Sunrise staging',
         description: 'Team staging vans before sunrise dispatch with Pusch Ridge views.',
         page: '/locations/oro-valley-az',
         section: 'gallery',
+        href: '/locations/oro-valley-az',
+      },
+      {
+        src: '/images/locations/oro-valley-az/oro-valley-az-golf-community-visit.png',
+        alt: 'Crest Air van at an Oro Valley golf community home',
+        title: 'Golf community service',
+        description: 'Service visit at a home in an Oro Valley golf course community with mountain views.',
+        page: '/locations/oro-valley-az',
+        section: 'gallery',
+        href: '/locations/oro-valley-az',
       },
     ],
+  },
   'marana-az': {
     hero: {
-      src: '/images/locations/marana-az/marana-rooftop-package-service.png',
+      src: '/images/locations/marana-az/marana-az-rooftop-package-service.png',
       alt: 'Technician checking a rooftop package unit in Marana',
       title: 'Marana rooftop package service',
       description: 'Marana rooftop package unit service with desert backdrop.',
       page: '/locations/marana-az',
       section: 'hero',
+      href: '/locations/marana-az',
     },
     gallery: [
       {
-        src: '/images/locations/marana-az/marana-wide-street-context.png',
+        src: '/images/locations/marana-az/marana-az-wide-street-context.png',
         alt: 'Crest Air van parked on a wide Marana residential street',
         title: 'Wide street coverage',
         description: 'Showing access to wide Marana residential streets.',
         page: '/locations/marana-az',
         section: 'gallery',
+        href: '/locations/marana-az',
       },
       {
-        src: '/images/locations/marana-az/marana-farmhouse-sideyard.png',
+        src: '/images/locations/marana-az/marana-az-farmhouse-sideyard.png',
         alt: 'Technician walking along a Marana farmhouse side yard',
         title: 'Farmhouse service visit',
         description: 'Service visit covering Marana farmhouse-style properties.',
         page: '/locations/marana-az',
         section: 'gallery',
+        href: '/locations/marana-az',
+      },
+      {
+        src: '/images/locations/marana-az/marana-az-new-construction-install.png',
+        alt: 'Crest Air crew installing HVAC at a new construction site in Marana',
+        title: 'New construction install',
+        description: 'HVAC installation at a new construction home in Marana\'s growing developments.',
+        page: '/locations/marana-az',
+        section: 'gallery',
+        href: '/locations/marana-az',
       },
     ],
   },
+  'catalina-foothills-az': {
+    hero: {
+      src: '/images/locations/catalina-foothills-az/catalina-foothills-az-hillside-arrival.png',
+      alt: 'Crest Air van arriving at a hillside home in Catalina Foothills',
+      title: 'Catalina Foothills service arrival',
+      description: 'Service van pulling up to a luxury hillside home in Catalina Foothills.',
+      page: '/locations/catalina-foothills-az',
+      section: 'hero',
+      href: '/locations/catalina-foothills-az',
+    },
+    gallery: [
+      {
+        src: '/images/locations/catalina-foothills-az/catalina-foothills-az-patio-service.png',
+        alt: 'Technician servicing an AC unit on a Catalina Foothills patio with mountain views',
+        title: 'Foothills patio service',
+        description: 'Servicing outdoor equipment with Catalina Mountain views in the background.',
+        page: '/locations/catalina-foothills-az',
+        section: 'gallery',
+        href: '/locations/catalina-foothills-az',
+      },
+      {
+        src: '/images/locations/catalina-foothills-az/catalina-foothills-az-luxury-home-visit.png',
+        alt: 'Crest Air technician at the entrance of a luxury Catalina Foothills home',
+        title: 'Luxury home visit',
+        description: 'Professional service visit to a high-end Catalina Foothills residence.',
+        page: '/locations/catalina-foothills-az',
+        section: 'gallery',
+        href: '/locations/catalina-foothills-az',
+      },
+    ],
+  },
+  'green-valley-az': {
+    hero: {
+      src: '/images/locations/green-valley-az/green-valley-az-retirement-community-visit.png',
+      alt: 'Crest Air van parked at a Green Valley retirement community home',
+      title: 'Green Valley community service',
+      description: 'Service call at a well-maintained Green Valley retirement community home.',
+      page: '/locations/green-valley-az',
+      section: 'hero',
+      href: '/locations/green-valley-az',
+    },
+    gallery: [
+      {
+        src: '/images/locations/green-valley-az/green-valley-az-desert-backyard-repair.png',
+        alt: 'Technician repairing an AC unit in a Green Valley desert backyard',
+        title: 'Desert backyard repair',
+        description: 'Repairing an outdoor condenser in a Green Valley backyard with Santa Rita Mountain views.',
+        page: '/locations/green-valley-az',
+        section: 'gallery',
+        href: '/locations/green-valley-az',
+      },
+      {
+        src: '/images/locations/green-valley-az/green-valley-az-senior-consultation.png',
+        alt: 'Crest Air tech explaining options to a Green Valley homeowner',
+        title: 'Senior-friendly consultation',
+        description: 'Patient, friendly consultation with a Green Valley homeowner about AC options.',
+        page: '/locations/green-valley-az',
+        section: 'gallery',
+        href: '/locations/green-valley-az',
+      },
+    ],
+  },
+  'sahuarita-az': {
+    hero: {
+      src: '/images/locations/sahuarita-az/sahuarita-az-new-development-service.png',
+      alt: 'Crest Air truck in a new Sahuarita housing development',
+      title: 'Sahuarita new development',
+      description: 'Servicing homes in one of Sahuarita\'s growing new residential developments.',
+      page: '/locations/sahuarita-az',
+      section: 'hero',
+      href: '/locations/sahuarita-az',
+    },
+    gallery: [
+      {
+        src: '/images/locations/sahuarita-az/sahuarita-az-pecan-grove-visit.png',
+        alt: 'Technician arriving at a Sahuarita home near pecan groves',
+        title: 'Pecan grove area service',
+        description: 'Service visit to a Sahuarita home with pecan orchards in the background.',
+        page: '/locations/sahuarita-az',
+        section: 'gallery',
+        href: '/locations/sahuarita-az',
+      },
+      {
+        src: '/images/locations/sahuarita-az/sahuarita-az-family-home-repair.png',
+        alt: 'Crest Air tech working on an AC unit at a Sahuarita family home',
+        title: 'Family home AC repair',
+        description: 'Repairing an outdoor unit at a family home in Sahuarita with kids\' bikes in the driveway.',
+        page: '/locations/sahuarita-az',
+        section: 'gallery',
+        href: '/locations/sahuarita-az',
+      },
+    ],
+  },
+  'south-tucson-az': {
+    hero: {
+      src: '/images/locations/south-tucson-az/south-tucson-az-neighborhood-arrival.png',
+      alt: 'Crest Air van arriving in a South Tucson neighborhood',
+      title: 'South Tucson service arrival',
+      description: 'Service van pulling into a South Tucson residential street for an AC repair call.',
+      page: '/locations/south-tucson-az',
+      section: 'hero',
+      href: '/locations/south-tucson-az',
+    },
+    gallery: [
+      {
+        src: '/images/locations/south-tucson-az/south-tucson-az-backyard-condenser.png',
+        alt: 'Technician repairing a condenser in a South Tucson backyard',
+        title: 'Backyard condenser repair',
+        description: 'Working on an outdoor unit in a compact South Tucson backyard.',
+        page: '/locations/south-tucson-az',
+        section: 'gallery',
+        href: '/locations/south-tucson-az',
+      },
+      {
+        src: '/images/locations/south-tucson-az/south-tucson-az-homeowner-walkthrough.png',
+        alt: 'Crest Air tech walking a South Tucson homeowner through repair options',
+        title: 'Homeowner walkthrough',
+        description: 'Explaining repair options to a South Tucson homeowner at their front porch.',
+        page: '/locations/south-tucson-az',
+        section: 'gallery',
+        href: '/locations/south-tucson-az',
+      },
+    ],
+  },
+  'drexel-heights-az': {
+    hero: {
+      src: '/images/locations/drexel-heights-az/drexel-heights-az-subdivision-service.png',
+      alt: 'Crest Air truck parked in a Drexel Heights subdivision',
+      title: 'Drexel Heights subdivision service',
+      description: 'Service truck ready for appointments in a Drexel Heights residential area.',
+      page: '/locations/drexel-heights-az',
+      section: 'hero',
+      href: '/locations/drexel-heights-az',
+    },
+    gallery: [
+      {
+        src: '/images/locations/drexel-heights-az/drexel-heights-az-rooftop-repair.png',
+        alt: 'Technician working on a rooftop unit in Drexel Heights',
+        title: 'Rooftop unit repair',
+        description: 'Servicing a rooftop package unit on a Drexel Heights home.',
+        page: '/locations/drexel-heights-az',
+        section: 'gallery',
+        href: '/locations/drexel-heights-az',
+      },
+      {
+        src: '/images/locations/drexel-heights-az/drexel-heights-az-driveway-greeting.png',
+        alt: 'Crest Air technician greeting a homeowner in Drexel Heights',
+        title: 'Driveway greeting',
+        description: 'Arriving for a scheduled maintenance visit in Drexel Heights.',
+        page: '/locations/drexel-heights-az',
+        section: 'gallery',
+        href: '/locations/drexel-heights-az',
+      },
+    ],
+  },
+  'flowing-wells-az': {
+    hero: {
+      src: '/images/locations/flowing-wells-az/flowing-wells-az-street-arrival.png',
+      alt: 'Crest Air van on a Flowing Wells residential street',
+      title: 'Flowing Wells service arrival',
+      description: 'Service van arriving in the Flowing Wells neighborhood for an HVAC call.',
+      page: '/locations/flowing-wells-az',
+      section: 'hero',
+      href: '/locations/flowing-wells-az',
+    },
+    gallery: [
+      {
+        src: '/images/locations/flowing-wells-az/flowing-wells-az-sideyard-unit.png',
+        alt: 'Technician servicing an AC unit in a Flowing Wells side yard',
+        title: 'Side yard AC service',
+        description: 'Working on an outdoor condenser tucked in a Flowing Wells side yard.',
+        page: '/locations/flowing-wells-az',
+        section: 'gallery',
+        href: '/locations/flowing-wells-az',
+      },
+      {
+        src: '/images/locations/flowing-wells-az/flowing-wells-az-evening-followup.png',
+        alt: 'Crest Air tech doing an evening follow-up in Flowing Wells',
+        title: 'Evening follow-up visit',
+        description: 'Returning for an evening check after a same-day repair in Flowing Wells.',
+        page: '/locations/flowing-wells-az',
+        section: 'gallery',
+        href: '/locations/flowing-wells-az',
+      },
+    ],
+  },
+  'vail-az': {
+    hero: {
+      src: '/images/locations/vail-az/vail-az-ranch-style-arrival.png',
+      alt: 'Crest Air van arriving at a ranch-style home in Vail',
+      title: 'Vail ranch-style service',
+      description: 'Service arrival at a ranch-style property in Vail with open desert views.',
+      page: '/locations/vail-az',
+      section: 'hero',
+      href: '/locations/vail-az',
+    },
+    gallery: [
+      {
+        src: '/images/locations/vail-az/vail-az-desert-lot-condenser.png',
+        alt: 'Technician working on a condenser at a Vail desert lot property',
+        title: 'Desert lot condenser service',
+        description: 'Working on an outdoor unit at a large-lot Vail property with desert vegetation.',
+        page: '/locations/vail-az',
+        section: 'gallery',
+        href: '/locations/vail-az',
+      },
+      {
+        src: '/images/locations/vail-az/vail-az-sunset-departure.png',
+        alt: 'Crest Air van departing a Vail neighborhood at sunset',
+        title: 'Sunset service completion',
+        description: 'Finishing up a service call in Vail as the sun sets over the Rincon Mountains.',
+        page: '/locations/vail-az',
+        section: 'gallery',
+        href: '/locations/vail-az',
+      },
+    ],
   },
 };
 
@@ -111,6 +366,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-6 py-10">
+      <AnimatedPage>
       <HeroSection
         eyebrow={`${location.city} Service Area`}
         title={`AC Repair & HVAC Service in ${location.city}, AZ`}
@@ -141,13 +397,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
       {galleryImages.length ? (
         <section className="grid gap-4 rounded-3xl bg-white p-8 shadow-sm sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((asset) => (
-            <figure key={asset.src} className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-              <SiteImage asset={asset} width={640} height={420} className="h-64 w-full object-cover" sizes="(min-width: 1024px) 30vw, 100vw" />
-              <figcaption className="px-4 py-3 text-sm text-slate-700">
-                <p className="font-semibold text-[#041B34]">{asset.title}</p>
-                <p className="text-slate-600">{asset.description}</p>
-              </figcaption>
-            </figure>
+            <ImageCard key={asset.src} asset={asset} />
           ))}
         </section>
       ) : null}
@@ -165,8 +415,8 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
 
       <section className="rounded-3xl bg-white p-8 shadow-sm">
         <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Services available in this area</h2>
-        <p className="mt-4 text-slate-700">If your comfort drops, our <Link className="underline" href="/services/ac-repair-tucson">AC repair team</Link> can respond quickly in {location.city}. When a replacement is smarter, explore <Link className="underline" href="/services/ac-installation-tucson">AC installation options</Link>, and keep everything tuned with routine <Link className="underline" href="/services/hvac-maintenance-tucson">HVAC maintenance visits</Link>.</p>
-        <ul className="mt-4 grid gap-3 text-slate-700 md:grid-cols-2">{location.services.map((service) => <li key={service.href}><Link className="underline" href={service.href}>{service.label}</Link></li>)}</ul>
+        <p className="mt-4 text-slate-700">If your comfort drops, our <Link className="underline transition hover:text-[#F4911D]" href="/services/ac-repair-tucson">AC repair team</Link> can respond quickly in {location.city}. When a replacement is smarter, explore <Link className="underline transition hover:text-[#F4911D]" href="/services/ac-installation-tucson">AC installation options</Link>, and keep everything tuned with routine <Link className="underline transition hover:text-[#F4911D]" href="/services/hvac-maintenance-tucson">HVAC maintenance visits</Link>.</p>
+        <ul className="mt-4 grid gap-3 text-slate-700 md:grid-cols-2">{location.services.map((service) => <li key={service.href}><Link className="underline transition hover:text-[#F4911D]" href={service.href}>{service.label}</Link></li>)}</ul>
       </section>
 
       <CTASection
@@ -205,7 +455,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
         </div>
         <div className="rounded-3xl bg-white p-8 shadow-sm">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold">Nearby areas</h2>
-          <ul className="mt-4 space-y-3 text-slate-700">{location.nearbyAreas.length ? location.nearbyAreas.map((item) => <li key={item.href}><Link className="underline" href={item.href}>{item.label}</Link></li>) : <li>Additional area pages can be generated from the same schema.</li>}</ul>
+          <ul className="mt-4 space-y-3 text-slate-700">{location.nearbyAreas.length ? location.nearbyAreas.map((item) => <li key={item.href}><Link className="underline transition hover:text-[#F4911D]" href={item.href}>{item.label}</Link></li>) : <li>Additional area pages can be generated from the same schema.</li>}</ul>
         </div>
       </section>
 
@@ -248,6 +498,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
         secondaryCallTracking={{ sourcePage, serviceType: 'general-hvac', location: location.slug, pageType: 'location' }}
         subline={`Same-day service available in ${location.city}`}
       />
+      </AnimatedPage>
     </div>
   );
 }

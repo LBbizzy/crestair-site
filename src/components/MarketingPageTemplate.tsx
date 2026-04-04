@@ -107,7 +107,7 @@ export function MarketingPageTemplate({
           <ul className="mt-5 grid gap-3 text-slate-700 md:grid-cols-2">
             {serviceLinks.map((link) => (
               <li key={link.href}>
-                <Link className="font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4" href={link.href}>
+                <Link className="font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4 transition hover:text-[#F4911D] hover:decoration-[#F4911D]" href={link.href}>
                   {link.label}
                 </Link>
               </li>
@@ -117,7 +117,7 @@ export function MarketingPageTemplate({
         <div className="rounded-3xl bg-white p-8 shadow-sm">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Need contact info?</h2>
           <p className="mt-4 text-slate-700">Use the direct contact page for service requests, general questions, financing conversations, or commercial HVAC coordination.</p>
-          <Link href={contactHref} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">
+          <Link href={contactHref} className="mt-5 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4 transition hover:text-[#F4911D] hover:decoration-[#F4911D]">
             Visit Contact Page
           </Link>
         </div>
@@ -129,7 +129,7 @@ export function MarketingPageTemplate({
           <ul className="mt-5 space-y-3 text-slate-700">
             {locationLinks.map((link) => (
               <li key={link.href}>
-                <Link className="font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4" href={link.href}>
+                <Link className="font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4 transition hover:text-[#F4911D] hover:decoration-[#F4911D]" href={link.href}>
                   {link.label}
                 </Link>
               </li>

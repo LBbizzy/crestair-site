@@ -4,6 +4,14 @@ import { BlogPost } from '@/lib/types';
 export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-know-if-your-ac-needs-repair-in-tucson',
+    image: {
+      src: '/images/blog/blog-ac-repair-signs-tucson.webp',
+      alt: 'Technician diagnosing AC problems at a Tucson home',
+      title: 'AC repair warning signs',
+      description: 'Crest Air technician checking an outdoor AC unit in a Tucson backyard.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'How to Know If Your AC Needs Repair in Tucson',
     query: 'how to know if your ac needs repair in tucson',
     meta: {
@@ -43,6 +51,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
       { href: '/services/emergency-hvac-repair-tucson', label: 'Emergency HVAC Repair Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'Preventive Maintenance' },
+      { href: '/services/ac-installation-tucson', label: 'AC Replacement Options' },
     ],
     locationLink: { href: '/locations/tucson-az', label: 'Tucson HVAC Services' },
     faqs: [
@@ -65,6 +75,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'how-often-should-you-service-your-hvac-in-tucson',
+    image: {
+      src: '/images/blog/blog-hvac-service-frequency-tucson.webp',
+      alt: 'Technician performing routine HVAC maintenance in Tucson',
+      title: 'HVAC service frequency guide',
+      description: 'Seasonal tune-up on a rooftop unit in bright Tucson sun.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'How Often Should You Service Your HVAC in Tucson?',
     query: 'how often should you service your hvac in tucson',
     meta: {
@@ -104,6 +122,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance Tucson' },
       { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
+      { href: '/services/duct-cleaning-tucson', label: 'Duct Cleaning Tucson' },
+      { href: '/services/indoor-air-quality-tucson', label: 'Indoor Air Quality' },
     ],
     locationLink: { href: '/locations/vail-az', label: 'Vail HVAC Services' },
     faqs: [
@@ -126,6 +146,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'signs-your-ac-is-about-to-fail-in-arizona-heat',
+    image: {
+      src: '/images/blog/blog-ac-failure-signs-arizona.webp',
+      alt: 'AC unit struggling in extreme Arizona heat',
+      title: 'AC failure warning signs',
+      description: 'Outdoor condenser in extreme Arizona heat with desert backdrop.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Signs Your AC Is About to Fail in Arizona Heat',
     query: 'signs your ac is about to fail in arizona heat',
     meta: {
@@ -165,6 +193,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/emergency-hvac-repair-tucson', label: 'Emergency HVAC Repair Tucson' },
       { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'Preventive Maintenance' },
+      { href: '/services/ac-installation-tucson', label: 'AC Replacement Options' },
     ],
     locationLink: { href: '/locations/oro-valley-az', label: 'Oro Valley HVAC Services' },
     faqs: [
@@ -187,6 +217,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'repair-vs-replace-ac-in-tucson-cost-comparison',
+    image: {
+      src: '/images/blog/blog-repair-vs-replace-tucson.webp',
+      alt: 'Old AC unit next to new one being installed',
+      title: 'Repair vs replace comparison',
+      description: 'Side-by-side of old and new AC units during a Tucson replacement.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Repair vs Replace AC in Tucson: Cost Comparison',
     query: 'repair vs replace ac in tucson cost comparison',
     meta: {
@@ -226,6 +264,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/ac-installation-tucson', label: 'AC Installation Tucson' },
       { href: '/financing', label: 'HVAC Financing Tucson' },
+      { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'Maintenance Plans' },
     ],
     locationLink: { href: '/locations/green-valley-az', label: 'Green Valley HVAC Services' },
     faqs: [
@@ -248,6 +288,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'how-to-lower-cooling-costs-in-tucson-summer',
+    image: {
+      src: '/images/blog/blog-lower-cooling-costs-tucson.webp',
+      alt: 'Homeowner adjusting thermostat to save on cooling',
+      title: 'Lower cooling costs guide',
+      description: 'Tucson homeowner adjusting a smart thermostat.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'How to Lower Cooling Costs in Tucson Summer',
     query: 'how to lower cooling costs in tucson summer',
     meta: {
@@ -287,6 +335,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance Tucson' },
       { href: '/services/indoor-air-quality-tucson', label: 'Indoor Air Quality Tucson' },
+      { href: '/services/ac-installation-tucson', label: 'Energy-Efficient AC Install' },
+      { href: '/services/duct-cleaning-tucson', label: 'Duct Sealing & Cleaning' },
     ],
     locationLink: { href: '/locations/sahuarita-az', label: 'Sahuarita HVAC Services' },
     faqs: [
@@ -309,6 +359,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'ac-not-cooling-in-tucson-immediate-steps',
+    image: {
+      src: '/images/blog/blog-ac-not-cooling-emergency.webp',
+      alt: 'Family dealing with AC not cooling in Tucson',
+      title: 'AC not cooling emergency steps',
+      description: 'Family in a warm Tucson home checking the thermostat.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'AC Not Cooling in Tucson? Immediate Steps Before Calling',
     query: 'ac not cooling tucson',
     meta: {
@@ -348,6 +406,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
       { href: '/services/emergency-hvac-repair-tucson', label: 'Emergency HVAC Repair Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'Preventive Maintenance' },
+      { href: '/services/ac-installation-tucson', label: 'AC Replacement' },
     ],
     locationLink: { href: '/locations/drexel-heights-az', label: 'Drexel Heights HVAC Services' },
     faqs: [
@@ -370,6 +430,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'tucson-monsoon-season-hvac-prep',
+    image: {
+      src: '/images/blog/blog-monsoon-hvac-prep-tucson.webp',
+      alt: 'Technician prepping HVAC before monsoon season',
+      title: 'Monsoon HVAC preparation',
+      description: 'Securing outdoor units with monsoon clouds building over Tucson.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Monsoon Season HVAC Prep Checklist for Tucson Homes',
     query: 'tucson monsoon hvac prep',
     meta: {
@@ -409,6 +477,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance Tucson' },
       { href: '/services/emergency-hvac-repair-tucson', label: 'Emergency HVAC Repair Tucson' },
+      { href: '/services/duct-cleaning-tucson', label: 'Duct Cleaning Tucson' },
+      { href: '/services/indoor-air-quality-tucson', label: 'Indoor Air Quality' },
     ],
     locationLink: { href: '/locations/tucson-az', label: 'Tucson HVAC Services' },
     faqs: [
@@ -431,6 +501,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'tucson-indoor-air-quality-dust-allergies',
+    image: {
+      src: '/images/blog/blog-indoor-air-quality-tucson.webp',
+      alt: 'Technician installing air filtration in Tucson home',
+      title: 'Indoor air quality solutions',
+      description: 'Installing a high-efficiency air filter in a Tucson home.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Indoor Air Quality Strategies for Tucson Dust and Allergies',
     query: 'tucson indoor air quality dust',
     meta: {
@@ -470,6 +548,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/indoor-air-quality-tucson', label: 'Indoor Air Quality Tucson' },
       { href: '/services/duct-cleaning-tucson', label: 'Duct Cleaning Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance' },
+      { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
     ],
     locationLink: { href: '/locations/catalina-foothills-az', label: 'Catalina Foothills HVAC Services' },
     faqs: [
@@ -492,6 +572,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'duct-cleaning-benefits-for-tucson-homes',
+    image: {
+      src: '/images/blog/blog-duct-cleaning-benefits.webp',
+      alt: 'Duct cleaning in progress at a Tucson home',
+      title: 'Duct cleaning benefits',
+      description: 'Technician cleaning residential ductwork in Tucson.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Duct Cleaning Benefits for Tucson Homes',
     query: 'duct cleaning tucson benefits',
     meta: {
@@ -531,6 +619,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/duct-cleaning-tucson', label: 'Duct Cleaning Tucson' },
       { href: '/services/indoor-air-quality-tucson', label: 'Indoor Air Quality Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance' },
+      { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
     ],
     locationLink: { href: '/locations/flowing-wells-az', label: 'Flowing Wells HVAC Services' },
     faqs: [
@@ -553,6 +643,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'commercial-hvac-basics-for-tucson-businesses',
+    image: {
+      src: '/images/blog/blog-commercial-hvac-basics.webp',
+      alt: 'Commercial rooftop HVAC units on a Tucson building',
+      title: 'Commercial HVAC basics',
+      description: 'Row of commercial rooftop units on a Tucson office building.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Commercial HVAC Basics for Tucson Businesses',
     query: 'commercial hvac tucson basics',
     meta: {
@@ -590,8 +688,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     serviceLinks: [
+      { href: '/commercial', label: 'Commercial HVAC Overview' },
       { href: '/commercial/ac-repair', label: 'Commercial AC Repair' },
       { href: '/commercial/maintenance', label: 'Commercial Maintenance' },
+      { href: '/commercial/ac-installation', label: 'Commercial Installation' },
+      { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance Tucson' },
     ],
     locationLink: { href: '/locations/tucson-az', label: 'Tucson Commercial HVAC' },
     faqs: [
@@ -614,6 +715,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'thermostat-optimization-for-desert-homes',
+    image: {
+      src: '/images/blog/blog-thermostat-optimization-desert.webp',
+      alt: 'Smart thermostat optimized for desert climate',
+      title: 'Thermostat optimization for desert homes',
+      description: 'Smart thermostat displaying efficient settings in a Tucson home.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Thermostat Optimization for Tucson Desert Homes',
     query: 'tucson thermostat optimization',
     meta: {
@@ -653,6 +762,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance Tucson' },
       { href: '/services/indoor-air-quality-tucson', label: 'Indoor Air Quality Tucson' },
+      { href: '/services/ac-installation-tucson', label: 'Smart Thermostat Install' },
+      { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
     ],
     locationLink: { href: '/locations/oro-valley-az', label: 'Oro Valley HVAC Services' },
     faqs: [
@@ -675,6 +786,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'tucson-emergency-hvac-response-guide',
+    image: {
+      src: '/images/blog/blog-emergency-hvac-guide-tucson.webp',
+      alt: 'Emergency HVAC response truck at night in Tucson',
+      title: 'Emergency HVAC response guide',
+      description: 'Crest Air emergency van arriving at a Tucson home at night.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'Emergency HVAC Response Guide for Tucson Homeowners',
     query: 'tucson emergency hvac',
     meta: {
@@ -714,6 +833,8 @@ export const blogPosts: BlogPost[] = [
     serviceLinks: [
       { href: '/services/emergency-hvac-repair-tucson', label: 'Emergency HVAC Repair Tucson' },
       { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'Preventive Maintenance' },
+      { href: '/services/ac-installation-tucson', label: 'AC Replacement' },
     ],
     locationLink: { href: '/locations/south-tucson-az', label: 'South Tucson HVAC Services' },
     faqs: [
@@ -736,6 +857,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'hvac-financing-and-cost-breakdowns-in-tucson',
+    image: {
+      src: '/images/blog/blog-hvac-financing-tucson.webp',
+      alt: 'Homeowner reviewing HVAC financing options',
+      title: 'HVAC financing guide',
+      description: 'Reviewing financing paperwork with a Crest Air advisor.',
+      page: '/blog',
+      section: 'hero',
+    },
     title: 'HVAC Financing & Cost Breakdowns in Tucson',
     query: 'hvac financing tucson',
     meta: {
@@ -773,8 +902,11 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     serviceLinks: [
-      { href: '/financing', label: 'HVAC Financing Tucson' },
       { href: '/services/ac-installation-tucson', label: 'AC Installation Tucson' },
+      { href: '/financing', label: 'HVAC Financing Options' },
+      { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
+      { href: '/services/hvac-maintenance-tucson', label: 'Maintenance Plans' },
+      { href: '/commercial/ac-installation', label: 'Commercial Installation' },
     ],
     locationLink: { href: '/locations/marana-az', label: 'Marana HVAC Services' },
     faqs: [

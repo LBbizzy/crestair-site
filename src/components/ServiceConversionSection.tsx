@@ -69,12 +69,12 @@ export function ServiceConversionSection({
   }
 
   return (
-    <section className="grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-[1fr_1.1fr]">
+    <section id="request-service" className="scroll-mt-24 grid gap-6 rounded-3xl bg-white p-8 shadow-sm md:grid-cols-[1fr_1.1fr]">
       <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Live Conversion Path</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Get Started</p>
         <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Request service or call now</h2>
         <p className="mt-4 text-slate-700">
-          This {contextLabel} routes form submissions server-side into GoHighLevel using secure environment variables only.
+          Fill out the form and a Crest Air team member will contact you to confirm your appointment. Or call us directly for immediate help.
         </p>
         <CallTrackedLink
           className="mt-6 inline-flex rounded-full bg-[#041B34] px-6 py-3 font-semibold text-white transition hover:bg-[#06284d]"
@@ -88,8 +88,7 @@ export function ServiceConversionSection({
           Call {site.phone}
         </CallTrackedLink>
         <p className="mt-4 text-sm text-slate-500">
-          Call CTA now sends a best-effort GoHighLevel tracking event before continuing to the phone dialer. Form submissions persist source, service, location, action, request details, page type, and funnel attribution.
-          {funnelIdentifier ? ` Funnel: ${funnelIdentifier}.` : ''}
+          Available Monday–Saturday. Emergency service available 24/7.
         </p>
       </div>
 

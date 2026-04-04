@@ -1,3 +1,4 @@
+import { AnimatedPage } from '@/components/AnimatedPage';
 import { MarketingPageTemplate } from '@/components/MarketingPageTemplate';
 import { buildMetadata } from '@/lib/metadata';
 

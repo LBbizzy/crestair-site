@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { CallTrackedLink } from '@/components/CallTrackedLink';
+import { SiteImage } from '@/components/SiteImage';
 import { BlogPost } from '@/lib/types';
 import { site } from '@/lib/site';
 
@@ -10,7 +11,14 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
 
   return (
     <article className="mx-auto flex w-full max-w-4xl flex-col gap-10 px-6 py-10">
-      <header className="rounded-3xl bg-[#041B34] px-8 py-14 text-white shadow-xl">
+      <header className="overflow-hidden rounded-3xl bg-[#041B34] text-white shadow-xl">
+        {post.image ? (
+          <div className="relative h-64 md:h-80">
+            <SiteImage asset={post.image} width={960} height={400} className="h-full w-full object-cover" sizes="(min-width: 768px) 60vw, 100vw" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#041B34] via-[#041B34]/40 to-transparent" />
+          </div>
+        ) : null}
+        <div className="px-8 py-14">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">{post.query}</p>
         <h1 className="mt-4 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight md:text-5xl">{post.title}</h1>
         <p className="mt-5 text-lg leading-8 text-slate-200">{post.intro}</p>
@@ -32,6 +40,7 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
             Call {site.phone}
           </CallTrackedLink>
         </div>
+        </div>
       </header>
 
       <section className="rounded-3xl bg-white p-8 shadow-sm">
@@ -39,11 +48,11 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
         <p className="mt-4 text-slate-700">This article is designed to route high-intent readers into the most relevant service page and the Tucson service-area hub without breaking the content flow.</p>
         <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold text-[#041B34]">
           {serviceButtons.map((service) => (
-            <Link key={`${post.slug}-${service.href}`} className="underline" href={service.href}>
+            <Link key={`${post.slug}-${service.href}`} className="underline transition hover:text-[#F4911D]" href={service.href}>
               {service.label}
             </Link>
           ))}
-          <Link className="underline" href={post.locationLink.href}>{post.locationLink.label}</Link>
+          <Link className="underline transition hover:text-[#F4911D]" href={post.locationLink.href}>{post.locationLink.label}</Link>
         </div>
       </section>
 
@@ -57,11 +66,11 @@ export function BlogPostTemplate({ post }: { post: BlogPost }) {
               <p className="mt-2 text-slate-700">If this issue sounds familiar in your Tucson home, move directly into the related service path before the problem becomes more expensive.</p>
               <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-[#041B34]">
                 {serviceButtons.map((service) => (
-                  <Link key={`${post.slug}-mid-${service.href}`} className="underline" href={service.href}>
+                  <Link key={`${post.slug}-mid-${service.href}`} className="underline transition hover:text-[#F4911D]" href={service.href}>
                     {service.label}
                   </Link>
                 ))}
-                <Link className="underline" href={post.locationLink.href}>{post.locationLink.label}</Link>
+                <Link className="underline transition hover:text-[#F4911D]" href={post.locationLink.href}>{post.locationLink.label}</Link>
               </div>
             </div>
           ) : null}

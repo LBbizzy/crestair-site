@@ -1,3 +1,4 @@
+import { AnimatedPage } from '@/components/AnimatedPage';
 import { HeroSection } from '@/components/HeroSection';
 import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { buildMetadata } from '@/lib/metadata';
@@ -15,10 +16,11 @@ export const metadata = buildMetadata(
 export default function ContactPage() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-6 py-10">
+      <AnimatedPage>
       <HeroSection
         eyebrow="Contact Crest Air"
         title="Talk to Crest Air about repair, installation, or general HVAC help"
-        body="Use the contact form below to send a tracked request into GoHighLevel or call now for faster help."
+        body="Fill out the form below to request service, or call us directly for immediate help. Same-day appointments available across Tucson."
         primaryLabel="Request Service"
         primaryHref="#contact-form"
         secondaryLabel={`Call ${site.phone}`}
@@ -53,6 +55,7 @@ export default function ContactPage() {
           contextLabel="contact page"
         />
       </div>
+      </AnimatedPage>
     </div>
   );
 }

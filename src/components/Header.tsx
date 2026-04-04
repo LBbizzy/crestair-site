@@ -8,12 +8,12 @@ import { SiteImage } from '@/components/SiteImage';
 import { ImageAsset } from '@/lib/types';
 
 const crestAirLogo: ImageAsset = {
-  src: '/images/home/crest-air-heating-cooling-tucson-logo.png',
+  src: '/images/logos/approved/crest-air-logo-primary-horizontal.png',
   alt: 'Crest Air Heating and Cooling Tucson logo',
   title: 'Crest Air Heating and Cooling Tucson',
   description: 'Sitewide Crest Air logo used in the primary navigation and masthead.',
-  page: 'home',
-  section: 'header',
+  page: 'logos/header',
+  section: 'brand',
 };
 
 const mobileExpandableLabels = new Set(['Services', 'Commercial', 'Locations', 'Service Areas', 'Blog', 'Blogs']);
@@ -85,17 +85,19 @@ export function Header() {
                 </Link>
 
                 {item.children?.length ? (
-                  <div className="pointer-events-none absolute left-0 top-full z-20 mt-3 w-64 rounded-2xl border border-slate-200 bg-white p-3 opacity-0 shadow-xl transition group-hover:pointer-events-auto group-hover:opacity-100">
-                    <div className="flex flex-col gap-1">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[#041B34]"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                  <div className="pointer-events-none absolute left-0 top-full z-20 w-64 pt-2 opacity-0 transition-opacity duration-150 group-hover:pointer-events-auto group-hover:opacity-100">
+                    <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-xl">
+                      <div className="flex flex-col gap-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-[#041B34]"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ) : null}

@@ -1,7 +1,97 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      // ━━━ Pages ━━━
+      { source: '/about-us', destination: '/about', permanent: true },
+      { source: '/about-us/', destination: '/about', permanent: true },
+      { source: '/contact-us', destination: '/contact', permanent: true },
+      { source: '/contact-us/', destination: '/contact', permanent: true },
+      { source: '/faq', destination: '/contact', permanent: true },
+      { source: '/faq/', destination: '/contact', permanent: true },
+      { source: '/price-table', destination: '/financing', permanent: true },
+      { source: '/price-table/', destination: '/financing', permanent: true },
+      { source: '/service-areas', destination: '/locations/tucson-az', permanent: true },
+      { source: '/service-areas/', destination: '/locations/tucson-az', permanent: true },
+      { source: '/service', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/service/', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/hvac-company-tucson-az', destination: '/', permanent: true },
+      { source: '/hvac-company-tucson-az/', destination: '/', permanent: true },
+      { source: '/blog-details', destination: '/blog', permanent: true },
+      { source: '/blog-details/', destination: '/blog', permanent: true },
+
+      // ━━━ Services (old top-level paths) ━━━
+      { source: '/ac-repair-tucson-az', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/ac-repair-tucson-az/', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/ac-installation-tucson-az', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/ac-installation-tucson-az/', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/residential-ac-installation-in-tucson-az', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/residential-ac-installation-in-tucson-az/', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/residential-hvac-services-in-tucson-az', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/residential-hvac-services-in-tucson-az/', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/hvac-maintenance-plans-in-tucson-az', destination: '/services/hvac-maintenance-tucson', permanent: true },
+      { source: '/hvac-maintenance-plans-in-tucson-az/', destination: '/services/hvac-maintenance-tucson', permanent: true },
+      { source: '/indoor-air-quality-services-in-tucson-az', destination: '/services/indoor-air-quality-tucson', permanent: true },
+      { source: '/indoor-air-quality-services-in-tucson-az/', destination: '/services/indoor-air-quality-tucson', permanent: true },
+      { source: '/ductwork-airflow-solutions-in-tucson-az', destination: '/services/duct-cleaning-tucson', permanent: true },
+      { source: '/ductwork-airflow-solutions-in-tucson-az/', destination: '/services/duct-cleaning-tucson', permanent: true },
+      { source: '/commercial-hvac-services-in-tucson-az', destination: '/commercial', permanent: true },
+      { source: '/commercial-hvac-services-in-tucson-az/', destination: '/commercial', permanent: true },
+      { source: '/commercial-ac-installation-in-tucson-az', destination: '/commercial/ac-installation', permanent: true },
+      { source: '/commercial-ac-installation-in-tucson-az/', destination: '/commercial/ac-installation', permanent: true },
+
+      // ━━━ Services (old /service/ paths) ━━━
+      { source: '/service/ac-repair-tucson', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/service/ac-repair-tucson/', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/service/residential-ac-installation-tucson', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/service/residential-ac-installation-tucson/', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/service/residential-hvac-services-tucson', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/service/residential-hvac-services-tucson/', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/service/hvac-maintenance-plans-tucson', destination: '/services/hvac-maintenance-tucson', permanent: true },
+      { source: '/service/hvac-maintenance-plans-tucson/', destination: '/services/hvac-maintenance-tucson', permanent: true },
+      { source: '/service/indoor-air-quality-services-tucson', destination: '/services/indoor-air-quality-tucson', permanent: true },
+      { source: '/service/indoor-air-quality-services-tucson/', destination: '/services/indoor-air-quality-tucson', permanent: true },
+      { source: '/service/ductwork-airflow-solutions-tucson', destination: '/services/duct-cleaning-tucson', permanent: true },
+      { source: '/service/ductwork-airflow-solutions-tucson/', destination: '/services/duct-cleaning-tucson', permanent: true },
+      { source: '/service/commercial-hvac-services-tucson', destination: '/commercial', permanent: true },
+      { source: '/service/commercial-hvac-services-tucson/', destination: '/commercial', permanent: true },
+      { source: '/service/commercial-ac-installation-tucson', destination: '/commercial/ac-installation', permanent: true },
+      { source: '/service/commercial-ac-installation-tucson/', destination: '/commercial/ac-installation', permanent: true },
+
+      // ━━━ Locations ━━━
+      { source: '/hvac-tucson-az', destination: '/locations/tucson-az', permanent: true },
+      { source: '/hvac-tucson-az/', destination: '/locations/tucson-az', permanent: true },
+      { source: '/hvac-oro-valley-az', destination: '/locations/oro-valley-az', permanent: true },
+      { source: '/hvac-oro-valley-az/', destination: '/locations/oro-valley-az', permanent: true },
+      { source: '/hvac-marana-az', destination: '/locations/marana-az', permanent: true },
+      { source: '/hvac-marana-az/', destination: '/locations/marana-az', permanent: true },
+      { source: '/hvac-vail-az', destination: '/locations/vail-az', permanent: true },
+      { source: '/hvac-vail-az/', destination: '/locations/vail-az', permanent: true },
+      { source: '/hvac-sahuarita-az', destination: '/locations/sahuarita-az', permanent: true },
+      { source: '/hvac-sahuarita-az/', destination: '/locations/sahuarita-az', permanent: true },
+      { source: '/hvac-catalina-foothills-az', destination: '/locations/catalina-foothills-az', permanent: true },
+      { source: '/hvac-catalina-foothills-az/', destination: '/locations/catalina-foothills-az', permanent: true },
+
+      // ━━━ Blog ━━━
+      { source: '/tucson-hvac-blog', destination: '/blog', permanent: true },
+      { source: '/tucson-hvac-blog/', destination: '/blog', permanent: true },
+      { source: '/ac-installation-tips', destination: '/blog/repair-vs-replace-ac-in-tucson-cost-comparison', permanent: true },
+      { source: '/ac-installation-tips/', destination: '/blog/repair-vs-replace-ac-in-tucson-cost-comparison', permanent: true },
+      { source: '/ac-repair-tips', destination: '/blog/how-to-know-if-your-ac-needs-repair-in-tucson', permanent: true },
+      { source: '/ac-repair-tips/', destination: '/blog/how-to-know-if-your-ac-needs-repair-in-tucson', permanent: true },
+      { source: '/hvac-maintenance-tips-preventative-service-guide-for-tucson-homes-businesses', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
+      { source: '/hvac-maintenance-tips-preventative-service-guide-for-tucson-homes-businesses/', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
+      { source: '/energy-efficient-hvac-systems-cost-saving-tips-in-tucson', destination: '/blog/how-to-lower-cooling-costs-in-tucson-summer', permanent: true },
+      { source: '/energy-efficient-hvac-systems-cost-saving-tips-in-tucson/', destination: '/blog/how-to-lower-cooling-costs-in-tucson-summer', permanent: true },
+      { source: '/indoor-air-quality-solutions-for-tucson-homes-businesses', destination: '/blog/tucson-indoor-air-quality-dust-allergies', permanent: true },
+      { source: '/indoor-air-quality-solutions-for-tucson-homes-businesses/', destination: '/blog/tucson-indoor-air-quality-dust-allergies', permanent: true },
+      { source: '/tucson-hvac-tips-for-home-business-owners', destination: '/blog/thermostat-optimization-for-desert-homes', permanent: true },
+      { source: '/tucson-hvac-tips-for-home-business-owners/', destination: '/blog/thermostat-optimization-for-desert-homes', permanent: true },
+      { source: '/how-often-should-you-service-your-ac-in-tucsons-extreme-heat', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
+      { source: '/how-often-should-you-service-your-ac-in-tucsons-extreme-heat/', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

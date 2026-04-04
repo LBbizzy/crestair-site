@@ -5,12 +5,12 @@ import { SiteImage } from '@/components/SiteImage';
 import { ImageAsset } from '@/lib/types';
 
 const crestAirFooterLogo: ImageAsset = {
-  src: '/images/home/crest-air-heating-cooling-tucson-logo.png',
+  src: '/images/logos/approved/crest-air-logo-primary-horizontal.png',
   alt: 'Crest Air Heating and Cooling Tucson logo',
   title: 'Crest Air Heating and Cooling Tucson',
   description: 'Footer logo reinforcing Crest Air brand trust across the site.',
-  page: 'home',
-  section: 'footer',
+  page: 'logos/footer',
+  section: 'brand',
 };
 
 export function Footer() {

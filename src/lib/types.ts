@@ -66,6 +66,7 @@ export type BlogPost = {
   query: string;
   meta: SeoMeta;
   intro: string;
+  image?: ImageAsset;
   sections: { heading: string; body: string }[];
   serviceLinks: { href: string; label: string }[];
   locationLink: { href: string; label: string };
@@ -79,4 +80,5 @@ export type ImageAsset = {
   description: string;
   page: string;
   section: string;
+  href?: string;
 };

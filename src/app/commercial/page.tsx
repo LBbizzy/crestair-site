@@ -1,6 +1,8 @@
+import { AnimatedPage } from '@/components/AnimatedPage';
 import Link from 'next/link';
 import { HeroSection } from '@/components/HeroSection';
 import { CTASection } from '@/components/CTASection';
+import { ImageCard } from '@/components/ImageCard';
 import { SiteImage } from '@/components/SiteImage';
 import { buildMetadata } from '@/lib/metadata';
 import { site } from '@/lib/site';
@@ -29,8 +31,38 @@ const commercialRoutes = [
   },
 ];
 
+const commercialGalleryImages: ImageAsset[] = [
+  {
+    src: '/images/services/commercial-hub-overview-building.png',
+    alt: 'Crest Air van parked outside a Tucson commercial building',
+    title: 'Commercial service overview',
+    description: 'Crest Air service van outside a Tucson office building ready for commercial HVAC work.',
+    page: '/commercial',
+    section: 'gallery',
+    href: '/commercial',
+  },
+  {
+    src: '/images/services/commercial-hub-team-rooftop.png',
+    alt: 'Crest Air commercial team gathered on a rooftop with Tucson skyline',
+    title: 'Commercial team on rooftop',
+    description: 'Crest Air commercial division crew on a Tucson rooftop ready for the day\'s work.',
+    page: '/commercial',
+    section: 'gallery',
+    href: '/commercial',
+  },
+  {
+    src: '/images/services/commercial-hub-loading-equipment.png',
+    alt: 'Crew loading commercial HVAC equipment into a Crest Air truck',
+    title: 'Equipment loading',
+    description: 'Loading heavy commercial HVAC components for a Tucson installation job.',
+    page: '/commercial',
+    section: 'gallery',
+    href: '/commercial',
+  },
+];
+
 const commercialOverviewImage: ImageAsset = {
-  src: '/images/services/commercial-overview-campus.png',
+  src: '/images/services/commercial-package-units-overview-campus.png',
   alt: 'Crest Air van outside a Tucson business park with rooftop HVAC units',
   title: 'Commercial HVAC overview hero image',
   description: 'Business park scene showing Crest Air supporting rooftop HVAC units across restaurants, offices, retail, and warehouses.',
@@ -50,6 +82,7 @@ export const metadata = buildMetadata(
 export default function CommercialOverviewPage() {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 py-10">
+      <AnimatedPage>
       <HeroSection
         eyebrow="Commercial HVAC"
         title="RTU-focused HVAC support for Tucson restaurants, offices, retail, and warehouses"
@@ -69,7 +102,12 @@ export default function CommercialOverviewPage() {
           <article key={route.href} className="rounded-3xl bg-white p-8 shadow-sm">
             <h2 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-slate-950">{route.title}</h2>
             <p className="mt-4 text-slate-700">{route.body}</p>
-            <Link href={route.href} className="mt-6 inline-flex font-semibold text-[#041B34] underline decoration-[#66CFEF] underline-offset-4">Open commercial page</Link>
+            <Link href={route.href} className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#041B34] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0B3158]">
+              Learn More
+              <svg className="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 5l5 5-5 5" />
+              </svg>
+            </Link>
           </article>
         ))}
       </section>
@@ -91,6 +129,12 @@ export default function CommercialOverviewPage() {
         </div>
       </section>
 
+      <section className="grid gap-4 rounded-3xl bg-white p-8 shadow-sm sm:grid-cols-2 lg:grid-cols-3">
+        {commercialGalleryImages.map((asset) => (
+          <ImageCard key={asset.src} asset={asset} />
+        ))}
+      </section>
+
       <CTASection
         heading="Need commercial HVAC help in Tucson right now?"
         body="Call Crest Air for the fastest next step, or move directly into the specific commercial page that fits the property and system issue."
@@ -100,6 +144,7 @@ export default function CommercialOverviewPage() {
         secondaryHref="/contact"
         secondaryCallTracking={{ sourcePage: '/commercial', serviceType: 'commercial-hvac', location: 'tucson-az', pageType: 'commercial-overview' }}
       />
+      </AnimatedPage>
     </div>
   );
 }
