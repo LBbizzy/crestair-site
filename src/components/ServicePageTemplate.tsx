@@ -84,7 +84,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
 const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   'ac-repair-tucson': [
     {
-      src: '/images/services/ac-repair-tucson/ac-repair-tucson-customer-handoff.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-customer-handoff.webp',
       alt: 'Technician handing off diagnostic notes to a Tucson homeowner',
       title: 'Customer briefing after diagnostics',
       description: 'Tech recaps refrigerant pressures and next steps for a Tucson homeowner.',
@@ -93,7 +93,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/ac-repair-tucson-multimeter-test.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-multimeter-test.webp',
       alt: 'Close-up of a Crest Air technician testing components with a multimeter',
       title: 'Component testing',
       description: 'Metering out contactors and capacitors before ordering parts.',
@@ -102,7 +102,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/ac-repair-tucson-wiring-detail.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-wiring-detail.webp',
       alt: 'Detailed wiring repair inside an outdoor condensing unit',
       title: 'Wiring detail repair',
       description: 'Tightening low-voltage wiring and replacing failing connectors.',
@@ -111,7 +111,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/ac-repair-tucson-homeowner-briefing.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-homeowner-briefing.webp',
       alt: 'Technician reviewing options with a Tucson homeowner inside the living room',
       title: 'Repair options conversation',
       description: 'Homeowner reviews repair vs. replacement options before signing.',
@@ -120,7 +120,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-repair-tucson',
     },
     {
-      src: '/images/services/ac-repair-tucson/ac-repair-tucson-rooftop-package.png',
+      src: '/images/services/ac-repair-tucson/ac-repair-tucson-rooftop-package.webp',
       alt: 'Crew working on a rooftop package unit overlooking Tucson',
       title: 'Rooftop package unit repair',
       description: 'Team stabilizing a rooftop package unit near Broadway and Campbell.',
@@ -131,7 +131,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'ac-installation-tucson': [
     {
-      src: '/images/services/ac-installation-tucson/ac-installation-tucson-hero-team.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-hero-team.webp',
       alt: 'Crest Air installation crew unloading a new condenser',
       title: 'Installation crew arrival',
       description: 'Installers unloading equipment for a Tucson retrofit.',
@@ -140,7 +140,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/ac-installation-tucson-blueprint-review.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-blueprint-review.webp',
       alt: 'Project manager reviewing load calculations and blueprints with a business owner',
       title: 'Load calculation review',
       description: 'Project manager reviewing duct and load calcs with stakeholders.',
@@ -149,7 +149,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/ac-installation-tucson-crane-rooftop.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-crane-rooftop.webp',
       alt: 'Crane lifting HVAC equipment onto a Tucson rooftop',
       title: 'Crane lift coordination',
       description: 'Coordinating crane lifts for rooftop replacements downtown.',
@@ -158,7 +158,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/ac-installation-tucson-attic-ductwork.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-attic-ductwork.webp',
       alt: 'Technician adjusting ductwork inside an attic',
       title: 'Ductwork adjustments',
       description: 'Attic adjustments to balance airflow before startup.',
@@ -167,7 +167,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/ac-installation-tucson',
     },
     {
-      src: '/images/services/ac-installation-tucson/ac-installation-tucson-thermostat-setup.png',
+      src: '/images/services/ac-installation-tucson/ac-installation-tucson-thermostat-setup.webp',
       alt: 'Installer setting up a smart thermostat after a system replacement',
       title: 'Thermostat commissioning',
       description: 'Technician programming comfort schedules post-install.',
@@ -178,7 +178,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'hvac-maintenance-tucson': [
     {
-      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-checklist.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-checklist.webp',
       alt: 'Technician checking off a maintenance checklist',
       title: 'Seasonal maintenance checklist',
       description: 'Documenting each inspection point for Tucson tune-ups.',
@@ -187,7 +187,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-coil-cleaning.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-coil-cleaning.webp',
       alt: 'Technician cleaning condenser coils',
       title: 'Coil cleaning',
       description: 'Clearing dust and debris from coils before heat season.',
@@ -196,7 +196,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-attic-adjustment.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-attic-adjustment.webp',
       alt: 'Tech adjusting equipment inside an attic',
       title: 'Attic adjustments',
       description: 'Tightening panels and checking wiring in attic installs.',
@@ -205,7 +205,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-capacitor-swap.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-capacitor-swap.webp',
       alt: 'Replacing a failing capacitor during maintenance',
       title: 'Capacitor replacement',
       description: 'Preemptively swapping weak capacitors during tune-ups.',
@@ -214,7 +214,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/hvac-maintenance-tucson',
     },
     {
-      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-customer-log.png',
+      src: '/images/services/hvac-maintenance-tucson/hvac-maintenance-tucson-customer-log.webp',
       alt: 'Homeowner reviewing maintenance logs with technician',
       title: 'Maintenance log handoff',
       description: 'Sharing digital logs and photos with the homeowner.',
@@ -225,7 +225,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'duct-cleaning-tucson': [
     {
-      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vent-detail.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vent-detail.webp',
       alt: 'Technician inspecting a supply vent for dust build-up',
       title: 'Vent detail inspection',
       description: 'Documenting dust build-up inside Tucson vents before cleaning.',
@@ -234,7 +234,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vacuum-detail.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vacuum-detail.webp',
       alt: 'Vacuum hose cleaning ductwork in an attic',
       title: 'Vacuum extraction',
       description: 'Sealed vacuum hoses clearing debris from attic duct runs.',
@@ -243,7 +243,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-duct-seal.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-duct-seal.webp',
       alt: 'Technician sealing duct joints with mastic',
       title: 'Duct sealing follow-up',
       description: 'Applying mastic to leaky joints after cleaning.',
@@ -252,7 +252,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-rooftop.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-rooftop.webp',
       alt: 'Crew working on rooftop package unit duct connections',
       title: 'Rooftop duct support',
       description: 'Stabilizing rooftop duct transitions during cleaning.',
@@ -261,7 +261,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/duct-cleaning-tucson',
     },
     {
-      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vent-before-after.png',
+      src: '/images/services/duct-cleaning-tucson/duct-cleaning-tucson-vent-before-after.webp',
       alt: 'Before and after comparison of a cleaned supply vent',
       title: 'Before/after proof',
       description: 'Visual proof of dust removal shared with homeowners.',
@@ -272,7 +272,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'heating-tucson': [
     {
-      src: '/images/services/heating-tucson/heating-tucson-furnace-inspection.png',
+      src: '/images/services/heating-tucson/heating-tucson-furnace-inspection.webp',
       alt: 'Technician inspecting a gas furnace in a Tucson home',
       title: 'Furnace inspection',
       description: 'Checking heat exchanger and burner assembly during a winter tune-up.',
@@ -281,7 +281,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/heating-tucson',
     },
     {
-      src: '/images/services/heating-tucson/heating-tucson-heat-pump-outdoor.png',
+      src: '/images/services/heating-tucson/heating-tucson-heat-pump-outdoor.webp',
       alt: 'Crest Air tech servicing a heat pump outdoor unit in Tucson',
       title: 'Heat pump service',
       description: 'Servicing a heat pump outdoor unit for efficient winter heating in Tucson.',
@@ -290,7 +290,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/heating-tucson',
     },
     {
-      src: '/images/services/heating-tucson/heating-tucson-thermostat-adjust.png',
+      src: '/images/services/heating-tucson/heating-tucson-thermostat-adjust.webp',
       alt: 'Homeowner adjusting thermostat with technician guidance',
       title: 'Heating thermostat adjustment',
       description: 'Technician showing homeowner optimal heating settings for Tucson winters.',
@@ -299,7 +299,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/heating-tucson',
     },
     {
-      src: '/images/services/heating-tucson/heating-tucson-duct-insulation.png',
+      src: '/images/services/heating-tucson/heating-tucson-duct-insulation.webp',
       alt: 'Technician checking duct insulation in an attic for heat loss',
       title: 'Duct insulation check',
       description: 'Inspecting attic ductwork insulation to prevent heat loss during Tucson cold snaps.',
@@ -310,7 +310,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'indoor-air-quality-tucson': [
     {
-      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-filter-upgrade.png',
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-filter-upgrade.webp',
       alt: 'Technician installing a high-efficiency air filter in a Tucson home',
       title: 'Air filter upgrade',
       description: 'Upgrading to a MERV-13 filter for better dust and allergen control.',
@@ -319,7 +319,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/indoor-air-quality-tucson',
     },
     {
-      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-uv-light-install.png',
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-uv-light-install.webp',
       alt: 'Installing a UV air purification light inside an HVAC system',
       title: 'UV purification installation',
       description: 'Installing UV-C germicidal light inside the air handler for indoor air purification.',
@@ -328,7 +328,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/indoor-air-quality-tucson',
     },
     {
-      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-air-test.png',
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-air-test.webp',
       alt: 'Technician testing indoor air quality with a particulate meter',
       title: 'Air quality testing',
       description: 'Using a particulate meter to measure dust and allergen levels before and after service.',
@@ -337,7 +337,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/indoor-air-quality-tucson',
     },
     {
-      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-whole-home-purifier.png',
+      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-whole-home-purifier.webp',
       alt: 'Crest Air tech installing a whole-home air purification system',
       title: 'Whole-home purifier install',
       description: 'Installing a whole-home air purification system in a Tucson residence.',
@@ -348,7 +348,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'emergency-hvac-repair-tucson': [
     {
-      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-truck-arrival.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-truck-arrival.webp',
       alt: 'Emergency HVAC truck arriving at night',
       title: 'Emergency truck arrival',
       description: 'Night dispatch arriving with headlamps and stocked truck.',
@@ -357,7 +357,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-homeowner-brief.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-homeowner-brief.webp',
       alt: 'Technician speaking with a homeowner during an emergency visit',
       title: 'Homeowner briefing',
       description: 'Explaining steps before emergency diagnostics start.',
@@ -366,7 +366,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-night-headlamp.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-night-headlamp.webp',
       alt: 'Night repair with technician using a headlamp',
       title: 'Night repair in progress',
       description: 'Tech working through the night with headlamps and safety gear.',
@@ -375,7 +375,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-truck-prep.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-truck-prep.webp',
       alt: 'Crew prepping emergency gear at the truck',
       title: 'Gear prep',
       description: 'Crew prepping parts and tools at the truck before climbing ladders.',
@@ -384,7 +384,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/emergency-hvac-repair-tucson',
     },
     {
-      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-night-repair.png',
+      src: '/images/services/emergency-hvac-repair-tucson/emergency-hvac-repair-tucson-night-repair.webp',
       alt: 'Technician repairing rooftop unit at night',
       title: 'Rooftop emergency repair',
       description: 'Stabilizing a rooftop unit during a night outage.',

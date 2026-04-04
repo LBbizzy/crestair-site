@@ -38,35 +38,35 @@ const caseStudies = [
 
 const commercialGalleryAssets: Record<string, ImageAsset[]> = {
   'ac-repair': [
-    { src: '/images/services/commercial-ac-repair-rooftop-diagnostics.png', alt: 'Crest Air technician running diagnostics on a commercial rooftop unit in Tucson', title: 'Commercial rooftop diagnostics', description: 'Technician testing refrigerant pressures on a large commercial RTU above a Tucson strip mall.', page: '/commercial/ac-repair', section: 'gallery' },
-    { src: '/images/services/commercial-ac-repair-panel-inspection.png', alt: 'Technician inspecting the control panel of a commercial HVAC unit', title: 'Commercial control panel inspection', description: 'Inspecting electrical components inside a commercial rooftop unit control panel.', page: '/commercial/ac-repair', section: 'gallery' },
-    { src: '/images/services/commercial-ac-repair-condenser-coil.png', alt: 'Close-up of a technician cleaning commercial condenser coils in Tucson', title: 'Commercial condenser coil service', description: 'Cleaning heavy-duty condenser coils on a commercial rooftop unit.', page: '/commercial/ac-repair', section: 'gallery' },
+    { src: '/images/services/commercial-ac-repair-rooftop-diagnostics.webp', alt: 'Crest Air technician running diagnostics on a commercial rooftop unit in Tucson', title: 'Commercial rooftop diagnostics', description: 'Technician testing refrigerant pressures on a large commercial RTU above a Tucson strip mall.', page: '/commercial/ac-repair', section: 'gallery' },
+    { src: '/images/services/commercial-ac-repair-panel-inspection.webp', alt: 'Technician inspecting the control panel of a commercial HVAC unit', title: 'Commercial control panel inspection', description: 'Inspecting electrical components inside a commercial rooftop unit control panel.', page: '/commercial/ac-repair', section: 'gallery' },
+    { src: '/images/services/commercial-ac-repair-condenser-coil.webp', alt: 'Close-up of a technician cleaning commercial condenser coils in Tucson', title: 'Commercial condenser coil service', description: 'Cleaning heavy-duty condenser coils on a commercial rooftop unit.', page: '/commercial/ac-repair', section: 'gallery' },
   ],
   'ac-installation': [
-    { src: '/images/services/commercial-ac-installation-equipment-staging.png', alt: 'Crest Air crew staging new HVAC equipment in a Tucson parking lot', title: 'Commercial equipment staging', description: 'Installation crew staging a new rooftop package unit before crane lift.', page: '/commercial/ac-installation', section: 'gallery' },
-    { src: '/images/services/commercial-ac-installation-ductwork-connect.png', alt: 'Technicians connecting ductwork to a new commercial HVAC unit', title: 'Commercial ductwork connection', description: 'Connecting supply and return ductwork to a newly installed rooftop unit.', page: '/commercial/ac-installation', section: 'gallery' },
-    { src: '/images/services/commercial-ac-installation-thermostat-program.png', alt: 'Installer programming a commercial thermostat system in a Tucson office', title: 'Commercial thermostat programming', description: 'Programming zone controls and scheduling on a commercial thermostat after installation.', page: '/commercial/ac-installation', section: 'gallery' },
+    { src: '/images/services/commercial-ac-installation-equipment-staging.webp', alt: 'Crest Air crew staging new HVAC equipment in a Tucson parking lot', title: 'Commercial equipment staging', description: 'Installation crew staging a new rooftop package unit before crane lift.', page: '/commercial/ac-installation', section: 'gallery' },
+    { src: '/images/services/commercial-ac-installation-ductwork-connect.webp', alt: 'Technicians connecting ductwork to a new commercial HVAC unit', title: 'Commercial ductwork connection', description: 'Connecting supply and return ductwork to a newly installed rooftop unit.', page: '/commercial/ac-installation', section: 'gallery' },
+    { src: '/images/services/commercial-ac-installation-thermostat-program.webp', alt: 'Installer programming a commercial thermostat system in a Tucson office', title: 'Commercial thermostat programming', description: 'Programming zone controls and scheduling on a commercial thermostat after installation.', page: '/commercial/ac-installation', section: 'gallery' },
   ],
   maintenance: [
-    { src: '/images/services/commercial-maintenance-filter-change.png', alt: 'Technician changing filters on a large commercial air handler in Tucson', title: 'Commercial filter replacement', description: 'Replacing commercial-grade air filters during quarterly maintenance visit.', page: '/commercial/maintenance', section: 'gallery' },
-    { src: '/images/services/commercial-maintenance-belt-inspection.png', alt: 'Crest Air tech inspecting belts and bearings on a commercial air handler', title: 'Belt and bearing inspection', description: 'Checking drive belts and motor bearings during preventive maintenance.', page: '/commercial/maintenance', section: 'gallery' },
-    { src: '/images/services/commercial-maintenance-rooftop-walkthrough.png', alt: 'Two technicians doing a rooftop walkthrough of multiple HVAC units', title: 'Rooftop maintenance walkthrough', description: 'Crew conducting a systematic walkthrough of multiple rooftop units on a Tucson office building.', page: '/commercial/maintenance', section: 'gallery' },
+    { src: '/images/services/commercial-maintenance-filter-change.webp', alt: 'Technician changing filters on a large commercial air handler in Tucson', title: 'Commercial filter replacement', description: 'Replacing commercial-grade air filters during quarterly maintenance visit.', page: '/commercial/maintenance', section: 'gallery' },
+    { src: '/images/services/commercial-maintenance-belt-inspection.webp', alt: 'Crest Air tech inspecting belts and bearings on a commercial air handler', title: 'Belt and bearing inspection', description: 'Checking drive belts and motor bearings during preventive maintenance.', page: '/commercial/maintenance', section: 'gallery' },
+    { src: '/images/services/commercial-maintenance-rooftop-walkthrough.webp', alt: 'Two technicians doing a rooftop walkthrough of multiple HVAC units', title: 'Rooftop maintenance walkthrough', description: 'Crew conducting a systematic walkthrough of multiple rooftop units on a Tucson office building.', page: '/commercial/maintenance', section: 'gallery' },
   ],
   emergency: [
-    { src: '/images/services/commercial-emergency-truck-dispatch.png', alt: 'Crest Air emergency truck racing to a commercial call at night in Tucson', title: 'Emergency commercial dispatch', description: 'Emergency truck dispatched to a Tucson commercial property after hours.', page: '/commercial/emergency', section: 'gallery' },
-    { src: '/images/services/commercial-emergency-warehouse-repair.png', alt: 'Technician repairing a warehouse HVAC system during an emergency call', title: 'Warehouse emergency repair', description: 'Emergency repair on a large warehouse HVAC system to prevent inventory damage.', page: '/commercial/emergency', section: 'gallery' },
-    { src: '/images/services/commercial-emergency-rooftop-night-work.png', alt: 'Crew working on a commercial rooftop unit at night with work lights', title: 'Nighttime rooftop emergency', description: 'After-hours rooftop repair with LED work lights on a Tucson commercial building.', page: '/commercial/emergency', section: 'gallery' },
+    { src: '/images/services/commercial-emergency-truck-dispatch.webp', alt: 'Crest Air emergency truck racing to a commercial call at night in Tucson', title: 'Emergency commercial dispatch', description: 'Emergency truck dispatched to a Tucson commercial property after hours.', page: '/commercial/emergency', section: 'gallery' },
+    { src: '/images/services/commercial-emergency-warehouse-repair.webp', alt: 'Technician repairing a warehouse HVAC system during an emergency call', title: 'Warehouse emergency repair', description: 'Emergency repair on a large warehouse HVAC system to prevent inventory damage.', page: '/commercial/emergency', section: 'gallery' },
+    { src: '/images/services/commercial-emergency-rooftop-night-work.webp', alt: 'Crew working on a commercial rooftop unit at night with work lights', title: 'Nighttime rooftop emergency', description: 'After-hours rooftop repair with LED work lights on a Tucson commercial building.', page: '/commercial/emergency', section: 'gallery' },
   ],
   'package-units': [
-    { src: '/images/services/commercial-package-units-multi-unit-row.png', alt: 'Row of rooftop package units being serviced on a Tucson campus', title: 'Multi-unit rooftop service', description: 'Servicing a row of package units on a Tucson school campus rooftop.', page: '/commercial/package-units', section: 'gallery' },
-    { src: '/images/services/commercial-package-units-electrical-panel.png', alt: 'Technician checking the electrical panel of a package unit', title: 'Package unit electrical service', description: 'Verifying electrical connections and safety controls on a rooftop package unit.', page: '/commercial/package-units', section: 'gallery' },
-    { src: '/images/services/commercial-package-units-refrigerant-charge.png', alt: 'Crest Air tech checking refrigerant charge on a commercial package unit', title: 'Refrigerant charge verification', description: 'Measuring superheat and subcooling on a commercial package unit in Tucson.', page: '/commercial/package-units', section: 'gallery' },
+    { src: '/images/services/commercial-package-units-multi-unit-row.webp', alt: 'Row of rooftop package units being serviced on a Tucson campus', title: 'Multi-unit rooftop service', description: 'Servicing a row of package units on a Tucson school campus rooftop.', page: '/commercial/package-units', section: 'gallery' },
+    { src: '/images/services/commercial-package-units-electrical-panel.webp', alt: 'Technician checking the electrical panel of a package unit', title: 'Package unit electrical service', description: 'Verifying electrical connections and safety controls on a rooftop package unit.', page: '/commercial/package-units', section: 'gallery' },
+    { src: '/images/services/commercial-package-units-refrigerant-charge.webp', alt: 'Crest Air tech checking refrigerant charge on a commercial package unit', title: 'Refrigerant charge verification', description: 'Measuring superheat and subcooling on a commercial package unit in Tucson.', page: '/commercial/package-units', section: 'gallery' },
   ],
 };
 
 const commercialImageAssets: Record<string, ImageAsset> = {
   'ac-repair': {
-    src: '/images/services/commercial-ac-repair-rooftop-team.png',
+    src: '/images/services/commercial-ac-repair-rooftop-team.webp',
     alt: 'Crest Air commercial technicians servicing a rooftop unit in Tucson',
     title: 'Commercial AC repair rooftop service',
     description: 'Technicians working on a rooftop HVAC unit above a Tucson business.',
@@ -75,7 +75,7 @@ const commercialImageAssets: Record<string, ImageAsset> = {
     href: '/commercial/ac-repair',
   },
   'ac-installation': {
-    src: '/images/services/commercial-ac-installation-crane-lift.png',
+    src: '/images/services/commercial-ac-installation-crane-lift.webp',
     alt: 'Crest Air crew guiding a rooftop unit into place with a crane',
     title: 'Commercial AC installation crane lift',
     description: 'Crest Air installs a new rooftop unit for a Tucson office building.',
@@ -84,7 +84,7 @@ const commercialImageAssets: Record<string, ImageAsset> = {
     href: '/commercial/ac-installation',
   },
   maintenance: {
-    src: '/images/services/commercial-maintenance-rtu-inspection.png',
+    src: '/images/services/commercial-maintenance-rtu-inspection.webp',
     alt: 'Technician inspecting a rooftop unit for a Tucson retail property',
     title: 'Commercial maintenance RTU inspection',
     description: 'Preventive maintenance on a rooftop HVAC unit serving Tucson shops.',
@@ -93,7 +93,7 @@ const commercialImageAssets: Record<string, ImageAsset> = {
     href: '/commercial/maintenance',
   },
   emergency: {
-    src: '/images/services/commercial-emergency-night-response.png',
+    src: '/images/services/commercial-emergency-night-response.webp',
     alt: 'Emergency Crest Air crew arriving at a Tucson warehouse at night',
     title: 'Commercial emergency HVAC response',
     description: 'After-hours dispatch for a Tucson warehouse rooftop system.',
@@ -102,7 +102,7 @@ const commercialImageAssets: Record<string, ImageAsset> = {
     href: '/commercial/emergency',
   },
   'package-units': {
-    src: '/images/services/commercial-package-units-overview-campus.png',
+    src: '/images/services/commercial-package-units-overview-campus.webp',
     alt: 'Crest Air technicians inspecting rooftop package units across a Tucson campus',
     title: 'Commercial rooftop package unit service',
     description: 'Coordinated rooftop package unit service for Tucson properties.',

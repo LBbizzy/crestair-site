@@ -21,7 +21,7 @@ type LocationImageSet = {
 const locationImageSets: Record<string, LocationImageSet> = {
   'tucson-az': {
     hero: {
-      src: '/images/locations/tucson-az/tucson-az-desert-driveway-visit.png',
+      src: '/images/locations/tucson-az/tucson-az-desert-driveway-visit.webp',
       alt: 'Crest Air van pulling into a Tucson driveway with desert landscaping',
       title: 'Tucson technician arrival',
       description: 'Service van arriving at a Tucson neighborhood driveway during peak heat.',
@@ -31,7 +31,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/tucson-az/tucson-az-rooftop-skyline-service.png',
+        src: '/images/locations/tucson-az/tucson-az-rooftop-skyline-service.webp',
         alt: 'Technicians working on a rooftop unit with the Tucson skyline behind them',
         title: 'Rooftop skyline service',
         description: 'Crew stabilizing a rooftop package unit overlooking downtown Tucson.',
@@ -40,7 +40,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/tucson-az',
       },
       {
-        src: '/images/locations/tucson-az/tucson-az-backyard-evening-check.png',
+        src: '/images/locations/tucson-az/tucson-az-backyard-evening-check.webp',
         alt: 'Technician inspecting a condenser in a Tucson backyard at dusk',
         title: 'Evening backyard check',
         description: 'Evening follow-up visit after monsoon outages in central Tucson.',
@@ -49,7 +49,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/tucson-az',
       },
       {
-        src: '/images/locations/tucson-az/tucson-az-midtown-apartment-service.png',
+        src: '/images/locations/tucson-az/tucson-az-midtown-apartment-service.webp',
         alt: 'Crest Air technician servicing an AC unit at a Tucson midtown apartment complex',
         title: 'Midtown apartment service',
         description: 'Servicing a condenser at a midtown Tucson apartment building.',
@@ -61,7 +61,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'oro-valley-az': {
     hero: {
-      src: '/images/locations/oro-valley-az/oro-valley-az-culdesac-arrival.png',
+      src: '/images/locations/oro-valley-az/oro-valley-az-culdesac-arrival.webp',
       alt: 'Crest Air truck arriving in an Oro Valley cul-de-sac',
       title: 'Oro Valley arrival',
       description: 'Crew parking near foothills cul-de-sacs before morning appointments.',
@@ -71,7 +71,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/oro-valley-az/oro-valley-az-terrace-service.png',
+        src: '/images/locations/oro-valley-az/oro-valley-az-terrace-service.webp',
         alt: 'Technician servicing equipment on a shaded patio in Oro Valley',
         title: 'Terrace service visit',
         description: 'Servicing equipment on shaded patios common in Oro Valley.',
@@ -80,7 +80,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/oro-valley-az',
       },
       {
-        src: '/images/locations/oro-valley-az/oro-valley-az-sunrise-street.png',
+        src: '/images/locations/oro-valley-az/oro-valley-az-sunrise-street.webp',
         alt: 'Sunrise view over Oro Valley with service vans staged',
         title: 'Sunrise staging',
         description: 'Team staging vans before sunrise dispatch with Pusch Ridge views.',
@@ -89,7 +89,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/oro-valley-az',
       },
       {
-        src: '/images/locations/oro-valley-az/oro-valley-az-golf-community-visit.png',
+        src: '/images/locations/oro-valley-az/oro-valley-az-golf-community-visit.webp',
         alt: 'Crest Air van at an Oro Valley golf community home',
         title: 'Golf community service',
         description: 'Service visit at a home in an Oro Valley golf course community with mountain views.',
@@ -101,7 +101,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'marana-az': {
     hero: {
-      src: '/images/locations/marana-az/marana-az-rooftop-package-service.png',
+      src: '/images/locations/marana-az/marana-az-rooftop-package-service.webp',
       alt: 'Technician checking a rooftop package unit in Marana',
       title: 'Marana rooftop package service',
       description: 'Marana rooftop package unit service with desert backdrop.',
@@ -111,7 +111,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/marana-az/marana-az-wide-street-context.png',
+        src: '/images/locations/marana-az/marana-az-wide-street-context.webp',
         alt: 'Crest Air van parked on a wide Marana residential street',
         title: 'Wide street coverage',
         description: 'Showing access to wide Marana residential streets.',
@@ -120,7 +120,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/marana-az',
       },
       {
-        src: '/images/locations/marana-az/marana-az-farmhouse-sideyard.png',
+        src: '/images/locations/marana-az/marana-az-farmhouse-sideyard.webp',
         alt: 'Technician walking along a Marana farmhouse side yard',
         title: 'Farmhouse service visit',
         description: 'Service visit covering Marana farmhouse-style properties.',
@@ -129,7 +129,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/marana-az',
       },
       {
-        src: '/images/locations/marana-az/marana-az-new-construction-install.png',
+        src: '/images/locations/marana-az/marana-az-new-construction-install.webp',
         alt: 'Crest Air crew installing HVAC at a new construction site in Marana',
         title: 'New construction install',
         description: 'HVAC installation at a new construction home in Marana\'s growing developments.',
@@ -141,7 +141,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'catalina-foothills-az': {
     hero: {
-      src: '/images/locations/catalina-foothills-az/catalina-foothills-az-hillside-arrival.png',
+      src: '/images/locations/catalina-foothills-az/catalina-foothills-az-hillside-arrival.webp',
       alt: 'Crest Air van arriving at a hillside home in Catalina Foothills',
       title: 'Catalina Foothills service arrival',
       description: 'Service van pulling up to a luxury hillside home in Catalina Foothills.',
@@ -151,7 +151,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/catalina-foothills-az/catalina-foothills-az-patio-service.png',
+        src: '/images/locations/catalina-foothills-az/catalina-foothills-az-patio-service.webp',
         alt: 'Technician servicing an AC unit on a Catalina Foothills patio with mountain views',
         title: 'Foothills patio service',
         description: 'Servicing outdoor equipment with Catalina Mountain views in the background.',
@@ -160,7 +160,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/catalina-foothills-az',
       },
       {
-        src: '/images/locations/catalina-foothills-az/catalina-foothills-az-luxury-home-visit.png',
+        src: '/images/locations/catalina-foothills-az/catalina-foothills-az-luxury-home-visit.webp',
         alt: 'Crest Air technician at the entrance of a luxury Catalina Foothills home',
         title: 'Luxury home visit',
         description: 'Professional service visit to a high-end Catalina Foothills residence.',
@@ -172,7 +172,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'green-valley-az': {
     hero: {
-      src: '/images/locations/green-valley-az/green-valley-az-retirement-community-visit.png',
+      src: '/images/locations/green-valley-az/green-valley-az-retirement-community-visit.webp',
       alt: 'Crest Air van parked at a Green Valley retirement community home',
       title: 'Green Valley community service',
       description: 'Service call at a well-maintained Green Valley retirement community home.',
@@ -182,7 +182,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/green-valley-az/green-valley-az-desert-backyard-repair.png',
+        src: '/images/locations/green-valley-az/green-valley-az-desert-backyard-repair.webp',
         alt: 'Technician repairing an AC unit in a Green Valley desert backyard',
         title: 'Desert backyard repair',
         description: 'Repairing an outdoor condenser in a Green Valley backyard with Santa Rita Mountain views.',
@@ -191,7 +191,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/green-valley-az',
       },
       {
-        src: '/images/locations/green-valley-az/green-valley-az-senior-consultation.png',
+        src: '/images/locations/green-valley-az/green-valley-az-senior-consultation.webp',
         alt: 'Crest Air tech explaining options to a Green Valley homeowner',
         title: 'Senior-friendly consultation',
         description: 'Patient, friendly consultation with a Green Valley homeowner about AC options.',
@@ -203,7 +203,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'sahuarita-az': {
     hero: {
-      src: '/images/locations/sahuarita-az/sahuarita-az-new-development-service.png',
+      src: '/images/locations/sahuarita-az/sahuarita-az-new-development-service.webp',
       alt: 'Crest Air truck in a new Sahuarita housing development',
       title: 'Sahuarita new development',
       description: 'Servicing homes in one of Sahuarita\'s growing new residential developments.',
@@ -213,7 +213,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/sahuarita-az/sahuarita-az-pecan-grove-visit.png',
+        src: '/images/locations/sahuarita-az/sahuarita-az-pecan-grove-visit.webp',
         alt: 'Technician arriving at a Sahuarita home near pecan groves',
         title: 'Pecan grove area service',
         description: 'Service visit to a Sahuarita home with pecan orchards in the background.',
@@ -222,7 +222,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/sahuarita-az',
       },
       {
-        src: '/images/locations/sahuarita-az/sahuarita-az-family-home-repair.png',
+        src: '/images/locations/sahuarita-az/sahuarita-az-family-home-repair.webp',
         alt: 'Crest Air tech working on an AC unit at a Sahuarita family home',
         title: 'Family home AC repair',
         description: 'Repairing an outdoor unit at a family home in Sahuarita with kids\' bikes in the driveway.',
@@ -234,7 +234,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'south-tucson-az': {
     hero: {
-      src: '/images/locations/south-tucson-az/south-tucson-az-neighborhood-arrival.png',
+      src: '/images/locations/south-tucson-az/south-tucson-az-neighborhood-arrival.webp',
       alt: 'Crest Air van arriving in a South Tucson neighborhood',
       title: 'South Tucson service arrival',
       description: 'Service van pulling into a South Tucson residential street for an AC repair call.',
@@ -244,7 +244,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/south-tucson-az/south-tucson-az-backyard-condenser.png',
+        src: '/images/locations/south-tucson-az/south-tucson-az-backyard-condenser.webp',
         alt: 'Technician repairing a condenser in a South Tucson backyard',
         title: 'Backyard condenser repair',
         description: 'Working on an outdoor unit in a compact South Tucson backyard.',
@@ -253,7 +253,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/south-tucson-az',
       },
       {
-        src: '/images/locations/south-tucson-az/south-tucson-az-homeowner-walkthrough.png',
+        src: '/images/locations/south-tucson-az/south-tucson-az-homeowner-walkthrough.webp',
         alt: 'Crest Air tech walking a South Tucson homeowner through repair options',
         title: 'Homeowner walkthrough',
         description: 'Explaining repair options to a South Tucson homeowner at their front porch.',
@@ -265,7 +265,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'drexel-heights-az': {
     hero: {
-      src: '/images/locations/drexel-heights-az/drexel-heights-az-subdivision-service.png',
+      src: '/images/locations/drexel-heights-az/drexel-heights-az-subdivision-service.webp',
       alt: 'Crest Air truck parked in a Drexel Heights subdivision',
       title: 'Drexel Heights subdivision service',
       description: 'Service truck ready for appointments in a Drexel Heights residential area.',
@@ -275,7 +275,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/drexel-heights-az/drexel-heights-az-rooftop-repair.png',
+        src: '/images/locations/drexel-heights-az/drexel-heights-az-rooftop-repair.webp',
         alt: 'Technician working on a rooftop unit in Drexel Heights',
         title: 'Rooftop unit repair',
         description: 'Servicing a rooftop package unit on a Drexel Heights home.',
@@ -284,7 +284,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/drexel-heights-az',
       },
       {
-        src: '/images/locations/drexel-heights-az/drexel-heights-az-driveway-greeting.png',
+        src: '/images/locations/drexel-heights-az/drexel-heights-az-driveway-greeting.webp',
         alt: 'Crest Air technician greeting a homeowner in Drexel Heights',
         title: 'Driveway greeting',
         description: 'Arriving for a scheduled maintenance visit in Drexel Heights.',
@@ -296,7 +296,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'flowing-wells-az': {
     hero: {
-      src: '/images/locations/flowing-wells-az/flowing-wells-az-street-arrival.png',
+      src: '/images/locations/flowing-wells-az/flowing-wells-az-street-arrival.webp',
       alt: 'Crest Air van on a Flowing Wells residential street',
       title: 'Flowing Wells service arrival',
       description: 'Service van arriving in the Flowing Wells neighborhood for an HVAC call.',
@@ -306,7 +306,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/flowing-wells-az/flowing-wells-az-sideyard-unit.png',
+        src: '/images/locations/flowing-wells-az/flowing-wells-az-sideyard-unit.webp',
         alt: 'Technician servicing an AC unit in a Flowing Wells side yard',
         title: 'Side yard AC service',
         description: 'Working on an outdoor condenser tucked in a Flowing Wells side yard.',
@@ -315,7 +315,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/flowing-wells-az',
       },
       {
-        src: '/images/locations/flowing-wells-az/flowing-wells-az-evening-followup.png',
+        src: '/images/locations/flowing-wells-az/flowing-wells-az-evening-followup.webp',
         alt: 'Crest Air tech doing an evening follow-up in Flowing Wells',
         title: 'Evening follow-up visit',
         description: 'Returning for an evening check after a same-day repair in Flowing Wells.',
@@ -327,7 +327,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
   },
   'vail-az': {
     hero: {
-      src: '/images/locations/vail-az/vail-az-ranch-style-arrival.png',
+      src: '/images/locations/vail-az/vail-az-ranch-style-arrival.webp',
       alt: 'Crest Air van arriving at a ranch-style home in Vail',
       title: 'Vail ranch-style service',
       description: 'Service arrival at a ranch-style property in Vail with open desert views.',
@@ -337,7 +337,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
     },
     gallery: [
       {
-        src: '/images/locations/vail-az/vail-az-desert-lot-condenser.png',
+        src: '/images/locations/vail-az/vail-az-desert-lot-condenser.webp',
         alt: 'Technician working on a condenser at a Vail desert lot property',
         title: 'Desert lot condenser service',
         description: 'Working on an outdoor unit at a large-lot Vail property with desert vegetation.',
@@ -346,7 +346,7 @@ const locationImageSets: Record<string, LocationImageSet> = {
         href: '/locations/vail-az',
       },
       {
-        src: '/images/locations/vail-az/vail-az-sunset-departure.png',
+        src: '/images/locations/vail-az/vail-az-sunset-departure.webp',
         alt: 'Crest Air van departing a Vail neighborhood at sunset',
         title: 'Sunset service completion',
         description: 'Finishing up a service call in Vail as the sun sets over the Rincon Mountains.',

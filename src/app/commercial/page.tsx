@@ -33,7 +33,7 @@ const commercialRoutes = [
 
 const commercialGalleryImages: ImageAsset[] = [
   {
-    src: '/images/services/commercial-hub-overview-building.png',
+    src: '/images/services/commercial-hub-overview-building.webp',
     alt: 'Crest Air van parked outside a Tucson commercial building',
     title: 'Commercial service overview',
     description: 'Crest Air service van outside a Tucson office building ready for commercial HVAC work.',
@@ -42,7 +42,7 @@ const commercialGalleryImages: ImageAsset[] = [
     href: '/commercial',
   },
   {
-    src: '/images/services/commercial-hub-team-rooftop.png',
+    src: '/images/services/commercial-hub-team-rooftop.webp',
     alt: 'Crest Air commercial team gathered on a rooftop with Tucson skyline',
     title: 'Commercial team on rooftop',
     description: 'Crest Air commercial division crew on a Tucson rooftop ready for the day\'s work.',
@@ -51,7 +51,7 @@ const commercialGalleryImages: ImageAsset[] = [
     href: '/commercial',
   },
   {
-    src: '/images/services/commercial-hub-loading-equipment.png',
+    src: '/images/services/commercial-hub-loading-equipment.webp',
     alt: 'Crew loading commercial HVAC equipment into a Crest Air truck',
     title: 'Equipment loading',
     description: 'Loading heavy commercial HVAC components for a Tucson installation job.',
@@ -62,7 +62,7 @@ const commercialGalleryImages: ImageAsset[] = [
 ];
 
 const commercialOverviewImage: ImageAsset = {
-  src: '/images/services/commercial-package-units-overview-campus.png',
+  src: '/images/services/commercial-package-units-overview-campus.webp',
   alt: 'Crest Air van outside a Tucson business park with rooftop HVAC units',
   title: 'Commercial HVAC overview hero image',
   description: 'Business park scene showing Crest Air supporting rooftop HVAC units across restaurants, offices, retail, and warehouses.',
