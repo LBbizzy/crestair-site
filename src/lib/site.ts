@@ -60,7 +60,6 @@ export const primaryNav = [
       { href: '/locations/green-valley-az', label: 'Green Valley, AZ' },
     ],
   },
-  { href: '/about', label: 'About' },
   { href: '/financing', label: 'Financing' },
   {
     href: '/blog',
