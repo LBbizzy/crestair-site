@@ -545,6 +545,253 @@ export const services: ServiceContent[] = [
       secondaryHref: '/services/ac-repair-tucson',
     },
   },
+{
+  slug: 'heat-pump-tucson',
+  title: 'Heat Pump Service in Tucson',
+  location: 'Tucson, AZ',
+  meta: {
+    title: 'Heat Pump Service Tucson | Crest Air',
+    description: 'Heat pump service in Tucson for repairs, maintenance, and replacement guidance that keeps desert homes efficient in both cooling and heating season.',
+    keywords: ['heat pump service tucson', 'heat pump repair tucson', 'heat pump installation tucson'],
+  },
+  problemHeadline: 'Heat Pump Struggling in Tucson Heat or Winter Mornings?',
+  problemDescription:
+    'Short cycling, weak airflow, rising power bills, or a system stuck in one mode usually points to a heat pump issue that needs real testing, not guesswork. Crest Air diagnoses Tucson heat pump systems for year-round comfort.',
+  intro:
+    'Crest Air provides heat pump service in Tucson for homeowners who want efficient cooling in summer, dependable heating in winter, and clear answers when the system starts falling behind.',
+  overview: [
+    'We inspect reversing valves, defrost controls, refrigerant charge, electrical components, airflow, and thermostat communication to pinpoint why your heat pump is underperforming.',
+    'After testing the full system, we explain repair, maintenance, or replacement options in plain language so you can choose the smartest path for your home and budget.',
+  ],
+  signs: [
+    'Heat pump blows lukewarm air in cooling mode',
+    'System switches modes unpredictably or gets stuck heating',
+    'Outdoor unit ices up or defrost cycles seem excessive',
+    'Energy bills spike without a clear reason',
+    'Rooms stay uneven even while the system runs constantly',
+    'Grinding, buzzing, or relay-click sounds start during operation',
+  ],
+  whatsIncluded: [
+    'Full heat pump diagnostic across indoor and outdoor equipment',
+    'Refrigerant, airflow, and electrical testing with documented readings',
+    'Thermostat and control-board communication checks',
+    'Repair recommendations with clear pricing before work begins',
+    'Performance verification after approved service is completed',
+  ],
+  benefits: [
+    'Restore efficient heating and cooling from one system',
+    'Reduce unnecessary energy waste and runtime',
+    'Catch component failures before they lead to full outages',
+    'Get a clear plan for repair versus replacement decisions',
+  ],
+  process: ['Book your visit', 'System diagnostic', 'Review findings', 'Approve repair or next step', 'Verify comfort and operation'],
+  testimonial: {
+    quote: 'They figured out why our heat pump kept switching modes and got the house comfortable again without pushing a replacement.',
+    name: 'Aaron P.',
+    area: 'Oro Valley',
+  },
+  trustLine: 'Local Tucson technicians who understand heat pump performance in desert climates and shoulder seasons.',
+  financingNote: 'If your heat pump needs a major repair or full replacement, Crest Air offers financing options that make the upgrade easier to budget.',
+  maintenanceNote: 'Seasonal maintenance helps heat pumps stay efficient in both cooling and heating mode, especially before summer peaks and winter cold snaps.',
+  financingLink: { href: '/financing', label: 'See heat pump financing options' },
+  maintenanceLink: { href: '/services/hvac-maintenance-tucson', label: 'Schedule heat pump maintenance' },
+  relatedServices: [
+    { href: '/services/heating-tucson', label: 'Heating Tucson' },
+    { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
+    { href: '/services/hvac-maintenance-tucson', label: 'HVAC Maintenance Tucson' },
+  ],
+  serviceAreas: [
+    { href: '/locations/tucson-az', label: 'Tucson, AZ' },
+    { href: '/locations/oro-valley-az', label: 'Oro Valley, AZ' },
+  ],
+  faqs: [
+    {
+      question: 'Do heat pumps work well in Tucson?',
+      answer: 'Yes. Heat pumps perform well in Tucson because our winters are mild and our biggest demand is efficient cooling. The key is proper sizing, airflow, and refrigerant performance.',
+    },
+    {
+      question: 'Should I repair or replace my heat pump?',
+      answer: 'That depends on age, repair history, efficiency loss, and compressor condition. We test first, then show you the practical options before you commit to anything.',
+    },
+    {
+      question: 'Can you service both ducted and ductless heat pumps?',
+      answer: 'Yes. We service central heat pumps and ductless mini-split heat pump systems across Tucson-area homes.',
+    },
+  ],
+  cta: {
+    heading: 'Schedule heat pump service in Tucson',
+    body: 'Get your heat pump checked before comfort issues turn into a full seasonal outage.',
+    primaryLabel: 'Book Heat Pump Service',
+    primaryHref: '/contact',
+    secondaryLabel: 'See Heating Services',
+    secondaryHref: '/services/heating-tucson',
+  },
+},
+{
+  slug: 'thermostat-repair-tucson',
+  title: 'Thermostat Repair in Tucson',
+  location: 'Tucson, AZ',
+  meta: {
+    title: 'Thermostat Repair Tucson | Crest Air',
+    description: 'Thermostat repair in Tucson for blank screens, bad temperature readings, wiring issues, and smart thermostat problems that throw off home comfort.',
+    keywords: ['thermostat repair tucson', 'smart thermostat repair tucson', 'thermostat replacement tucson'],
+  },
+  problemHeadline: 'Thermostat Problems Throwing Off Your Tucson Comfort?',
+  problemDescription:
+    'If your thermostat is blank, inaccurate, unresponsive, or constantly misreading room temperature, Crest Air can trace the issue back to wiring, power, sensors, programming, or equipment communication.',
+  intro:
+    'Crest Air provides thermostat repair in Tucson for homeowners dealing with bad readings, Wi-Fi issues, short cycling, and controls that no longer communicate correctly with the HVAC system.',
+  overview: [
+    'We test thermostat power, low-voltage wiring, sensors, programming, and system communication so you know whether the real issue is the control, the wiring path, or the HVAC equipment itself.',
+    'If replacement makes more sense, we can recommend and install a thermostat that matches your system, comfort goals, and scheduling habits.',
+  ],
+  signs: [
+    'Thermostat screen is blank or keeps rebooting',
+    'Displayed temperature does not match the room',
+    'System will not turn on or off when commanded',
+    'AC or heat short cycles after thermostat changes',
+    'Smart thermostat loses connection or schedule control',
+    'Buttons, touch controls, or app settings stop responding',
+  ],
+  whatsIncluded: [
+    'Thermostat diagnostic with power and wiring verification',
+    'Sensor, calibration, and communication testing',
+    'Inspection of low-voltage connections at equipment and wall plate',
+    'Programming review for schedules, staging, and smart features',
+    'Repair or replacement recommendations with setup verification',
+  ],
+  benefits: [
+    'Restore accurate temperature control and scheduling',
+    'Reduce short cycling and uneven comfort',
+    'Improve communication between controls and equipment',
+    'Get cleaner control over cooling and heating costs',
+  ],
+  process: ['Request thermostat help', 'Control and wiring test', 'Review repair options', 'Repair or replace', 'Confirm proper system response'],
+  testimonial: {
+    quote: 'Our thermostat kept reading five degrees off and running the AC nonstop. Crest Air fixed the wiring issue and recalibrated everything in one visit.',
+    name: 'Nicole T.',
+    area: 'Vail',
+  },
+  trustLine: 'Clear thermostat diagnostics for Tucson homeowners, from standard controls to modern smart thermostats.',
+  financingNote: 'Most thermostat fixes are straightforward, but if the controls problem points to a larger HVAC upgrade, financing can help spread costs out.',
+  maintenanceNote: 'Annual maintenance catches thermostat drift, wiring wear, and control issues before they create comfort complaints in peak season.',
+  financingLink: { href: '/financing', label: 'Explore financing options' },
+  maintenanceLink: { href: '/services/hvac-maintenance-tucson', label: 'Protect your system with maintenance' },
+  relatedServices: [
+    { href: '/services/ac-repair-tucson', label: 'AC Repair Tucson' },
+    { href: '/services/heating-tucson', label: 'Heating Tucson' },
+    { href: '/services/heat-pump-tucson', label: 'Heat Pump Service Tucson' },
+  ],
+  serviceAreas: [
+    { href: '/locations/tucson-az', label: 'Tucson, AZ' },
+    { href: '/locations/vail-az', label: 'Vail, AZ' },
+  ],
+  faqs: [
+    {
+      question: 'Can a bad thermostat make my AC stop cooling?',
+      answer: 'Absolutely. A thermostat that misreads temperature, loses power, or fails to send the correct signal can make a healthy system act like it has a major cooling problem.',
+    },
+    {
+      question: 'Do you repair smart thermostats?',
+      answer: 'Yes. We troubleshoot Wi-Fi setup, app control issues, wiring mismatches, and thermostat compatibility problems with supported HVAC systems.',
+    },
+    {
+      question: 'When should a thermostat be replaced instead of repaired?',
+      answer: 'Replacement usually makes sense when the thermostat has repeated failures, outdated staging limits, damaged hardware, or poor compatibility with the current system.',
+    },
+  ],
+  cta: {
+    heading: 'Fix your thermostat before comfort gets worse',
+    body: 'Book a Tucson thermostat diagnostic and get accurate control back fast.',
+    primaryLabel: 'Book Thermostat Repair',
+    primaryHref: '/contact',
+    secondaryLabel: 'See AC Repair',
+    secondaryHref: '/services/ac-repair-tucson',
+  },
+},
+{
+  slug: 'mini-split-tucson',
+  title: 'Mini-Split Service in Tucson',
+  location: 'Tucson, AZ',
+  meta: {
+    title: 'Mini Split Service Tucson | Crest Air',
+    description: 'Mini-split service in Tucson for ductless AC repairs, new room additions, garage comfort, and efficient zoned cooling and heating solutions.',
+    keywords: ['mini split tucson', 'ductless ac tucson', 'mini split repair tucson'],
+  },
+  problemHeadline: 'Need Ductless Cooling or Mini-Split Repair in Tucson?',
+  problemDescription:
+    'Mini-splits are ideal for room additions, garages, casitas, and hot spots, but they still need correct sizing, refrigerant performance, and clean installation to work right in Tucson heat.',
+  intro:
+    'Crest Air provides mini-split service in Tucson for homeowners who need ductless cooling and heating, better zoning, or repairs on an existing wall-mounted system.',
+  overview: [
+    'We help homeowners compare mini-split repair versus replacement, evaluate new ductless installations, and solve comfort issues in spaces where central air is not the best fit.',
+    'From single-room applications to multi-zone setups, we focus on clean installation paths, proper condensate management, and system performance that holds up in desert conditions.',
+  ],
+  signs: [
+    'Mini-split head drips water or smells musty',
+    'Room never reaches the set temperature',
+    'Outdoor unit runs but indoor head does not respond',
+    'Remote or wall control is inconsistent',
+    'System throws error codes or keeps restarting',
+    'Garage, office, or casita still feels hot despite the system running',
+  ],
+  whatsIncluded: [
+    'Ductless system diagnostic or installation planning visit',
+    'Airflow, refrigerant, drain, and communication testing',
+    'Indoor head cleaning and visible issue inspection',
+    'Repair recommendations or sizing guidance for new installs',
+    'Final performance testing and control walkthrough',
+  ],
+  benefits: [
+    'Add targeted comfort without extending ductwork',
+    'Improve efficiency with zoned heating and cooling',
+    'Solve hot-room problems in additions, garages, and casitas',
+    'Get quieter operation with modern ductless equipment',
+  ],
+  process: ['Tell us about the space', 'Evaluate the current system or install need', 'Review options and pricing', 'Complete service or install plan', 'Verify zone comfort'],
+  testimonial: {
+    quote: 'Our detached office finally stays cool all afternoon, and the mini-split runs quieter than our old window unit ever did.',
+    name: 'Devon R.',
+    area: 'Catalina Foothills',
+  },
+  trustLine: 'Thoughtful ductless recommendations and mini-split repairs for Tucson homes, casitas, garages, and additions.',
+  financingNote: 'If a new ductless system is the best fit, financing helps spread out the cost of multi-zone and single-zone mini-split installations.',
+  maintenanceNote: 'Mini-splits need periodic cleaning and performance checks to protect airflow, condensate drainage, and long-term efficiency.',
+  financingLink: { href: '/financing', label: 'Finance a ductless upgrade' },
+  maintenanceLink: { href: '/services/hvac-maintenance-tucson', label: 'Schedule mini-split maintenance' },
+  relatedServices: [
+    { href: '/services/ac-installation-tucson', label: 'AC Installation Tucson' },
+    { href: '/services/indoor-air-quality-tucson', label: 'Indoor Air Quality Tucson' },
+    { href: '/services/heat-pump-tucson', label: 'Heat Pump Service Tucson' },
+  ],
+  serviceAreas: [
+    { href: '/locations/tucson-az', label: 'Tucson, AZ' },
+    { href: '/locations/catalina-foothills-az', label: 'Catalina Foothills, AZ' },
+  ],
+  faqs: [
+    {
+      question: 'Where do mini-splits make the most sense in Tucson homes?',
+      answer: 'They are a great fit for room additions, garages, casitas, offices, and any hot spot where extending ductwork would be expensive or inefficient.',
+    },
+    {
+      question: 'Can a mini-split both cool and heat?',
+      answer: 'Yes. Most modern ductless systems are heat pumps, which means they can provide efficient cooling in summer and heating during Tucson winter mornings.',
+    },
+    {
+      question: 'Do mini-splits need maintenance?',
+      answer: 'Yes. Filters, indoor coils, drain lines, and outdoor components need regular service so the system stays efficient and does not develop airflow or water issues.',
+    },
+  ],
+  cta: {
+    heading: 'Talk through your mini-split options',
+    body: 'Get help with ductless repairs, replacements, and new comfort zones in Tucson homes.',
+    primaryLabel: 'Book Mini-Split Service',
+    primaryHref: '/contact',
+    secondaryLabel: 'Explore AC Installation',
+    secondaryHref: '/services/ac-installation-tucson',
+  },
+},
+
 ];
 
 export const getServiceBySlug = (slug: string) => services.find((service) => service.slug === slug);
