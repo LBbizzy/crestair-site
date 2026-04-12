@@ -74,7 +74,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     href: '/services/heating-tucson',
   },
   'indoor-air-quality-tucson': {
-    src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-hero.webp',
+    src: '/images/services/indoor-air-quality-tucson-hero.webp',
     alt: 'Homeowner reviewing indoor air quality solutions in Tucson',
     title: 'Indoor Air Quality Tucson hero image',
     description: 'Hero image for the indoor air quality service page focused on Tucson homes.',
@@ -302,7 +302,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'heat-pump-tucson': [
     {
-      src: '/images/services/heating-tucson/heating-tucson-heat-pump-outdoor.webp',
+      src: '/images/services/heat-pump-tucson-gallery-outdoor.webp',
       alt: 'Outdoor heat pump service in Tucson',
       title: 'Outdoor heat pump service',
       description: 'Technician servicing a Tucson heat pump outdoor unit.',
@@ -311,7 +311,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/heat-pump-tucson',
     },
     {
-      src: '/images/services/heating-tucson/heating-tucson-thermostat-adjust.webp',
+      src: '/images/services/heat-pump-tucson-gallery-thermostat.webp',
       alt: 'Thermostat adjustments for a Tucson heat pump system',
       title: 'Heat pump control adjustments',
       description: 'Fine-tuning thermostat settings on a Tucson heat pump system.',
@@ -322,7 +322,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'thermostat-repair-tucson': [
     {
-      src: '/images/services/ac-installation-tucson/ac-installation-tucson-thermostat-setup.webp',
+      src: '/images/services/thermostat-repair-tucson-gallery-setup.webp',
       alt: 'Thermostat setup and testing in Tucson',
       title: 'Thermostat setup and testing',
       description: 'Technician testing thermostat operation and schedules.',
@@ -331,7 +331,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/thermostat-repair-tucson',
     },
     {
-      src: '/images/services/heating-tucson/heating-tucson-thermostat-adjust.webp',
+      src: '/images/services/thermostat-repair-tucson-gallery-adjust.webp',
       alt: 'Homeowner learning thermostat settings with a Crest Air technician',
       title: 'Comfort control walkthrough',
       description: 'Guided thermostat setup for better Tucson comfort control.',
@@ -342,7 +342,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
   ],
   'mini-split-tucson': [
     {
-      src: '/images/services/ac-installation-tucson-az-crane-lift-crest-air-hvac.webp',
+      src: '/images/services/mini-split-tucson-gallery-planning.webp',
       alt: 'Crest Air team handling equipment placement for new comfort systems',
       title: 'Ductless project planning',
       description: 'Planning a clean equipment layout for Tucson comfort upgrades.',
@@ -351,7 +351,7 @@ const serviceGalleryAssets: Record<string, ImageAsset[]> = {
       href: '/services/mini-split-tucson',
     },
     {
-      src: '/images/services/indoor-air-quality-tucson/indoor-air-quality-tucson-hero.webp',
+      src: '/images/services/mini-split-tucson-gallery-indoor.webp',
       alt: 'Indoor comfort consultation for a Tucson ductless system',
       title: 'Indoor zone comfort planning',
       description: 'Reviewing the best placement and airflow path for ductless comfort.',
