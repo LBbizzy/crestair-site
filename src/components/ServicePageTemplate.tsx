@@ -28,7 +28,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     href: '/services/ac-repair-tucson',
   },
   'ac-installation-tucson': {
-    src: '/images/services/ac-installation-tucson-az-crane-lift-crest-air-hvac.webp',
+    src: '/images/services/mini-split-tucson-hero.webp',
     alt: 'Crest Air team performing an AC installation with a crane in Tucson',
     title: 'AC Installation Tucson hero image',
     description: 'Hero image for the AC installation service page showing equipment being lifted into place.',
@@ -37,7 +37,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     href: '/services/ac-installation-tucson',
   },
   'heat-pump-tucson': {
-    src: '/images/services/heating-tucson-az-crest-air-hvac.webp',
+    src: '/images/services/heat-pump-tucson-hero.webp',
     alt: 'Crest Air technician servicing a heat pump in Tucson',
     title: 'Heat pump service Tucson hero image',
     description: 'Hero image for the Tucson heat pump service page.',
@@ -46,7 +46,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     href: '/services/heat-pump-tucson',
   },
   'thermostat-repair-tucson': {
-    src: '/images/services/ac-installation-tucson/ac-installation-tucson-thermostat-setup.webp',
+    src: '/images/services/thermostat-repair-tucson-hero.webp',
     alt: 'Technician configuring a thermostat for a Tucson homeowner',
     title: 'Thermostat repair Tucson hero image',
     description: 'Hero image for the Tucson thermostat repair page.',
