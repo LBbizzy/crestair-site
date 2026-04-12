@@ -1,4 +1,14 @@
 import { CommercialServicePage } from '@/components/CommercialServicePage';
+import { buildMetadata } from '@/lib/metadata';
+
+export const metadata = buildMetadata(
+  {
+    title: 'Commercial HVAC Installation Tucson | Crest Air',
+    description: 'Commercial HVAC installation in Tucson for rooftop replacements, tenant improvement projects, and facility upgrades that need clear scopes, scheduling, and commissioning.',
+    keywords: ['commercial hvac installation tucson', 'commercial ac installation tucson', 'rooftop unit installation tucson'],
+  },
+  '/commercial/ac-installation',
+);
 
 export default function CommercialInstallationsPage() {
   return (

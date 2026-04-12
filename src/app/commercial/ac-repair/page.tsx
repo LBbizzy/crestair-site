@@ -1,4 +1,14 @@
 import { CommercialServicePage } from '@/components/CommercialServicePage';
+import { buildMetadata } from '@/lib/metadata';
+
+export const metadata = buildMetadata(
+  {
+    title: 'Commercial AC Repair Tucson | Crest Air',
+    description: 'Commercial AC repair in Tucson for restaurants, offices, retail spaces, and warehouses that need fast diagnostics, rooftop unit expertise, and minimal downtime.',
+    keywords: ['commercial ac repair tucson', 'commercial hvac repair tucson', 'rooftop unit repair tucson'],
+  },
+  '/commercial/ac-repair',
+);
 
 export default function CommercialAcRepairPage() {
   return (

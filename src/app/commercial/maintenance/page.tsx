@@ -1,4 +1,14 @@
 import { CommercialServicePage } from '@/components/CommercialServicePage';
+import { buildMetadata } from '@/lib/metadata';
+
+export const metadata = buildMetadata(
+  {
+    title: 'Commercial HVAC Maintenance Tucson | Crest Air',
+    description: 'Commercial HVAC maintenance in Tucson for property managers and facilities teams that want fewer breakdowns, longer equipment life, and dependable rooftop unit performance.',
+    keywords: ['commercial hvac maintenance tucson', 'commercial ac maintenance tucson', 'commercial rooftop unit maintenance tucson'],
+  },
+  '/commercial/maintenance',
+);
 
 export default function CommercialMaintenancePage() {
   return (

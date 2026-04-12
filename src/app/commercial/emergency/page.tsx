@@ -1,4 +1,14 @@
 import { CommercialServicePage } from '@/components/CommercialServicePage';
+import { buildMetadata } from '@/lib/metadata';
+
+export const metadata = buildMetadata(
+  {
+    title: 'Commercial Emergency HVAC Tucson | Crest Air',
+    description: 'Commercial emergency HVAC service in Tucson for after-hours no-cool calls, critical rooftop failures, and urgent business downtime that needs rapid dispatch.',
+    keywords: ['commercial emergency hvac tucson', 'emergency commercial ac repair tucson', 'after hours commercial hvac tucson'],
+  },
+  '/commercial/emergency',
+);
 
 export default function CommercialEmergencyPage() {
   return (

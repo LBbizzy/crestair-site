@@ -1,6 +1,6 @@
 function normalizeSiteUrl(value: string | undefined) {
   if (!value) return undefined;
-  return value.replace(/\/$/, '');
+  return value.trim().replace(/\/$/, '');
 }
 
 const envSiteUrl =

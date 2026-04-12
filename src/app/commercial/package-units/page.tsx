@@ -1,4 +1,14 @@
 import { CommercialServicePage } from '@/components/CommercialServicePage';
+import { buildMetadata } from '@/lib/metadata';
+
+export const metadata = buildMetadata(
+  {
+    title: 'Commercial Package Units Tucson | Crest Air',
+    description: 'Commercial package unit service in Tucson for rooftop packaged systems that need expert repair, preventive maintenance, and replacement planning for occupied properties.',
+    keywords: ['commercial package units tucson', 'rooftop package unit service tucson', 'commercial packaged hvac tucson'],
+  },
+  '/commercial/package-units',
+);
 
 export default function CommercialPackageUnitsPage() {
   return (
