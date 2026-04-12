@@ -62,6 +62,7 @@ export const site = {
     '/images/home/home-hero-crest-air-team-tucson.webp',
     '/images/home/home-hero-crest-air-truck-visit.webp',
   ],
+  defaultSocialImagePath: '/images/home/home-hero-crest-air-team-tucson.webp',
   aggregateRating: {
     ratingValue: 4.9,
     reviewCount: 240,

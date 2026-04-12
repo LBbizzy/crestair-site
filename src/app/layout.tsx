@@ -27,11 +27,23 @@ export const metadata: Metadata = {
   openGraph: {
     url: site.url,
     siteName: site.name,
+    title: `${site.name} | Tucson HVAC Services`,
     description: site.description,
     type: 'website',
+    images: [
+      {
+        url: site.defaultSocialImagePath,
+        width: 1200,
+        height: 630,
+        alt: `${site.name} Tucson HVAC team`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    title: `${site.name} | Tucson HVAC Services`,
+    description: site.description,
+    images: [site.defaultSocialImagePath],
   },
   title: {
     default: `${site.name} | Tucson HVAC Services`,

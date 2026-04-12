@@ -2,6 +2,7 @@ export type SeoMeta = {
   title: string;
   description: string;
   keywords: string[];
+  image?: string;
 };
 
 export type CTA = {
