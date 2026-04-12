@@ -8,27 +8,50 @@ export const metadata = buildMetadata(
   {
     title: 'About Crest Air',
     description:
-      'Learn about Crest Air, a Tucson HVAC company serving homeowners and businesses with licensed service, Arizona ROC #343786, and technicians trained for repair, replacement, and maintenance.',
-    keywords: ['about crest air', 'crest air tucson', 'tucson hvac company', 'arizona roc 343786'],
+      'Crest Air is a Marine Corps veteran-owned Tucson HVAC company founded in 2016, locally owned and operated, licensed and insured, and serving residential and light commercial customers across the Tucson area.',
+    keywords: [
+      'about crest air',
+      'marine corps veteran owned hvac tucson',
+      'tucson hvac company',
+      'arizona roc 343786',
+      'same-day hvac service tucson',
+    ],
     image: '/images/home/home-hero-crest-air-team-tucson.webp',
   },
   '/about',
 );
 
-const serviceAreaLinks = [
-  { href: '/locations/tucson-az', label: 'Tucson' },
-  { href: '/locations/oro-valley-az', label: 'Oro Valley' },
-  { href: '/locations/marana-az', label: 'Marana' },
-  { href: '/locations/vail-az', label: 'Vail' },
-  { href: '/locations/green-valley-az', label: 'Green Valley' },
-  { href: '/locations/sahuarita-az', label: 'Sahuarita' },
+const credentials = [
+  'Arizona ROC License #343786',
+  'BBB rated A+',
+  'Licensed and insured',
+  'NATE-certified technicians',
+  'EPA-certified technicians',
+  'Authorized York dealer',
 ];
 
-const teamPoints = [
-  'Crest Air routes Tucson homeowners and businesses into the right repair, installation, maintenance, and commercial service path instead of forcing every job through the same message.',
-  'The site copy consistently describes licensed, insured, background-checked Crest Air employees, not anonymous subcontractor filler.',
-  'Homepage trust proof calls out NATE-trained technicians, and maintenance content references NATE-certified technicians who understand desert system stress, airflow, and year-round performance in Southern Arizona.',
-  'The company covers residential service, commercial HVAC work, emergency response, financing conversations, and location-based service pages across the Tucson area.',
+const brands = ['York', 'Trane', 'Lennox', 'Goodman', 'Daikin', 'Day & Night'];
+
+const serviceAreas = [
+  'Tucson',
+  'Oro Valley',
+  'Marana',
+  'Sahuarita',
+  'Green Valley',
+  'Vail',
+  'Catalina Foothills',
+  'South Tucson',
+  'Drexel Heights',
+  'Flowing Wells',
+];
+
+const trustSignals = [
+  'Marine Corps veteran-owned',
+  'Licensed and insured',
+  'Background-checked technicians',
+  'Same-day service available',
+  '4.9 stars and 240+ Google reviews',
+  'Residential and light commercial HVAC service',
 ];
 
 export default function AboutPage() {
@@ -40,102 +63,110 @@ export default function AboutPage() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">About Crest Air</p>
               <h1 className="mt-3 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight md:text-5xl">
-                Tucson HVAC support built around licensed service, clear communication, and real local coverage
+                Marine Corps veteran-owned HVAC service for Tucson homes and light commercial properties
               </h1>
               <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
-                Crest Air serves Tucson-area homeowners and businesses with HVAC repair, installation, maintenance, indoor air quality work, and commercial support. The company operates from Tucson, covers surrounding communities, and presents a cleaner path for customers who need fast answers instead of generic HVAC marketing fluff.
+                Crest Air is a Marine Corps veteran-owned Tucson HVAC company founded in 2016, locally owned and operated, and focused on residential and light commercial service across Southern Arizona. The company provides same-day service, licensed and insured support, and installation options for homeowners and businesses that need dependable heating and cooling help.
               </p>
             </div>
             <div className="rounded-3xl bg-white/10 p-6 backdrop-blur-sm">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Company snapshot</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#66CFEF]">Quick facts</p>
               <dl className="mt-4 space-y-4 text-sm text-slate-200">
                 <div>
-                  <dt className="font-semibold text-white">Business name</dt>
-                  <dd>{site.legalName}</dd>
+                  <dt className="font-semibold text-white">Founded</dt>
+                  <dd>2016 in Tucson, Arizona</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-white">Phone</dt>
-                  <dd>{site.phone}</dd>
+                  <dt className="font-semibold text-white">Service focus</dt>
+                  <dd>Residential and light commercial HVAC</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-white">Arizona ROC license</dt>
-                  <dd>ROC #{site.rocNumber}</dd>
+                  <dt className="font-semibold text-white">Google reviews</dt>
+                  <dd>4.9 stars and 240+ reviews</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-white">Primary service area</dt>
-                  <dd>Tucson and surrounding communities in Southern Arizona</dd>
+                  <dt className="font-semibold text-white">Availability</dt>
+                  <dd>Same-day service available</dd>
                 </div>
               </dl>
             </div>
           </div>
         </section>
 
-        <section className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
-          <article className="rounded-3xl bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">What the repo confirms today</p>
-            <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">A real Tucson HVAC company with trust signals tied to service delivery</h2>
-            <div className="mt-5 space-y-4 text-slate-700">
-              <p>
-                Crest Air is positioned in the site as a Tucson HVAC company focused on same-day repair conversations, replacement planning, maintenance, and commercial coordination. Instead of thin brochure copy, the strongest pages emphasize routing customers to the right next step, documenting service options clearly, and covering the broader Tucson area with dedicated service and location pages.
-              </p>
-              <p>
-                The repo also supports meaningful trust language. Homepage and service content reference licensed and insured technicians, background-checked Crest Air employees, and NATE-trained or NATE-certified technical staff. That gives the About page enough verified substance to describe how the team works without inventing awards, fake bios, or filler claims.
-              </p>
-            </div>
-          </article>
-          <aside className="rounded-3xl bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Need service now?</p>
-            <p className="mt-3 text-slate-700">
-              If your AC is down, airflow is weak, or you need help deciding between repair and replacement, call Crest Air directly.
-            </p>
-            <CallTrackedLink
-              className="mt-6 inline-flex rounded-full bg-[#041B34] px-6 py-3 font-semibold text-white transition hover:bg-[#0B3158]"
-              sourcePage="/about"
-              serviceType="about-page"
-              location="tucson-az"
-              pageType="about"
-              dataCtaId="about-call"
-            >
-              Call {site.phone}
-            </CallTrackedLink>
-          </aside>
-        </section>
-
-        <section className="rounded-3xl bg-white p-8 shadow-sm">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Team and training</p>
-          <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">How Crest Air presents its team</h2>
-          <ul className="mt-5 space-y-3 text-slate-700">
-            {teamPoints.map((point) => (
-              <li key={point}>• {point}</li>
-            ))}
-          </ul>
-        </section>
-
         <section className="grid gap-6 md:grid-cols-2">
           <article className="rounded-3xl bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Service area summary</p>
-            <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Coverage across Tucson and nearby communities</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Credentials</p>
+            <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Licensed, certified, and trusted in Tucson</h2>
+            <ul className="mt-5 space-y-3 text-slate-700">
+              {credentials.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="rounded-3xl bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Brands installed</p>
+            <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Systems Crest Air installs</h2>
             <p className="mt-5 text-slate-700">
-              Crest Air’s service-area footprint in the repo includes Tucson, Oro Valley, Marana, Vail, Green Valley, Sahuarita, Catalina Foothills, South Tucson, Drexel Heights, and Flowing Wells. That local coverage supports homeowners, property managers, and commercial clients who need a Tucson-first HVAC company with nearby reach.
+              Crest Air is an authorized York dealer and also installs Trane, Lennox, Goodman, Daikin, and Day & Night systems.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              {serviceAreaLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-[#041B34] transition hover:border-[#66CFEF] hover:text-[#F4911D]">
-                  {link.label}
-                </Link>
+              {brands.map((brand) => (
+                <span key={brand} className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-[#041B34]">
+                  {brand}
+                </span>
               ))}
             </div>
           </article>
+        </section>
+
+        <section className="rounded-3xl bg-white p-8 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Service area</p>
+          <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Serving Tucson and surrounding communities</h2>
+          <p className="mt-5 text-slate-700">
+            Crest Air serves Tucson, Oro Valley, Marana, Sahuarita, Green Valley, Vail, Catalina Foothills, South Tucson, Drexel Heights, and Flowing Wells.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {serviceAreas.map((area) => (
+              <span key={area} className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-[#041B34]">
+                {area}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
           <article className="rounded-3xl bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Explore Crest Air</p>
-            <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Helpful next steps</h2>
-            <div className="mt-5 grid gap-3">
-              <Link href="/services/ac-repair-tucson" className="rounded-2xl border border-slate-200 px-5 py-4 font-semibold text-[#041B34] transition hover:border-[#66CFEF] hover:text-[#F4911D]">AC Repair in Tucson</Link>
-              <Link href="/services/ac-installation-tucson" className="rounded-2xl border border-slate-200 px-5 py-4 font-semibold text-[#041B34] transition hover:border-[#66CFEF] hover:text-[#F4911D]">AC Installation in Tucson</Link>
-              <Link href="/services/hvac-maintenance-tucson" className="rounded-2xl border border-slate-200 px-5 py-4 font-semibold text-[#041B34] transition hover:border-[#66CFEF] hover:text-[#F4911D]">HVAC Maintenance</Link>
-              <Link href="/commercial" className="rounded-2xl border border-slate-200 px-5 py-4 font-semibold text-[#041B34] transition hover:border-[#66CFEF] hover:text-[#F4911D]">Commercial HVAC</Link>
-            </div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Why homeowners choose Crest Air</p>
+            <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-slate-950">Trust signals that matter before you schedule service</h2>
+            <ul className="mt-5 space-y-3 text-slate-700">
+              {trustSignals.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
           </article>
+
+          <aside className="rounded-3xl bg-white p-8 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#F4911D]">Need service now?</p>
+            <p className="mt-3 text-slate-700">
+              Contact Crest Air to request same-day HVAC service, schedule an estimate, or talk through repair and replacement options.
+            </p>
+            <div className="mt-6 flex flex-col gap-3">
+              <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-[#F4911D] px-6 py-3 font-semibold text-white transition hover:bg-[#D97F16]">
+                Schedule Service
+              </Link>
+              <CallTrackedLink
+                className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 font-semibold text-[#041B34] transition hover:border-[#66CFEF] hover:text-[#F4911D]"
+                sourcePage="/about"
+                serviceType="about-page"
+                location="tucson-az"
+                pageType="about"
+                dataCtaId="about-call"
+              >
+                Call {site.phone}
+              </CallTrackedLink>
+            </div>
+          </aside>
         </section>
       </div>
     </AnimatedPage>
