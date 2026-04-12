@@ -28,7 +28,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     href: '/services/ac-repair-tucson',
   },
   'ac-installation-tucson': {
-    src: '/images/services/mini-split-tucson-hero.webp',
+    src: '/images/services/ac-installation-tucson-az-crane-lift-crest-air-hvac.webp',
     alt: 'Crest Air team performing an AC installation with a crane in Tucson',
     title: 'AC Installation Tucson hero image',
     description: 'Hero image for the AC installation service page showing equipment being lifted into place.',
