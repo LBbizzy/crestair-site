@@ -15,6 +15,7 @@ const resolvedSiteUrl = envSiteUrl ?? 'http://localhost:3000';
 
 export const site = {
   name: 'Crest Air',
+  legalName: 'Crest Air',
   url: resolvedSiteUrl,
   description:
     'Crest Air delivers HVAC repair, installation, and heating services across Tucson-area communities.',
@@ -23,6 +24,56 @@ export const site = {
   primaryColor: '#F4911D',
   secondaryColor: '#041B34',
   accentColor: '#66CFEF',
+  address: {
+    streetAddress: '129 E Plata St',
+    addressLocality: 'Tucson',
+    addressRegion: 'AZ',
+    postalCode: '85705',
+    addressCountry: 'US',
+  },
+  geo: {
+    latitude: 32.2217,
+    longitude: -110.9694,
+  },
+  serviceAreas: [
+    'Tucson, AZ',
+    'Oro Valley, AZ',
+    'Marana, AZ',
+    'Vail, AZ',
+    'Green Valley, AZ',
+    'Sahuarita, AZ',
+    'Catalina Foothills, AZ',
+    'South Tucson, AZ',
+    'Drexel Heights, AZ',
+    'Flowing Wells, AZ',
+  ],
+  hours: [
+    { dayOfWeek: 'Monday', opens: '08:00', closes: '18:00' },
+    { dayOfWeek: 'Tuesday', opens: '08:00', closes: '18:00' },
+    { dayOfWeek: 'Wednesday', opens: '08:00', closes: '18:00' },
+    { dayOfWeek: 'Thursday', opens: '08:00', closes: '18:00' },
+    { dayOfWeek: 'Friday', opens: '08:00', closes: '18:00' },
+    { dayOfWeek: 'Saturday', opens: '08:00', closes: '17:00' },
+  ],
+  emergencyHoursNote: 'Emergency service available 24/7.',
+  logoPath: '/images/logos/approved/crest-air-logo-primary-horizontal.png',
+  imagePaths: [
+    '/images/logos/approved/crest-air-logo-primary-horizontal.png',
+    '/images/home/home-hero-crest-air-team-tucson.webp',
+    '/images/home/home-hero-crest-air-truck-visit.webp',
+  ],
+  aggregateRating: {
+    ratingValue: 4.9,
+    reviewCount: 240,
+    bestRating: 5,
+  },
+  googleBusinessProfileUrl: undefined,
+  facebookUrl: undefined,
+  instagramUrl: undefined,
+  linkedinUrl: undefined,
+  youtubeUrl: undefined,
+  twitterUrl: undefined,
+  rocNumber: '343786',
 };
 
 export const primaryNav = [

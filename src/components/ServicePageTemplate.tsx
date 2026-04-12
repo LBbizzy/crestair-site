@@ -3,9 +3,11 @@ import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { FAQSection } from '@/components/FAQSection';
 import { HeroSection } from '@/components/HeroSection';
+import { JsonLd } from '@/components/JsonLd';
 import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { ImageCard } from '@/components/ImageCard';
 import { SiteImage } from '@/components/SiteImage';
+import { buildFaqSchema, buildServiceSchema } from '@/lib/schema';
 import { ImageAsset, ServiceContent } from '@/lib/types';
 import { site } from '@/lib/site';
 
@@ -407,9 +409,13 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
   const sourcePage = `/services/${service.slug}`;
   const heroImage = getServiceHeroAsset(service.slug);
   const galleryImages = serviceGalleryAssets[service.slug] || [];
+  const serviceSchema = buildServiceSchema(service);
+  const faqSchema = buildFaqSchema(service.faqs);
 
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-6 py-10">
+      <JsonLd data={serviceSchema} />
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
       <AnimatedPage>
       <HeroSection
         eyebrow={`${service.location} · ${service.title}`}

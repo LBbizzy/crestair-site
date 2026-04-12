@@ -1,16 +1,22 @@
 import Link from 'next/link';
 import { CTASection } from '@/components/CTASection';
 import { CallTrackedLink } from '@/components/CallTrackedLink';
+import { JsonLd } from '@/components/JsonLd';
 import { SiteImage } from '@/components/SiteImage';
+import { buildBlogPostingSchema, buildFaqSchema } from '@/lib/schema';
 import { BlogPost } from '@/lib/types';
 import { site } from '@/lib/site';
 
 export function BlogPostTemplate({ post }: { post: BlogPost }) {
   const primaryService = post.serviceLinks[0];
   const serviceButtons = post.serviceLinks.length ? post.serviceLinks : [post.locationLink];
+  const blogSchema = buildBlogPostingSchema(post);
+  const faqSchema = buildFaqSchema(post.faqs ?? []);
 
   return (
     <article className="mx-auto flex w-full max-w-4xl flex-col gap-10 px-6 py-10">
+      <JsonLd data={blogSchema} />
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
       <header className="overflow-hidden rounded-3xl bg-[#041B34] text-white shadow-xl">
         {post.image ? (
           <div className="relative h-64 md:h-80">
