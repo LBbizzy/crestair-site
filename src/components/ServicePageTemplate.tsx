@@ -55,7 +55,7 @@ const serviceHeroAssets: Record<string, ImageAsset> = {
     href: '/services/thermostat-repair-tucson',
   },
   'mini-split-tucson': {
-    src: '/images/services/ac-installation-tucson-az-crane-lift-crest-air-hvac.webp',
+    src: '/images/services/mini-split-tucson-hero.webp',
     alt: 'Crest Air technician discussing ductless comfort options in Tucson',
     title: 'Mini-split service Tucson hero image',
     description: 'Hero image for the Tucson mini-split and ductless service page.',
