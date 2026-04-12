@@ -72,11 +72,12 @@ export function HeroSection({
           {ctaSubline ? <p className="mt-3 text-sm font-semibold text-[#66CFEF]">{ctaSubline}</p> : null}
         </div>
         {image ? (
-          <div className="relative min-h-[320px] bg-slate-900">
+          <div className="min-h-[320px] bg-slate-900 lg:h-full">
             <SiteImage
               asset={image}
-              fill
-              className="object-cover"
+              width={960}
+              height={720}
+              className="h-full w-full object-cover"
               sizes={imageSizes || '(min-width: 1024px) 40vw, 100vw'}
               priority={imagePriority}
             />

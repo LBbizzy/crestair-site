@@ -109,6 +109,12 @@ export function buildServiceSchema(service: ServiceContent) {
     })),
     provider: { '@id': businessId },
     brand: { '@id': businessId },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: site.aggregateRating.ratingValue,
+      reviewCount: site.aggregateRating.reviewCount,
+      bestRating: site.aggregateRating.bestRating,
+    },
     termsOfService: absoluteUrl('/contact'),
     offers: {
       '@type': 'Offer',
