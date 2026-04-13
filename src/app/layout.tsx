@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Chivo, Public_Sans } from 'next/font/google';
 import './globals.css';
 import { SiteShell } from '@/components/SiteShell';
@@ -60,6 +61,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="min-h-screen bg-slate-50 font-[family-name:var(--font-body)] text-slate-900">
         <JsonLd data={globalSchemas} />
         <SiteShell>{children}</SiteShell>
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="690ce51fd69ee829fc02fe74"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
