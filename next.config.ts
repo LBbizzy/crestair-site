@@ -40,6 +40,20 @@ const nextConfig: NextConfig = {
       { source: '/commercial-hvac-services-in-tucson-az/', destination: '/commercial', permanent: true },
       { source: '/commercial-ac-installation-in-tucson-az', destination: '/commercial/ac-installation', permanent: true },
       { source: '/commercial-ac-installation-in-tucson-az/', destination: '/commercial/ac-installation', permanent: true },
+      { source: '/heating-tucson-az', destination: '/services/heating-tucson', permanent: true },
+      { source: '/heating-tucson-az/', destination: '/services/heating-tucson', permanent: true },
+      { source: '/air-conditioning-tucson-az', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/air-conditioning-tucson-az/', destination: '/services/ac-repair-tucson', permanent: true },
+      { source: '/maintenance-tucson-az', destination: '/services/hvac-maintenance-tucson', permanent: true },
+      { source: '/maintenance-tucson-az/', destination: '/services/hvac-maintenance-tucson', permanent: true },
+      { source: '/ductless-ac-tucson-az', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/ductless-ac-tucson-az/', destination: '/services/ac-installation-tucson', permanent: true },
+      { source: '/duct-cleaning-tucson-az', destination: '/services/duct-cleaning-tucson', permanent: true },
+      { source: '/duct-cleaning-tucson-az/', destination: '/services/duct-cleaning-tucson', permanent: true },
+      { source: '/indoor-air-quality-tucson-az', destination: '/services/indoor-air-quality-tucson', permanent: true },
+      { source: '/indoor-air-quality-tucson-az/', destination: '/services/indoor-air-quality-tucson', permanent: true },
+      { source: '/heat-pumps-oro-valley-az', destination: '/services/heating-tucson', permanent: true },
+      { source: '/heat-pumps-oro-valley-az/', destination: '/services/heating-tucson', permanent: true },
 
       // ━━━ Services (old /service/ paths) ━━━
       { source: '/service/ac-repair-tucson', destination: '/services/ac-repair-tucson', permanent: true },
@@ -72,6 +86,8 @@ const nextConfig: NextConfig = {
       { source: '/hvac-sahuarita-az/', destination: '/locations/sahuarita-az', permanent: true },
       { source: '/hvac-catalina-foothills-az', destination: '/locations/catalina-foothills-az', permanent: true },
       { source: '/hvac-catalina-foothills-az/', destination: '/locations/catalina-foothills-az', permanent: true },
+      { source: '/green-valley-az', destination: '/locations/green-valley-az', permanent: true },
+      { source: '/green-valley-az/', destination: '/locations/green-valley-az', permanent: true },
 
       // ━━━ Blog ━━━
       { source: '/tucson-hvac-blog', destination: '/blog', permanent: true },
@@ -90,6 +106,14 @@ const nextConfig: NextConfig = {
       { source: '/tucson-hvac-tips-for-home-business-owners/', destination: '/blog/thermostat-optimization-for-desert-homes', permanent: true },
       { source: '/how-often-should-you-service-your-ac-in-tucsons-extreme-heat', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
       { source: '/how-often-should-you-service-your-ac-in-tucsons-extreme-heat/', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
+      { source: '/4-top-problems-with-your-old-hvac-system', destination: '/blog/signs-your-ac-is-about-to-fail-in-arizona-heat', permanent: true },
+      { source: '/4-top-problems-with-your-old-hvac-system/', destination: '/blog/signs-your-ac-is-about-to-fail-in-arizona-heat', permanent: true },
+      { source: '/include-duct-cleaning-with-your-spring-cleaning', destination: '/blog/duct-cleaning-benefits-for-tucson-homes', permanent: true },
+      { source: '/include-duct-cleaning-with-your-spring-cleaning/', destination: '/blog/duct-cleaning-benefits-for-tucson-homes', permanent: true },
+      { source: '/heat-pump-maintenance-saves-money-and-keeps-you-cooler', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
+      { source: '/heat-pump-maintenance-saves-money-and-keeps-you-cooler/', destination: '/blog/how-often-should-you-service-your-hvac-in-tucson', permanent: true },
+      { source: '/feed', destination: '/blog', permanent: true },
+      { source: '/feed/', destination: '/blog', permanent: true },
     ];
   },
 };
