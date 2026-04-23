@@ -18,6 +18,8 @@ export const site = {
   legalName: 'Crest Air LLC',
   url: resolvedSiteUrl,
   description:
+    "Tucson's Marine Corps veteran-owned HVAC team. NATE & EPA certified same-day AC repair, installation, heating, maintenance, and 24/7 emergency service.",
+  longDescription:
     'Marine Corps veteran-owned HVAC company serving Tucson and Southern Arizona since 2016. NATE-certified and EPA-certified technicians deliver same-day AC repair, installation, heating service, maintenance, duct cleaning, indoor air quality, heat pumps, thermostats, and mini-splits for homes and light commercial properties.',
   tagline: "Tucson's veteran-owned HVAC team",
   phone: '(520) 751-8888',
