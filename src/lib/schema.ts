@@ -29,6 +29,7 @@ function buildSameAs() {
     site.linkedinUrl,
     site.youtubeUrl,
     site.twitterUrl,
+    site.tiktokUrl,
   ].filter(Boolean);
 
   return candidates.length ? candidates : undefined;
@@ -233,7 +234,7 @@ export function buildBlogPostingSchema(post: BlogPost) {
     headline: post.title,
     description: post.meta.description,
     url,
-    mainEntityOfPage: url,
+    mainEntityOfPage: `${url}`,
     publisher: { '@id': businessId },
     author: { '@id': businessId },
     ...(post.image ? { image: [absoluteUrl(post.image.src)] } : {}),
