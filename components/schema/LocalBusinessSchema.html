@@ -1,0 +1,82 @@
+<!--
+  Crest Air HVAC LLC — actual LocalBusiness JSON-LD, filled.
+  Drop this into <head> on every page of crestair.com.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "@id": "https://crestair.com/#business",
+  "name": "Crest Air LLC",
+  "alternateName": ["Crest Air", "Crest Air HVAC"],
+  "description": "Crest Air provides residential and commercial HVAC installation, repair, and maintenance across Tucson, Oro Valley, Marana, and the Catalina Foothills. Same-day AC repair, Carrier-certified, family-owned since 2018.",
+  "url": "https://crestair.com",
+  "telephone": "+1-520-XXX-XXXX",
+  "email": "service@crestair.com",
+  "image": "https://crestair.com/logo.png",
+  "logo": "https://crestair.com/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{FILL: Crest Air street}}",
+    "addressLocality": "Tucson",
+    "addressRegion": "AZ",
+    "postalCode": "{{FILL: ZIP}}",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "32.2226",
+    "longitude": "-110.9747"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": [
+    { "@type": "City", "name": "Tucson" },
+    { "@type": "City", "name": "Oro Valley" },
+    { "@type": "City", "name": "Marana" },
+    { "@type": "City", "name": "Catalina Foothills" },
+    { "@type": "AdministrativeArea", "name": "Pima County" }
+  ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "32.2226",
+      "longitude": "-110.9747"
+    },
+    "geoRadius": "40000"
+  },
+  "sameAs": [
+    "https://www.facebook.com/Crest-Air-LLC",
+    "https://www.instagram.com/crest_air",
+    "https://www.youtube.com/@CrestAir",
+    "https://www.tiktok.com/@crest.air"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Crest Air HVAC Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair", "description": "Same-day air conditioning repair across Tucson" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Installation", "description": "New AC system installation with Carrier-certified technicians" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heating Repair", "description": "Furnace and heat pump repair in Tucson" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC Maintenance", "description": "Seasonal tune-ups and maintenance plans" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ductless Mini-Split Installation", "description": "Ductless system installation for additions and retrofits" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial HVAC", "description": "Commercial HVAC installation and service across Pima County" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "24-Hour Emergency Repair", "description": "Emergency AC and heating repair, 24/7 in Tucson" } }
+    ]
+  }
+}
+</script>
