@@ -21,6 +21,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   verification: {
     google: 'rqMpx7xOWI9rC4e8-cgGHjKkhGCsuF_YWWHiSD2EEis',
+    // Ship 494 — Bing Webmaster verification.
+    // Get this code at https://www.bing.com/webmasters → add crestairaz.com → Meta tag method
+    // Drop the value in BING_VERIFICATION env var on Vercel.
+    other: {
+      'msvalidate.01': process.env.BING_VERIFICATION ?? '',
+    },
   },
   alternates: {
     canonical: site.url,
