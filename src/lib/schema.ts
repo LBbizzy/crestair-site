@@ -214,6 +214,56 @@ export function buildServiceSchema(service: ServiceContent) {
   };
 }
 
+// Ship 494 — common Tucson HVAC questions for FAQPage rich result on the homepage.
+// These target high-intent featured snippet queries that ChatGPT, Perplexity,
+// Google AI Overviews, and Bing surface for "Tucson HVAC" intent.
+export const homepageFaqs: FAQ[] = [
+  {
+    question: 'How much does AC repair cost in Tucson?',
+    answer:
+      'Most Tucson AC repairs at Crest Air run $129–$450 depending on the part (capacitor, contactor, fan motor, refrigerant top-off). A flat $89 diagnostic fee is waived when you approve the repair. Major repairs like compressor replacement run higher. We give a written quote before any work starts.',
+  },
+  {
+    question: 'How fast can Crest Air get to my house in Tucson?',
+    answer:
+      "We dispatch same-day across Tucson, Oro Valley, Marana, Vail, Catalina Foothills, Green Valley, and Sahuarita. Most customers get a technician within 2–4 hours. Call (520) 751-8888 for true 24/7 emergency service when your AC dies in summer.",
+  },
+  {
+    question: 'When should I get an AC tune-up in Tucson?',
+    answer:
+      "Spring (March–May) before peak summer load is the best time for an AC tune-up in Tucson. A $89 tune-up checks refrigerant, electrical connections, capacitor health, blower wheel, and condenser coil — catching the failures that turn into $400 August emergency calls.",
+  },
+  {
+    question: 'How much does a new AC installation cost in Tucson?',
+    answer:
+      'A new central AC install in Tucson typically runs $5,500–$13,000 depending on tonnage (2.5–5 ton), SEER2 rating (14.3–20+), and whether you need new ductwork. Heat pump installs start around $7,500. Crest Air offers financing — same-day approval for qualified customers.',
+  },
+  {
+    question: 'Is Crest Air licensed and insured?',
+    answer:
+      'Yes. Crest Air is fully licensed (Arizona ROC #343786), insured, and bonded. Our technicians are NATE-certified and EPA 608 certified, background-checked, and uniformed. We are a Marine Corps veteran-owned business serving Tucson since 2016.',
+  },
+  {
+    question: 'Do you handle commercial HVAC in Tucson?',
+    answer:
+      "Yes — Crest Air services light commercial HVAC including rooftop package units, split systems, and maintenance contracts for offices, retail, restaurants, and small medical facilities. We handle 2-ton through 20-ton commercial systems across Tucson and Southern Arizona.",
+  },
+  {
+    question: 'Do you service heat pumps and mini-splits?',
+    answer:
+      'Yes. Crest Air installs and repairs heat pumps and ductless mini-splits across Tucson. Mini-splits are popular for casitas, additions, garage conversions, and zoning single rooms in older Tucson homes without ductwork.',
+  },
+  {
+    question: 'What hours does Crest Air operate?',
+    answer:
+      'Monday–Friday 8 AM–6 PM, Saturday 8 AM–5 PM. 24/7 true emergency service available at (520) 751-8888 — no answering services, real Crest Air technicians on call when your AC dies after-hours.',
+  },
+];
+
+export function buildHomepageFaqSchema() {
+  return buildFaqSchema(homepageFaqs);
+}
+
 export function buildFaqSchema(faqs: FAQ[]) {
   if (!faqs.length) return null;
 
