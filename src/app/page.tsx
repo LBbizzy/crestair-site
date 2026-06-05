@@ -10,6 +10,8 @@ import { CallTrackedLink } from '@/components/CallTrackedLink';
 import { ImageCard } from '@/components/ImageCard';
 import { SiteImage } from '@/components/SiteImage';
 import { site } from '@/lib/site';
+import { buildHomepageFaqSchema, serializeJsonLd } from '@/lib/schema';
+import { JsonLd } from '@/components/JsonLd';
 import { services } from '@/content/services';
 import { blogPosts } from '@/content/blog';
 import { locations } from '@/content/locations';
@@ -114,6 +116,7 @@ export default function HomePage() {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-10">
       <AnimatedPage>
+      <JsonLd data={buildHomepageFaqSchema()!} />
       <HeroSection
         eyebrow="Tucson HVAC Company"
         title="Tucson AC Not Cooling? We Fix It Today."
