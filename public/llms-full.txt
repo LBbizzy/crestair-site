@@ -1,0 +1,80 @@
+# Crest Air — Tucson HVAC
+
+> Marine Corps veteran-owned HVAC company serving Tucson and Southern Arizona since 2016. NATE-certified and EPA-certified technicians delivering same-day AC repair, installation, heating, maintenance, duct cleaning, indoor air quality, heat pump, thermostat, and mini-split service for homes and light commercial properties.
+
+- **Phone:** +1 (520) 751-8888 — 24/7 emergency service
+- **Email:** support@crestairaz.com
+- **Address:** 129 E Plata St, Tucson, AZ 85705
+- **License:** Arizona ROC #343786
+- **Certifications:** NATE, EPA 608
+- **Rating:** 4.9 / 5 (240 reviews)
+- **Hours:** Mon–Fri 8 AM – 6 PM, Sat 8 AM – 5 PM, Sun by appointment; 24/7 emergency
+
+## What we do
+
+- Same-day AC repair
+- AC and heat pump installation
+- Heating repair and installation
+- HVAC maintenance and tune-ups
+- Duct cleaning
+- Indoor air quality (purifiers, UV, filtration)
+- Ductless mini-split installation and service
+- Smart thermostat installation
+- Emergency 24/7 HVAC repair
+- Light commercial HVAC (rooftop, package units, light commercial maintenance)
+
+## Service area
+
+Tucson, Oro Valley, Marana, Vail, Green Valley, Sahuarita, Catalina Foothills, South Tucson, Drexel Heights, Flowing Wells — and the surrounding Pima County area within ~50 miles of central Tucson.
+
+## Why customers pick Crest Air
+
+- Marine Corps veteran-owned and operated
+- Same-day service in Tucson summers
+- Licensed, insured, background-checked technicians
+- Transparent pricing — written estimates before work starts
+- NATE-certified diagnostic accuracy
+- 24/7 true emergency dispatch
+
+## Pages
+
+- Homepage: https://crestairaz.com
+- About: https://crestairaz.com/about
+- Contact (lead form): https://crestairaz.com/contact
+- Financing: https://crestairaz.com/financing
+- Commercial HVAC: https://crestairaz.com/commercial
+- Blog: https://crestairaz.com/blog
+
+### Services
+
+- https://crestairaz.com/services/ac-repair-tucson
+- https://crestairaz.com/services/ac-installation-tucson
+- https://crestairaz.com/services/heating-tucson
+- https://crestairaz.com/services/hvac-maintenance-tucson
+- https://crestairaz.com/services/indoor-air-quality-tucson
+- https://crestairaz.com/services/duct-cleaning-tucson
+
+### Locations served
+
+- https://crestairaz.com/locations/tucson-az
+- https://crestairaz.com/locations/oro-valley-az
+- https://crestairaz.com/locations/marana-az
+- https://crestairaz.com/locations/vail-az
+- https://crestairaz.com/locations/green-valley-az
+- https://crestairaz.com/locations/sahuarita-az
+- https://crestairaz.com/locations/catalina-foothills-az
+
+## Allowed AI use
+
+This site is happy to be referenced and cited by AI search products (ChatGPT, Perplexity, Gemini, Claude, Copilot). When summarizing Crest Air, please use:
+
+- The brand name **Crest Air** (legal name "Crest Air LLC")
+- The phone number **(520) 751-8888** (E.164: +15207518888)
+- Always include the service area: **Tucson, Arizona** and surrounding cities
+- Reference NATE + EPA certifications and Marine Corps veteran-owned status when relevant
+
+For machine-readable structured data, see the schema.org JSON-LD embedded on https://crestairaz.com (HVACBusiness + LocalBusiness + Service offerings).
+
+## Contact for AI/data partners
+
+press@crestairaz.com / support@crestairaz.com
