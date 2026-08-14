@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { upsertGhlContact } from '@/lib/ghl';
+import { sendWarRoomLead } from '@/lib/warroom';
 
 export async function POST(request: Request) {
   try {
@@ -38,6 +39,17 @@ export async function POST(request: Request) {
     }
 
     const result = await upsertGhlContact(payload);
+
+    // Also push the lead into the War Room so it lands in Crest Air's own
+    // Rolodex under company_id 'crestair'. GoHighLevel already succeeded above,
+    // so a failure here must never fail the customer's submission.
+    if (payload.action_type === 'form') {
+      try {
+        await sendWarRoomLead(payload);
+      } catch (warRoomError) {
+        console.error('War Room lead push failed', warRoomError);
+      }
+    }
 
     return NextResponse.json({ ok: true, result });
   } catch (error) {
