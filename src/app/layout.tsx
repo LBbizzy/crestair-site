@@ -68,9 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <JsonLd data={globalSchemas} />
         <SiteShell>{children}</SiteShell>
         <Script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="690ce51fd69ee829fc02fe74"
+          src="https://api.warroom.lmbhub.com/web-chat/widget.js?co=crestair"
           strategy="afterInteractive"
         />
       </body>
