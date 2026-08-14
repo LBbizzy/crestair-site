@@ -200,7 +200,7 @@ export function FunnelForm({
       )}
 
       <p className="text-center text-xs text-slate-500">
-        Your information is safe. We never spam or share your data.
+        By submitting this form you agree that Crest Air may call and text you at the number provided about your request. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out, HELP for help. SMS terms and privacy: crestairaz.com/sms-terms.html
       </p>
     </form>
   );
