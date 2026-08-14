@@ -118,6 +118,7 @@ export function ServiceConversionSection({
           {status === 'submitting' ? 'Submitting…' : 'Request Service'}
         </button>
         {message ? <p className={`text-sm ${status === 'success' ? 'text-emerald-700' : 'text-red-700'}`}>{message}</p> : null}
+        <p className="text-xs leading-relaxed text-slate-500">By submitting this form you agree that Crest Air may call and text you at the number provided about your request. Consent is not a condition of purchase. Message and data rates may apply; message frequency varies. Reply STOP to opt out, HELP for help. SMS terms and privacy: crestairaz.com/sms-terms.html</p>
       </form>
     </section>
   );
