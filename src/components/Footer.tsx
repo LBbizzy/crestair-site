@@ -53,6 +53,7 @@ export function Footer() {
             {site.phone}
           </CallTrackedLink>
           <p className="text-sm text-slate-200">{site.email}</p>
+          <address className="mt-3 not-italic text-sm leading-6 text-slate-200">{site.legalName}<br />{site.address.streetAddress}<br />{site.address.addressLocality}, {site.address.addressRegion} {site.address.postalCode}</address>
         </div>
       </div>
     </footer>
