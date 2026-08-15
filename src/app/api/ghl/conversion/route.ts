@@ -17,6 +17,10 @@ export async function POST(request: Request) {
       page_type: string;
       service_request?: string;
       funnel_identifier?: string;
+      utm_source?: string;
+      utm_medium?: string;
+      utm_campaign?: string;
+      utm_content?: string;
     } = {
       name: String(body.name || '').trim(),
       email: String(body.email || '').trim(),
@@ -28,6 +32,13 @@ export async function POST(request: Request) {
       page_type: String(body.page_type || 'service').trim(),
       service_request: body.service_request ? String(body.service_request).trim() : undefined,
       funnel_identifier: body.funnel_identifier ? String(body.funnel_identifier).trim() : undefined,
+      // FunnelForm has been sending these on every paid-traffic submission and
+      // this route silently discarded them, so no lead in GoHighLevel could be
+      // traced back to the campaign that bought it.
+      utm_source: body.utm_source ? String(body.utm_source).trim() : undefined,
+      utm_medium: body.utm_medium ? String(body.utm_medium).trim() : undefined,
+      utm_campaign: body.utm_campaign ? String(body.utm_campaign).trim() : undefined,
+      utm_content: body.utm_content ? String(body.utm_content).trim() : undefined,
     };
 
     if (!payload.name || !payload.phone || !payload.source_page || !payload.service_type || !payload.location || !payload.page_type) {
