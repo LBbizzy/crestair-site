@@ -2,7 +2,11 @@ const GHL_API_BASE_URL = process.env.GHL_API_BASE_URL;
 const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
 const GHL_PRIVATE_INTEGRATION_TOKEN = process.env.GHL_PRIVATE_INTEGRATION_TOKEN;
 
-const TRACKING_FIELDS = ['source_page', 'service_type', 'location', 'action_type', 'page_type', 'service_request', 'funnel_identifier'] as const;
+// utm_* are here because the funnel forms have always collected them and the
+// conversion route has always thrown them away, which made every dollar of ad
+// spend unattributable once a lead landed in GoHighLevel. ensureTrackingFields
+// creates any field that does not exist yet, so these appear on first use.
+const TRACKING_FIELDS = ['source_page', 'service_type', 'location', 'action_type', 'page_type', 'service_request', 'funnel_identifier', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content'] as const;
 
 type TrackingFieldName = (typeof TRACKING_FIELDS)[number];
 
@@ -19,6 +23,10 @@ export type GhlConversionPayload = {
   email?: string;
   phone: string;
   source_page: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
   service_type: string;
   location: string;
   action_type: 'form' | 'call';

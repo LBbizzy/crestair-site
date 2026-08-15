@@ -199,12 +199,15 @@ export function buildServiceSchema(service: ServiceContent) {
     })),
     provider: { '@id': businessId },
     brand: { '@id': businessId },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: site.aggregateRating.ratingValue,
-      reviewCount: site.aggregateRating.reviewCount,
-      bestRating: site.aggregateRating.bestRating,
-    },
+    // No aggregateRating here, deliberately.
+    //
+    // This used to stamp the business-wide 4.9/240 onto every single Service
+    // node. Google's review-snippet policy requires that a rating on an item
+    // be a rating OF that item, backed by reviews of it — there are no Review
+    // objects for "AC Repair in Tucson" as a service, and the same ten pages
+    // all claimed the identical number. That is a manual-action risk for
+    // zero upside. The genuine business rating stays on the LocalBusiness
+    // node, where it belongs and where Google actually reads it.
     termsOfService: absoluteUrl('/contact'),
     offers: {
       '@type': 'Offer',
