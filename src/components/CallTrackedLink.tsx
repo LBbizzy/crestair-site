@@ -14,6 +14,13 @@ type CallTrackedLinkProps = {
   dataCtaId?: string;
 };
 
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export function CallTrackedLink({
   className,
   children,
@@ -24,31 +31,32 @@ export function CallTrackedLink({
   funnelIdentifier,
   dataCtaId,
 }: CallTrackedLinkProps) {
-  async function handleClick() {
+  // A call click is a MEASUREMENT event, not a lead.
+  //
+  // This used to POST to /api/ghl/conversion with `phone: site.phone` — Crest
+  // Air's own number. GoHighLevel upserts contacts by phone, so every single
+  // call click in the site's history collapsed into one contact record keyed on
+  // (520) 751-8888. That record is junk, and worse, it made real inbound leads
+  // harder to see. Nobody who clicks "Call" has given us their number yet; there
+  // is nothing to put in a CRM.
+  //
+  // So: send the click to GA4, where call-click volume by page and service is
+  // exactly the kind of thing GA4 exists to measure, and leave the CRM for
+  // people who actually filled something in. Fire-and-forget — the dial must
+  // never wait on analytics, and must still work if GA4 is blocked.
+  function onClick() {
     try {
-      await fetch('/api/ghl/conversion', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: 'Website Call Click',
-          phone: site.phone,
-          source_page: sourcePage,
-          service_type: serviceType,
-          location,
-          action_type: 'call',
-          page_type: pageType,
-          funnel_identifier: funnelIdentifier,
-          service_request: 'Phone call click',
-        }),
-        keepalive: true,
+      window.gtag?.('event', 'call_click', {
+        source_page: sourcePage,
+        service_type: serviceType,
+        location,
+        page_type: pageType,
+        funnel_identifier: funnelIdentifier,
+        cta_id: dataCtaId,
       });
     } catch {
-      // Best-effort tracking only. Call flow should still continue.
+      // Analytics is best-effort. The call goes through regardless.
     }
-  }
-
-  function onClick() {
-    void handleClick();
   }
 
   return (

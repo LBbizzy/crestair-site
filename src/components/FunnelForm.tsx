@@ -70,6 +70,15 @@ export function FunnelForm({
       utm_content: utmParams.utm_content,
     };
 
+    // Capture the form element BEFORE the first await. React nulls
+    // `event.currentTarget` once the event finishes dispatching, so
+    // `event.currentTarget.reset()` further down throws — and because it sits
+    // inside this try block, the throw lands in the catch and shows the visitor
+    // "Something went wrong. Please call us instead" for a lead that was
+    // actually saved. That drives duplicate submissions and abandonment on the
+    // ten funnel pages, which are the paid-traffic landing pages.
+    const form = event.currentTarget;
+
     try {
       const response = await fetch('/api/ghl/conversion', {
         method: 'POST',
@@ -87,7 +96,7 @@ export function FunnelForm({
 
       setStatus('success');
       setMessage('Thanks! A Crest Air team member will contact you shortly.');
-      event.currentTarget.reset();
+      form.reset();
     } catch {
       setStatus('error');
       setMessage('Something went wrong. Please call us instead at (520) 751-8888.');

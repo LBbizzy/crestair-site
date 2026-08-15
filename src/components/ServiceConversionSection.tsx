@@ -49,23 +49,38 @@ export function ServiceConversionSection({
       funnel_identifier: funnelIdentifier,
     };
 
-    const response = await fetch('/api/ghl/conversion', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
+    // Capture the form element BEFORE the first await. React pools and nulls
+    // `event.currentTarget` once the event finishes dispatching, so calling
+    // `event.currentTarget.reset()` after an await throws — and the throw lands
+    // in the catch below, showing the customer an error for a lead that was
+    // actually saved. That drives duplicate submissions and abandonment.
+    const form = event.currentTarget;
 
-    const data = await response.json();
+    try {
+      const response = await fetch('/api/ghl/conversion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
 
-    if (!response.ok || !data.ok) {
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.ok) {
+        setStatus('error');
+        setMessage(data.error || 'We could not submit your request right now. Please call instead.');
+        return;
+      }
+
+      setStatus('success');
+      setMessage(`Thanks — your request was sent from ${title}.`);
+      form.reset();
+    } catch {
+      // A dropped connection or a non-JSON gateway error used to produce an
+      // unhandled rejection: the button stuck on "Submitting…" forever with no
+      // message. The visitor waits, then leaves. Always land somewhere.
       setStatus('error');
-      setMessage(data.error || 'We could not submit your request right now. Please call instead.');
-      return;
+      setMessage('We could not submit your request right now. Please call us instead.');
     }
-
-    setStatus('success');
-    setMessage(`Thanks — your request was sent from ${title}.`);
-    event.currentTarget.reset();
   }
 
   return (

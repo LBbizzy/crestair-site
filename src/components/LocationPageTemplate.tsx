@@ -6,6 +6,8 @@ import { HeroSection } from '@/components/HeroSection';
 import { ServiceConversionSection } from '@/components/ServiceConversionSection';
 import { ImageCard } from '@/components/ImageCard';
 import { SiteImage } from '@/components/SiteImage';
+import { JsonLd } from '@/components/JsonLd';
+import { buildFaqSchema } from '@/lib/schema';
 import { ImageAsset, LocationContent } from '@/lib/types';
 import { site } from '@/lib/site';
 
@@ -359,6 +361,11 @@ const locationImageSets: Record<string, LocationImageSet> = {
 };
 
 export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
+  // The ten location pages render three real Q&A pairs each on screen but
+  // emitted no FAQPage markup, so 30 answers were invisible to rich results and
+  // to AI answer engines. ServicePageTemplate already does this correctly;
+  // this mirrors it.
+  const faqSchema = buildFaqSchema(location.faqs);
   const sourcePage = `/locations/${location.slug}`;
   const imageSet = locationImageSets[location.slug];
   const heroImage = imageSet?.hero;
@@ -486,6 +493,7 @@ export function LocationPageTemplate({ location }: LocationPageTemplateProps) {
         subline={`Same-day service available in ${location.city}`}
       />
 
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
       <FAQSection faqs={location.faqs} />
 
       <CTASection
