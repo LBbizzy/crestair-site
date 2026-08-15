@@ -3,6 +3,18 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // www -> apex. Both hostnames resolve to this same deployment, so without
+      // this rule www.crestairaz.com served a byte-identical copy of every page
+      // under a second hostname — duplicate content that splits ranking signals
+      // between two URLs for no benefit. The canonical tag already points at the
+      // apex; this makes the server agree.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.crestairaz.com' }],
+        destination: 'https://crestairaz.com/:path*',
+        permanent: true,
+      },
+
       // ━━━ Pages ━━━
       { source: '/about-us', destination: '/about', permanent: true },
       { source: '/about-us/', destination: '/about', permanent: true },
