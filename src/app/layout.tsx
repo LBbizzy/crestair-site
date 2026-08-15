@@ -71,6 +71,30 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           src="https://api.warroom.lmbhub.com/web-chat/widget.js?co=crestair"
           strategy="afterInteractive"
         />
+        {/* Google Analytics 4 — property "Crest Air" (549936907) in the
+            "Bizzy Cube" account (404685884), owned by DJ@bizzycube.com.
+            Measurement ID G-K44WLVFGH5.
+
+            This REPLACES G-QYPHP3H1FG, which lived in an older account under a
+            different login. That property had recorded nothing until earlier
+            today, so there is no history worth preserving — and all three
+            companies now report into one account that one role address owns,
+            which is the whole point of the move. Do not re-add the old ID; two
+            tags on one page double-counts every session.
+
+            Hard-coded rather than read from env because a missing env var fails
+            silently and that is the failure mode that produced the empty
+            property in the first place. */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K44WLVFGH5"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-K44WLVFGH5');`}
+        </Script>
       </body>
     </html>
   );

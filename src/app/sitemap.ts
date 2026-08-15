@@ -12,6 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/financing`, changeFrequency: 'monthly' as const, priority: 0.7 },
     { url: `${baseUrl}/blog`, changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${baseUrl}/commercial`, changeFrequency: 'monthly' as const, priority: 0.8 },
+    // Hub pages: both return 200 and neither was listed.
+    { url: `${baseUrl}/services`, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/locations`, changeFrequency: 'monthly' as const, priority: 0.8 },
   ];
 
   const servicePages = [
@@ -22,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'indoor-air-quality-tucson',
     'duct-cleaning-tucson',
     'emergency-hvac-repair-tucson',
+    // These three service pages are built, indexable, and ~950 words each, but
+    // were absent from the sitemap — Google had to find them through a single
+    // homepage link or not at all.
+    'heat-pump-tucson',
+    'mini-split-tucson',
+    'thermostat-repair-tucson',
   ].map((slug) => ({
     url: `${baseUrl}/services/${slug}`,
     changeFrequency: 'monthly' as const,
